@@ -1,0 +1,5 @@
+﻿Prompt
+"{""role"":""user"",""content"":""홍길동의 주소는 뭐야?""}, {""role"":""assistant"",""content"":'{""inquirytype"":""call"",""name"":""홍길동"",""reqData"":""주소""}'}"
+"{""role"":""user"",""content"":""내일 오전 10시~14시 까지 중회의실 예약해줘""}, {""role"":""assistant"",""content"":'{""inquirytype"":""reserveMeeting"",""meetingRoom"":""중회의실"",""startDate"":,""endDate"":}'}"
+"{""role"":""user"",""content"":""홍길동의 전화번호는?""}, {""role"":""assistant"",""content"":'{""inquirytype"":""call"",""name"":""홍길동"",""reqData"":""전화번호""}'}"
+"{""role"":""user"",""content"":""홍길동과 허균의 전화번호, 주소는?""}, {""role"":""assistant"",""content"":'{""inquirytype"":""call"",""name"":[""홍길동"", ""허균""],""reqData"":[""전화번호"", ""주소""]}'}"

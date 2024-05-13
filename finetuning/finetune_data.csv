@@ -1,0 +1,2617 @@
+﻿Title,Contents
+anaconda 오프라인 환경 설치,"# ---- 아나콘다 가상환경 구축(인터넷 가능 환경에서)
+# 가상환경 py3.7 만들고 패키지 설치
+# (base) 는 Anaconda prompt 환경
+(base) conda create --name py3.7 python=3.7
+(base) conda install --name py3.7 pymssql
+# conda install --name py3.7 cx_Oracle
+(base) conda install --name py3.7 numpy
+(base) conda install --name py3.7 pandas
+(base) conda install --name py3.7 matplotlib
+(base) conda install --name py3.7 openpyxl
+(base) conda install --name py3.7 jupyter
+#conda install --name py3.7 fastapi
+(base) conda install --name py3.7 scikit-learn
+#conda install --name py3.7 uvicorn
+#아래 pip install 을 가상환경에서 된다고 하는 말이 있으나 잘 안됨.ㅡㅡ
+#가상환경안에서 pip install fastapi
+#가상환경안에서 pip install matplotlib
+#가상환경안에서 pip install seaborn
+# ---- 아나콘다 가상환경을 오프라인으로 옮기기
+# ---- - 단, 같은 windows 환경에서 테스트해본 결과 잘됨
+# ---- - 아나콘다 설치 경로 ""C:\Users\{사용자명}\.conda""
+# OFFLINE PC에 설치해야 이동/설치해야 될 파일
+- Python설치 파일 : python-3.7.9-amd64.exe
+- Miniconda 설치파일 : Miniconda3-py37_4.12.0-Windows-x86_64.exe
+- C:\Users\{사용자명}\.conda\envs\{가상환경명} 통째로
+C:\Users\{사용자명}\.conda\envs\{가상환경명}\share\jupyter\kernels\python3\kernel.json 파일 내용에서 python.exe 경로 수정
+- ""C:/Users/{사용자명}/.conda/envs/{가상환경명}\\python.exe""
+# 가상환경 활성화
+(base) conda activate py3.7
+# jupyter notebook 실행
+(py3.7) jupyter notebook
+# 가상환경 비활성화
+(py3.7) conda deactivate py3.7"
+Angular 12 템플릿 정보,"Angular 12 템플릿 정보 입니다.
+소스 파일 : [angular12_template.zip](https://softzion-my.sharepoint.com/:u:/p/lkh8342/EcEe53jFdXRHqPjMd6nief0B3T4kY_2DZB6wBN7DlwSTTA)
+템플릿 사이트 [https://pixinvent.com/demo/vuexy-vuejs-admin-dashboard-template/demo-2/dashboard/ecommerce](https://pixinvent.com/demo/vuexy-vuejs-admin-dashboard-template/demo-2/dashboard/ecommerce)
+Doc [https://pixinvent.com/demo/vuexy-vuejs-admin-dashboard-template/documentation/](https://pixinvent.com/demo/vuexy-vuejs-admin-dashboard-template/documentation/)"
+Angular Debugging Guide,"Angular Debugging Guide
+Angular 애플리케이션 디버깅: 이 문서에서는 RxJs 연산자, ng.probe, Angular 프로파일러, Augury, Redux 개발자 도구, json 파이프, Chrome 개발자 도구 등 Angular 애플리케이션 디버깅을 위한 다양한 도구와 기법을 제공합니다.
+디버깅 팁과 요령: 이 문서에서는 콘솔 객체 사용, 디버거 문, 조건부 중단점, 네트워크 및 CPU 스로틀링, 로컬 저장소 검사 등과 같은 디버깅을 위한 몇 가지 팁과 요령도 제공합니다.
+디버깅의 이점: 이 문서는 모든 애플리케이션을 빌드하고 버그를 제거하기 위한 디버깅의 중요성을 강조합니다1. 디버깅은 소프트웨어 제공 프로세스의 속도를 높이고 애플리케이션의 성능을 향상시킬 수 있습니다.
+원문
+[https://medium.com/@vamsivempati/a-guide-to-debugging-angular-applications-5a36bd88b4cf](https://medium.com/@vamsivempati/a-guide-to-debugging-angular-applications-5a36bd88b4cf)
+번역
+[https://softzion.sharepoint.com/:b:/s/msteams_d48474/EXkqTh_IFAtHlHNyWolc0hIBYtC24tiwKkXAJJe45Q_Q7Q?e=1OitwX](https://softzion.sharepoint.com/:b:/s/msteams_d48474/EXkqTh_IFAtHlHNyWolc0hIBYtC24tiwKkXAJJe45Q_Q7Q?e=1OitwX)"
+Angular DeepCopy 관련 정보,"```objectivec
+deepcopy 를 위한 spread copy
+앵귤러 에서 오브젝트 딥카피를 위해서
+const schoolDefaultData = {
+SEQ: '',
+MS_BACH: '',
+MS_NAME: '',
+MS_STUDY: '',
+uploadFileList: [],
+};
+this.school.push({...schoolDefaultData});
+위와 같이 진행을 하는 경우
+uploadFileList 와 같이 string타입이 아닌 타입의 경우
+딥카피가 안되고 shallow copy 참조복사가 되는 현상이 발생됩니다.
+참조복사가 되는것을 방지하기 위해
+const schoolDefaultData = {
+SEQ: '',
+MS_BACH: '',
+MS_NAME: '',
+MS_STUDY: ''
+};
+this.school.push({...schoolDefaultData, ...{uploadFileList: []}});
+와 같이 spread copy를 진행하면 참조복사가 되지 않습니다.
+```"
+Angular 개발 환경 구축 방법,"### Backend 설정
+[https://gitlab.com/szrndwas/simddle-was/-/blob/main/README.md](https://gitlab.com/szrndwas/simddle-was/-/blob/main/README.md)
+### Frontend 설정
+[https://gitlab.com/szrndweb/simddle-web/-/blob/main/README.md](https://gitlab.com/szrndweb/simddle-web/-/blob/main/README.md)
+### 동영상 가이드
+[https://softzion.sharepoint.com/:u:/s/msteams_d48474/EXNOMYnGyldEqMwfinBwbOsBKLezHjcGNZ5zfnIqr_PZCg?e=rVCrv6](https://softzion.sharepoint.com/:u:/s/msteams_d48474/EXNOMYnGyldEqMwfinBwbOsBKLezHjcGNZ5zfnIqr_PZCg?e=rVCrv6)
+[https://softzion.sharepoint.com/:u:/s/msteams_d48474/EbkouaZwM7JKlVPn0N83TKcBJ2CvS4Osde3rhphonxsLCQ?e=CX3cRm](https://softzion.sharepoint.com/:u:/s/msteams_d48474/EbkouaZwM7JKlVPn0N83TKcBJ2CvS4Osde3rhphonxsLCQ?e=CX3cRm)"
+"angular 웹 소스를 apache 서버에 배포할 때, 하위 url 로 이동 후 refresh 문제","```perl
+1. .htaccess 설정추가 :
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.html$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.html [L]
+</IfModule>
+2. httpd.conf 에 mod_rewrite 사용 :
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.html$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.html [L]
+</IfModule>
+3. httpd.conf 에 FallbackResource 설정 : Apache 2.2 이상에서 사용 가능
+<Directory ""document 경로"">
+FallbackResource /index.html
+</Directory>
+```"
+AXURE 사용법 알려주세요,"Axure를 잘 사용하기 위한 Tutorial이나 자료는 어떻게 찾나요?
+---
+```
+목차
+별(*) 표시 : 중요 학습 항목
+별(*) 갯수 : 학습난이도
+```
+시작하기 전에
+[Axure RP 9,10 - 제품 관리자(PO, PM, 기획자)를 위한 최적의 프로토타이핑 툴](https://www.inflearn.com/course/axure-%ED%94%84%EB%A1%9C%ED%86%A0%ED%83%80%EC%9D%B4%ED%95%91/lecture/61815?tab=curriculum&volume=1.00)"
+Backend 개발 가이드-BE 개발 가이드 문서 (Gitlab),"[https://gitlab.com/softzionrnd/prm-salevis-was/-/blob/master/BackEnd_DevelopmentGuide.pptx](https://gitlab.com/softzionrnd/prm-salevis-was/-/blob/master/BackEnd_DevelopmentGuide.pptx)
+개발 가이드 문서 (Gitlab) 입니다."
+Backend 개발 가이드-log4j2 전체 쿼리 Log 설정,"1. pom.xml 에 org.bgee.log4jdbc-log4j2 추가
+```xml
+<dependency>
+<groupId>org.bgee.log4jdbc-log4j2</groupId>
+<artifactId>log4jdbc-log4j2-jdbc4.1</artifactId>
+<version>1.16</version>
+</dependency>
+```
+1. src/resources 폴더에 log4jdbc.log4j2.properties 파일 추가
+```
+log4jdbc.spylogdelegator.name=net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator
+log4jdbc.dump.sql.maxlinelength=0
+```
+1. src/resources 폴더에 log4j2.xml 파일 수정
+```xml
+<?xml version=""1.0"" encoding=""UTF-8""?>
+<Configuration>
+<Appenders>
+<!-- Console 출력을 위한 Appender -->
+<Console name=""console"" target=""SYSTEM_OUT"">
+<PatternLayout pattern=""%d %5p [%c] %m%n"" />
+</Console>
+<!-- 로그파일 생성을 위한 Appender -->
+<!-- <RollingFile name=""dailyRollingFileAppender"" fileName=""d:/tdms_logs/tdms.log"" filePattern=""d:/tdms_logs/tdms_%d{yyyy-MM-dd}.log"" append=""true"">
+<PatternLayout pattern=""%d %5p [%c] %m%n"" />
+<Policies>
+<TimeBasedTriggeringPolicy interval=""1"" modulate=""true""/>
+</Policies>
+</RollingFile>-->
+</Appenders>
+<Loggers>
+<Logger name=""java.sql"" level=""INFO"" additivity=""false"">
+<AppenderRef ref=""console"" />
+</Logger>
+<Logger name=""egovframework"" level=""DEBUG"" additivity=""false"">
+<AppenderRef ref=""console"" />
+</Logger>
+<!-- log SQL with timing information, post execution -->
+<Logger name=""jdbc.sqltiming"" level=""INFO"" additivity=""false"">
+<AppenderRef ref=""console"" />
+</Logger>
+<Logger name=""EmpMapper"" level=""debug"" additivity=""false"">
+<AppenderRef ref=""console"" />
+</Logger>
+<Logger name=""org.springframework"" level=""INFO"" additivity=""false"">
+<AppenderRef ref=""console"" />
+</Logger>
+<Logger name=""org.apache.http.client"" level=""error"" additivity=""false"">
+<AppenderRef ref=""console"" />
+</Logger>
+<Logger name=""org.apache.http.wire"" level=""error"" additivity=""false"">
+<AppenderRef ref=""console"" />
+</Logger>
+<Logger name=""jdbc.audit"" level=""OFF"" additivity=""false"">
+<AppenderRef ref=""console"" />
+</Logger>
+<Logger name=""jdbc.resultset"" level=""OFF"" additivity=""false"">
+<AppenderRef ref=""console"" />
+</Logger>
+<Logger name=""org.mybatis.spring.SqlSessionUtils"" level=""OFF"" additivity=""false"">
+<AppenderRef ref=""console"" />
+</Logger>
+<Logger name=""org.mybatis.spring.transaction.SpringManagedTransaction"" level=""OFF"" additivity=""false"">
+<AppenderRef ref=""console"" />
+</Logger>
+<Logger name=""jdbc.sqltiming"" level=""OFF"" additivity=""false"">
+<AppenderRef ref=""console"" />
+</Logger>
+<Logger name=""jdbc.sqlonly"" level=""INFO"" additivity=""false"">
+<AppenderRef ref=""console"" />
+</Logger>
+<Root level=""DEBUG"">
+<AppenderRef ref=""console"" />
+</Root>
+</Loggers>
+</Configuration>
+```
+1. context-datasource.xml 파일에 dataSource 수정
+```xml
+<property name=""driverClassName"" value=""net.sf.log4jdbc.sql.jdbcapi.DriverSpy""/>
+<property name=""url"" value=""jdbc:log4jdbc:mysql://: ......
+```
+- 21.04.02 prm-salevis-was Master Branch 적용"
+"Backend 개발 가이드-RoleScreen, Screen 테이블의 필요 없는 데이터 정리","delete from rolescreen where roleid not in (select roleid from role);
+delete from screen where screenid not in (select screenid from rolescreen);
+delete from rolescreen where screenid not in (select screenid from screen where menuid in (select menuid from menu) and mainYn = 'Y');
+delete from screen where menuid not in (select menuid from menu) and mainYn = 'Y';"
+Backend 개발 가이드-SPF 등록 가이드,"### 내용
+스팸 메일 인식율을 줄이기 위해서 메일서버에 SPF 등록을 위한 가이드 자료입니다.
+---
+### 답변
+[https://helpdesk.midasinsight.com/hc/ko/articles/900000287723--%EA%B0%80%EC%9D%B4%EB%93%9C-SPF-%EB%93%B1%EB%A1%9D-%EA%B0%80%EC%9D%B4%EB%93%9C](https://helpdesk.midasinsight.com/hc/ko/articles/900000287723--%EA%B0%80%EC%9D%B4%EB%93%9C-SPF-%EB%93%B1%EB%A1%9D-%EA%B0%80%EC%9D%B4%EB%93%9C)
+스팸 메일 인식율을 줄이기 위해서 메일서버에 SPF 등록을 위한 가이드 자료입니다."
+Backend 개발 가이드-SQL - LEFT JOIN 사용시 주의,"```r
+SELECT
+...
+FROM
+campaignimplcustomer C LEFT JOIN tenantcustomer T ON C.CustId = T.CustId
+WHERE
+C.TenantId = CONV( #{srchTenantId}, 36, 10 ) AND T.TcId = CONV(#{keyId}, 36, 10)
+와 같이 조건문을 사용하면 tenantcustomer 에 CustId 가 없는 항목이 SELECT 가 되지 않으므로 LEFT JOIN 의 의미가 없으므로 반드시 아래와 같이 사용해야 됩니다.
+SELECT
+...
+FROM
+campaignimplcustomer C LEFT JOIN tenantcustomer T ON C.CustId = T.CustId AND T.TcId = CONV(#{keyId}, 36, 10)
+WHERE
+C.TenantId = CONV( #{srchTenantId}, 36, 10 )
+```"
+Backend 개발 가이드-UTC 적용,"```sql
+vm options 에 추가
+-Duser.timezone=UTC
+만료일 관련 UTC 시간 처리를 위하여,
+프론트에 localtoutc 필터에 to 옵션을 추가하였습니다.
+이 필터와 동일하여 만료일을 서버상의 DB에서 계산하기 위해 다음 쿼리문을 사용합니다.
+방안1 : 아래와 같이 바꾸고 싶은 날짜를 '23:59:59'를 강제로 붙여서 UTC 시간으로 CONVERT 합니다.
+CONVERT_TZ(DATE_FORMAT('2021-07-31', '%Y-%m-%d 23:59:59'), 'Asia/Seoul', 'UTC');
+CONVERT_TZ(DATE_FORMAT(NOW(), '%Y-%m-%d 23:59:59'), 'Asia/Seoul', 'UTC');
+하지만, 문제가 있습니다. 예를 들어 NOW() 시간이 오전 9시 이전이라면 날짜계산이 잘 못 됩니다.
+예를 들어, 로컬시간이 '2021-07-31 08:00:00'인 경우 서버에서 NOW() 는 '2021-07-30 23:00:00' 와 같이 됩니다.
+CONVERT_TZ(DATE_FORMAT('2021-07-30 23:00:00', '%Y-%m-%d 23:59:59'), 'Asia/Seoul', 'UTC')  -> 2021-07-30 14:59:59
+방안2 : 따라서 아래와 같이 로컬시간으로 한번 바꿨다가 다시 UTC 시간으로 바꾸는 과정이 필요합니다.
+CONVERT_TZ(DATE_FORMAT(CONVERT_TZ('2021-07-30 23:00:00', 'UTC', 'Asia/Seoul'), '%Y-%m-%d 23:59:59'), 'Asia/Seoul', 'UTC')  -> 2021-07-31 14:59:59
+따라서, 날짜를 지정하는 경우와 NOW() 로 날짜를 얻는 경우 공통으로 사용하기 위해 다음과 같은 형식이면 되겠습니다.
+CONVERT_TZ(DATE_FORMAT(CONVERT_TZ('2021-07-31', 'UTC', 'Asia/Seoul'), '%Y-%m-%d 23:59:59'), 'Asia/Seoul', 'UTC');
+﻿     CONVERT_TZ(DATE_FORMAT(CONVERT_TZ(NOW(), 'UTC', 'Asia/Seoul'), '%Y-%m-%d 23:59:59'), 'Asia/Seoul', 'UTC');
+mysql 에서 convert_tz 함수에서 'UTC', 'Asia/Seoul' 옵션을 사용할 수 없어서, '+00:00', '+09:00' 옵션으로 변경필요합니다.
+CONVERT_TZ(DATE_FORMAT(CONVERT_TZ('2021-07-31', '+00:00', '+09:00'), '%Y-%m-%d 23:59:59'), '+09:00', '+00:00');
+CONVERT_TZ(DATE_FORMAT(CONVERT_TZ(NOW(), '+00:00', '+09:00'), '%Y-%m-%d 23:59:59'), '+09:00', '+00:00');
+```"
+DBCP 라이브러리 수정을 통한 Commnuication Error 수정,"안녕하세요, 임선규 연구원입니다.
+현재 WeSeed Mind에서 간헐적으로 발생하는 communication error, 즉 이미 끊긴 db connection에 연결하여 쿼리가 제대로 작동하지 않는 에러에 대해 프로젝트의 dbcp설정값을 바꿔가며 test중입니다.
+현재, Weseed Mind에서는 commons-dbcp의 버전을 올려 1.4버전 대신 2.7.0 버전을 사용하고 있습니다.
+dbcp의 버전이 갱신됨에 따라 일부 connection parameter들의 명칭이 변경되었으며, 추가적으로 유효한 db connection 구성을 위해 다음과 같이 세팅을 완료했습니다.
+---
+> DBCP 버전 변경
+>
+>
+> [https://carrotweb.tistory.com/246](https://carrotweb.tistory.com/246)
+>
+> 현재 해당 설정 적용 후 예후를 지켜보고 있으며, 현재까지의 경과를 말씀드리자면
+>
+> 1일 간 2~3회 발생하던 communication error가 이틀에 한번 꼴로 빈도가 줄었음을 확인했습니다.
+>
+> 앞으로 추가적인 테스트를 통해 최적의 설정값을 찾아 공유드리고자 하나, 현재 담당하신 프로젝트에서 해당 에러의 빈도가 너무 잦다고 생각되신다면 dbcp의 세팅을 위와 같이 변경해 보시는 것도 고려해주시면 감사하겠습니다.
+>
+> 배포하실 때는 build 후 기존 운영서버에 있는 commons-dbcp.1.4.jar를 삭제하신 후 프로젝트에서 build된 commons-dbcp jar파일을 업로드하시면 됩니다.
+>
+> 세팅하실 때의 유의점은 다음과 같습니다.
+>
+> timeBetweenEvictionRunsMillis의 값이 DB의 wait_timeout 값보다 크면 안됩니다.
+>
+> numTestsPerEvictionRun의 값은 해당 서비스를 이용할 사용자 수에 비례해 유연하게 설정하시기 바랍니다.
+>
+> softMinEvictableIdleTimeMillis 설정은 아직 시험단계입니다. 실 적용 때는 설정하지 않으셔도 무방합니다.
+>
+```xml
+<bean id=""dataSource"" class=""org.apache.commons.dbcp2.BasicDataSource"" destroy-method=""close"">
+<property name=""driverClassName"" value=""net.sf.log4jdbc.sql.jdbcapi.DriverSpy""/>
+<property name=""url"" value=""jdbc:log4jdbc:mysql://61.35.16.250:13306/simddle?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&autoReconnectForPools=true&verifyServerCertificate=false&useSSL=false&serverTimezone=UTC""/>
+<property name=""username"" value=""****"" />
+<property name=""password"" value=""****"" />
+<property name=""initialSize"" value=""5""/>
+<property name=""maxTotal"" value=""20""/>
+<property name=""minIdle"" value=""5""/>
+<property name=""maxWaitMillis"" value=""3000""/>
+<property name=""poolPreparedStatements"" value=""true""/>
+<property name=""maxOpenPreparedStatements"" value=""50""/>
+<property name=""validationQuery"" value=""select 1""/>
+<property name=""testWhileIdle"" value=""true""/>
+<property name=""timeBetweenEvictionRunsMillis"" value=""600000""/>
+<property name=""numTestsPerEvictionRun"" value=""6""/>
+<property name=""minEvictableIdleTimeMillis"" value=""-1""/>
+<property name=""softMinEvictableIdleTimeMillis"" value=""300000""/>
+</bean>
+```"
+Docker에 Oracle 11g 설치,"Docker에 Oracle 11g 설치
+[https://afsdzvcx123.tistory.com/entry/Docker-%EC%98%A4%EB%9D%BC%ED%81%B4-11g-%EC%BB%A8%ED%85%8C%EC%9D%B4%EB%84%88-%EC%8B%A4%ED%96%89-%EB%B0%8F-%EB%B3%BC%EB%A5%A8-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0](https://afsdzvcx123.tistory.com/entry/Docker-%EC%98%A4%EB%9D%BC%ED%81%B4-11g-%EC%BB%A8%ED%85%8C%EC%9D%B4%EB%84%88-%EC%8B%A4%ED%96%89-%EB%B0%8F-%EB%B3%BC%EB%A5%A8-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0)"
+eclipse 에서 common-api project dependency 설정,"# **common-api 소스를 디버깅 하기 위함**
+project properties 창에서
+- Java Build Path -> Projects 탭 -> common-api 프로젝트 추가
+- Project References -> common-api 선택
+pom.xml 에서 common-api 부분 삭제
+WEB-INF/lib/common-api.jar 파일 삭제"
+Frontend 개발 가이드- Frontend 속도 향상 가이드,"[https://www.smashingmagazine.com/2021/01/front-end-performance-2021-free-pdf-checklist/](https://www.smashingmagazine.com/2021/01/front-end-performance-2021-free-pdf-checklist/)
+위 링크를 참조해주시길 바랍니다."
+Frontend 개발 가이드-angularjs 모듈에서 modalFactory 를 사용한 modal 창 사이즈 커스터마이징하기,"html 또는 css 파일에 아래를 선언
+.ctrl-kakaomapconfigmodalctrl-wrap .modal-dialog {
+width: 1200px;
+}
+js 파일에서 다음과 같이 모달을 호출할 때, controller name 인 KakaomapConfigModalCtrl 를 소문자로 변경하여
+생성된 ctrl-kakaomapconfigmodalctrl-wrap 이 css class 명으로 사용되기 때문에 위와 같이 스타일을 지정하면 됩니다.
+var ctrl = 'KakaomapConfigModalCtrl as vc';
+modalFactory.open('lg', 'components/modal/kakaomap/kakaomap-config-modal.html', ctrl, paramData);"
+Frontend 개발 가이드-Browser Sync 를 비활성화 하여 동시에 여러 화면 띄우기,"gulp serve 로 개발용서버를 띄우면 browsersync 가 작동하여서, 소스를 고치면 browser 에 바로 반영이 되어 편리합니다.
+하지만, 단점으로 browser 여러개를 열었을 때, 화면이 동시에 움직이는 문제가 있습니다.
+browser 두개를 동시에 쓰기 위해서 [http://localhost:3001](http://localhost:3001/) 으로 접속하여 Sync Options 메뉴에서 Sync 를 Disable 시킬 수 있습니다.
+browser sync 를 disable 시키면 소스를 고쳤을 때 browser 가 자동 갱신이 되지 않기 때문에 새로 고침을 해야 됩니다."
+"Frontend 개발 가이드-CSS, datepicker style","```css
+datepicker 에 마우스오버시 날짜사이즈가 늘어나는 문제점을 아래를 지정하여 보완해 주세요.
+MMG, 삼영RPMS 등에 모두 적용해 주세요.
+.datepicker .btn-default {
+border: 1px solid #dee;
+...
+}
+기존에는 아래와 같이 되어 있습니다.
+.datepicker .btn-default {
+border-width: 0;
+...
+}
+```"
+Frontend 개발 가이드-ESLint와 Prettier 사용,"[https://feynubrick.github.io/2019/05/20/eslint-prettier.html](https://feynubrick.github.io/2019/05/20/eslint-prettier.html)
+위 링크를 참조해주시기 바랍니다."
+Frontend 개발 가이드-fapane 목록화면에서의 미디어 쿼리,"fapane (화면분할기능, 스프릿트 기능) 이 적용된 화면의 목록화면에서 col-sm-6 와 같은 bootstrap 의 미디어 쿼리를 사용할 때,
+화면 전체 영역(app 영역) 의 폭에 따라서 미디어 쿼리가 동작하고, 화면이 분할된 상태에서 화면분할 사이즈를 조정해도 미디어 쿼리가 제대로 동작하지 않는 문제가 있었습니다.
+이를 위해 custom-media-width-size.css 에 다음 2 Lines 을 추가해 주세요.
+[fapane-size=sm] .showlevel3 { display: none; }  <-- 기존
+[fapane-size=sm] .showlevel2 { display: none; }   <-- 기존
+[fapane-size=md] .showlevel3 { display: none; }  <-- 기존
+[fapane-size=sm] .col-sm-hidden { display: none; }  <-- 추가
+[fapane-size=xs] .col-xs-hidden { display: none; }  <-- 추가"
+Frontend 개발 가이드-FE 개발 가이드 문서 (Gitlab),"[FrontEnd_DevelopmentGuide.pptx · master · Softzion / civasan-web · GitLab](https://gitlab.com/softzionrnd/civasan-web/-/blob/master/FrontEnd_DevelopmentGuide.pptx)
+위 링크를 참조해주시기 바랍니다."
+Frontend 개발 가이드-FE 초기 설정,"1. npm install
+2. npm i bower
+3. (bower 설치 실패시 windows-build-tool 설치 필요함, [https://nhj12311.tistory.com/27](https://nhj12311.tistory.com/27)
+4. bower install -> Answer? 1번 salevis 선택
+5. bower_components_custom 폴더를 bower_components 폴더로 덮어쓰기 (bower 모듈에서 부득이 수정한 부분은 별도로 버전 관리함)
+6. npm i -g gulp
+7. gulp serve"
+Frontend 개발 가이드-html 에 있는 javascript 에서 angularjs controller 접근하기,"html 에 있는 javascript 에서 angularjs controller 접근하기
+---
+```jsx
+1. foo.html 파일
+<script>
+function accessController() {
+angular.element(document.getElementById('idFoo')).scope().showMessage();
+}
+</script>
+<div id=""idFoo"" ng-controller=""FooCtrl as vc"">
+<a href="""" onclick=""accessController();"">Show Hello world</a>
+<span ng-bind=""fooMessage""></span>
+</div>
+2. foo-ctrl.js 파일
+app.controller('FooCtrl', function($scope) {
+$scope.showMessage = function () {
+console.log('hello world.');
+$scope.fooMessage = 'Hello World !!!';
+};
+}
+```"
+"Frontend 개발 가이드-HTML, table 표시","목록에서 데이터가 없을 때,
+<td class=""text-center"" colspan=""N"">{{ 'MSG.NO_DATA' | translate }}</td>
+를 표시하면서 N 값이 일정하지 않아 테이블이 깨지는 경우가 있습니다.
+이를 위해 N 값을 가변하거나, 여러문장으로 처리하는 경우가 있는데,
+아래와 같이 table 바깥으로 빼서 처리해 주세요.
+```xml
+<table class=""table table-striped ...."">
+<thead>....</thead>
+<tbody ng-if=""vc.totalItems > 0"">....</tbody>
+</table>
+<div ng-if=""vc.totalItems == 0"" class=""text-center form-control"">
+{{ 'MSG.NO_DATA' | translate }}
+</div>
+```"
+"Frontend 개발 가이드-Javascript defer , async 설정","[https://kimlog.me/js/2019-10-05-script/](https://kimlog.me/js/2019-10-05-script/)
+위 링크를 참조해주시기 바랍니다."
+Frontend 개발 가이드-jQuery 와 DOM 접근을 사용하지 않기,"angular9, native script, angular universal 등 최신기술의 프론트엔드 프레임워크를 사용할 때, DOM 을 접근하는 방식은 더 이상 사용할 수 없게 됩니다. 따라서 jquery 를 사용할 수 없게 되는데, 기본적으로 jquery 의 DOM을 쉽게 접근하여 사용할수 있는 막강한 기능때문에 프론트엔드 프레임워크 배포 및 빌드시 오류가 나므로 jquery 를 더 이상 사용할 수 없게 됩니다. 또한, javascript 에서 DOM 을 접근하는 기능도 사용할 수 없습니다.
+그 동안 잘 사용해 왔던 jquery 함수들을 아쉽지만 앞으로는 javascript 함수로 작성을 해야 겠군요.
+$.each 도 javascript 의 foreach 나 for 함수로 바꿔서 사용해야 되는 것이지요.
+DOM 을 사용할 수 없다는 것을 그림으로 설명을 하지만, 아래 그림과 같은 방식을 사용할 수 없다는 것입니다.
+이러한 접근을 하지 말고, angular 에서 제공하는 UI 그리는 방식을 사용하라는 의미로 이해하시면 되겠습니다.
+![Untitled](Frontend%20%E1%84%80%E1%85%A2%E1%84%87%E1%85%A1%E1%86%AF%20%E1%84%80%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%83%E1%85%B3-jQuery%20%E1%84%8B%E1%85%AA%20DOM%20%E1%84%8C%E1%85%A5%E1%86%B8%E1%84%80%E1%85%B3%E1%86%AB%E1%84%8B%E1%85%B3%E1%86%AF%20%E1%84%89%E1%85%A1%E1%84%8B%E1%85%AD%204665a934b8464af0af3b00444f341de1/Untitled.png)"
+"Frontend 개발 가이드-LeftMenu(nav-state:xs,md) 스크롤 시 2depth 메뉴 위치 이슈","salevis4 버전에서 메뉴를 가장 작게 한 상태에서 스크롤 시 메뉴 위치가 변경되는 이슈가 있습니다.
+많은 프로젝트에서 해당 소스를 사용하고 있는것으로 확인되는데요.
+```
+salevis-web-default\src\components\ui-component\layout\sidebar\sidebar.component.js
+```
+```jsx
+$("".sidebar-nav > ul > li"").hover(function(e) {
+.................
+var offset = $(this).offset();
+$(this).find(""> ul"").css(""top"", offset.top);
+```
+부분을 아래와 같이 변경 해주시기 바랍니다.
+```jsx
+var offset = $(this).position();
+$(this).find(""> ul"").css(""top"", offset.top + $(this).height()+5);
+```"
+Frontend 개발 가이드-ng-required 사용방법,"```xml
+<form ng-submit=""vc.setData()"">
+<button type=""submit"">등록</button>
+<input type=""text"" name=""이름"" ng-required=""true"">
+</form>
+입력필드를 입력하지 않고 submit 을 하면 다음과 같이 UI가 표시됩니다.
+```
+![Untitled](Frontend%20%E1%84%80%E1%85%A2%E1%84%87%E1%85%A1%E1%86%AF%20%E1%84%80%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%83%E1%85%B3-ng-required%20%E1%84%89%E1%85%A1%E1%84%8B%E1%85%AD%E1%86%BC%E1%84%87%E1%85%A1%E1%86%BC%E1%84%87%E1%85%A5%E1%86%B8%206f751f7824cf4f37be649aa7d4369a2d/Untitled.png)
+```swift
+<form> 태그 안에 있는 button 에서 submit 을 하지 않고, ng-click 으로 처리해야 될 버튼이 있을 때,
+<button type=""button""> 과 같이 type 을 ""button"" 으로 지정해 주어야 됩니다. 그렇지 않으면 ng-click 시 submit 이 발생합니다.
+common-code-custom 은 다음과 같이 수정합니다.
+common-code-custom-directive.js
+if(iAttrs.isDisabled != undefined) $select.attr(""ng-disabled"", iAttrs.isDisabled);
+if(iAttrs.isRequired != undefined) $select.attr(""ng-required"", iAttrs.isRequired); // 새로 추가
+추가/수정 화면용 html 파일
+<common-code-custom
+is-required=""true""  /* 새로추가 */
+>
+common-code 는 다음과 같이 수정합니다.
+common-code-directive.js
+scope : {
+isRequried : ""="" // 추가
+}
+scope.$watchCollection('isRequired', function(value) {
+//console.log('isDisabled=', scope.isDisabled);
+if (ctrl.isRequired != undefined)
+ctrl.isRequired = scope.isRequired;
+});
+common-code-ctrl.js
+vm.isRequired = false; // 추가
+common-code-html
+<select
+ng-required=""ccCtrl.isRequired"" /* 새로추가 */
+>
+추가/수정 화면용 html 파일
+<common-code
+is-required=""true""  /* 새로추가 */
+>
+```"
+"Frontend 개발 가이드-Region 사용, 함수 parameter 주석 추가","```csharp
+*** Frontend 코딩시 #region 사용과 함수 주석 규칙 통일 ***
+javascript 코딩시 아래 규칙을 통일되게 적용하여 코드 가독성을 향상 시켰으면 좋겠습니다.
+1. #region , #endregion 사용
+//#region 사용
+아래와 같이 동일한 속성의 코드 그룹에 대해서는 #region을 이용하여 묶어 주면
+VS Code에서 접힘/ 펼침을 사용 할수 있습니다.
+//#region 함수 구현
+function foo() {
+alert('blah');
+}
+//#endregion 함수 구현
+2. 함수 주석에 parameter 표기
+/**
+* keyId를 이용하여 존재여부 검사
+* @param {*} keyId
+*/
+function check(keyId) {
+/* blah~blah! */
+}
+```"
+Frontend 개발 가이드-select form-control 속도 느린문제,"select 에서 `class=""form-control""` 을 사용하는 경우 크롬에서 표시속도가 느린 경우가 있습니다.
+이것은 `bootstrap/dist/css/less/forms.less` 파일에 선언되어 있는 `form-control` 의
+- `webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;`
+속성 때문입니다.
+이를 해결하기 위해
+```css
+.form-control {
+-webkit-transition:none  !important;
+}
+```
+를 추가하여 `-webkit-transition` 속성을 제거합니다."
+Frontend 개발 가이드-다른 목록페이지 이동시에도 fa-pane size 유지하기 (split bar 위치 유지),"목록페이지에서 목록영역과 상세영역을 나누는 split bar 의 위치를 조정해도 다른 화면으로 이동하거나, 페이지를 새로고침 하면 초기화 되는 문제는 다음을 통해 수정할 수 있습니다.
+- 목록 화면에서 다음을 수정하면, 다른 페이지로 이동을 해도 위치가 유지됩니다.
+파일명 : 모든 목록페이지 html 파일
+수정내용 : pane-size=""40% + 2px"" 를 pane-size=""{{$root.gVariable.layoutBoardSize}}"" 로 수정
+- 페이지를 새로 고침을 해도 위치를 유지하기 위해 다음을 수정합니다.
+파일명 : borderLayout.js
+수정내용 :
+if ($rootScope.gVariable && $rootScope.gVariable.layoutBoardSize) {
+$rootScope.gVariable.layoutBoardSize = size + ""px"";
+$window.sessionStorage.setItem(""layoutBoardSize"", size + ""px"");  // 새로 추가
+}
+HTML 파일에는 다음을 공통으로 적용합니다.
+<div fa-pane fa-pane pane-anchor=""{{vc.anchor}}"" pane-handle=""4"" pane-max=""80% + 2px"" pane-min=""{{vc.paneMin}}"" pane-size=""{{$root.gVariable.layoutBoardSize}}"">"
+Frontend 개발 가이드-메타정보관리 화면 기능 개선,"수정 파일
+- src/app/boardmng/boardmmg-edit-ctrl.js
+- src/app/boardmng/boardmmg-edit.html
+추가파일
+- src/scripts/directives/meta-sortable-container/sortable-container-ctrl.js
+- src/scripts/directives/meta-sortable-container/sortable-container-directive.js
+- src/scripts/directives/meta-sortable-container/sortable-container.html
+변경 내용
+- 리스트와 상세 분리 작업
+- 리스트와 상세 순서 따로 적용하도록 수정
+- Drag 방식으로 순서 변경가능하도록 개선
+21.04.07 Salevis-web-default Master Branch 적용
+참고 : [https://gitlab.com/softzionrnd/salevis-web-default/-/commit/1beeb2eb7c845700d7e039dfbfbc9cecccd9ddbf](https://gitlab.com/softzionrnd/salevis-web-default/-/commit/1beeb2eb7c845700d7e039dfbfbc9cecccd9ddbf)"
+Frontend 개발 가이드-상세/추가/수정 페이지에서 데이터 저장/삭제 후 reload 처리,"```php
+추가/수정 페이지에서 데이터 저장 후 화면이 분할 상태에 따라 다른 reload 처리를 합니다.
+if (vm.layout == 'N') { // 화면이 분할되지 않은 경우
+// 삭제시
+$state.go(""app.board.list"", { srch: srch }, {reload:""app.board.list""});
+} else {
+// 저장
+$state.go(""app.board.list.edit"", {srch: srch}, {reload:""app.board.list""});
+}
+```"
+Frontend 개발 가이드-웹 성능 지표,"Frontend 성능을 측정하는 주요 성능 지표
+- 사용자 중심 성능 지표를 4가지로 구성해서 설명하고, 목표해야 하는 점수를 나열
+ㅤ→ 진행여부 : TTFB, FP, FCP
+ㅤ→ 유용성 : LCP, VC, SI
+ㅤ→ 사용 가능 여부 : FID, mFID, TBT, TTI
+ㅤ→ 쾌적함 : CLS, Frame Rate
+- Cheatsheet
+ㅤ→ Time to First Byte (TTFB) <600ms
+ㅤ→ First Paint (FP) <1.8s
+ㅤ→ First Contentful Paint (FCP) <1.8s
+ㅤ→ Largest Contentful Paint (LCP) <2.5s
+ㅤ→ Visually Complete (VC) <3.4s
+ㅤ→ Speed Index (SI) <3.4s
+ㅤ→ First Input Delay (FID) <100ms
+ㅤ→ Max Potential First Input Delay (mFID) <130ms
+ㅤ→ Total Blocking Time (TBT) <200ms
+ㅤ→ Time to Interactive (TTI) <3.8s
+ㅤ→ Cumulative Layout Shift (CLS) <0.1
+ㅤ→ Frame Rate (FR) 60 FPS"
+Frontend 개발 가이드-이 웹 사이트가 Internet Explorer 에서 작동하지 않음 처리,"```xml
+index.html 에 다음 코드를 추가
+<script>
+if(/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) {
+window.location = 'microsoft-edge:' + window.location;
+setTimeout(function() {
+window.location = 'https://go.microsoft.com/fwlink/?linkid=2135547';
+}, 1);
+}
+</script>
+```"
+Frontend 개발 가이드-파일명과 폴더구성 규칙,"app 이름이 app.system.user-edit 인 경우
+1. system 폴더 하위에 파일이 많지 않은 경우 app/system/user-edit.html , app/system/user-edit-ctrl.js 로 생성
+2. system 폴더 하위에 파일이 많아서 하위폴더를 더 만드는 경우 app/system/user/user-edit.html , app/system/user/user-edit-ctrl.js 로 생성
+예시)
+.state('app.system.user-list', {  // 일반목록
+url: '/user-list/:srch',
+templateUrl: 'app/system/user/user-list.html',
+}).state('app.system.user-detail', {  // 일반상세
+url: '/user-detail/:srch/:keyId',
+templateUrl: 'app/system/user/user-detail.html',
+}).state('app.system.user-edit', {  // 일반추가수정
+url: '/user-edit/:srch/:keyId',
+templateUrl: 'app/system/user/user-edit.html',
+}).state('app.system.user-edit.tab1', {  // 일반추가,수정내의 tab1
+url: '/user-edit/:srch/:keyId/tab1',
+templateUrl: 'app/system/user/user-edit-tab1.html',
+}).state('app.system.user-list.detail', {  // 분할화면으로 목록과 상세표시
+url: '/detail/:keyId',
+templateUrl: 'app/system/user/user-detail.html',
+}).state('app.system.user-list.edit', {  // 분할화면으로 목록과 추가수정표시
+url: '/edit/:keyId',
+templateUrl: 'app/system/user/user-edit.html',
+}).state('app.system.user-list.edit.tab1', {  // 분할화면으로 목록과 상세의 tab1 표시
+url: '/tab1',
+templateUrl: 'app/system/user/user-edit-tab1.html',
+})"
+IntelliJ IDEA 실행 시 android JDK 설정 화면,"### 내용
+IntelliJ IDEA 실행 시 android JDK 경로 설정 화면이 계속 나타나는데
+설정 화면을 나오지 않게 하려면 어떻게 해야 하나요?
+---
+### 답변
+![Untitled](IntelliJ%20IDEA%20%E1%84%89%E1%85%B5%E1%86%AF%E1%84%92%E1%85%A2%E1%86%BC%20%E1%84%89%E1%85%B5%20android%20JDK%20%E1%84%89%E1%85%A5%E1%86%AF%E1%84%8C%E1%85%A5%E1%86%BC%20%E1%84%92%E1%85%AA%E1%84%86%E1%85%A7%E1%86%AB%20de1c3694b548407e9c26fdf84a4664ff/Untitled.png)
+JDK 설정이 나오지 않도록 IntelliJ Settings에서 설정할 수 있습니다.
+단축키 (Win: Ctrl + Alt + S / Mac: Alt + ,)
+또는
+File -> Settings... 클릭
+Plugins 에서 Installed 클릭 후 Android에 Disable을 적용시키면 JDK가 나타나지 않습니다."
+intelliJ IDEA에서 Gradle 사용 시 exploded 가 안될때는 어떻게 하나요?,"### 내용
+인텔리제이에서 Gradle을 통한 Exploded 빌드를 진행하였는데,
+톰캣 시작이 안되는데, 어찌하면 되나요?
+---
+### 답변
+\> 인텔리제이 메뉴 > File >Settings > Build, Excution, Deployment > Build Tools > gradle
+Gradle Projects >
+Build and run using > IntelliJ IDEA
+Run tests using > IntelliJ IDEA
+OK
+### 댓글
+이클립스 사용할때는 발생 안하는 문제인가요?
+– [최원영](https://stackoverflowteams.com/c/softzion/users/1/)
+[Jun 29, 2022 at 3:38](https://stackoverflowteams.com/c/softzion/questions/48#comment7_49)"
+Java Maven Build가 내 PC에서만 실패할 경우 Repository 확인 필요,"### 내용
+- Java Backend Source를 내 PC에서 Maven Build를 할때 Build 오류가 나면서 계속해서 실패하고 있었음.
+- 다른 개발자 PC에서는 정상적으로 Build 되고 있음
+---
+### 답변
+아래의 방법을 단계적으로 실행해 보면서 확인 필요 함
+- Build 성공한 개발자 PC의 소스 폴더 전체를 복사해서 Build 확인
+- Build 성공한 개발자 PC의 .m2/repository 폴더 전체를 복사해서 Build 확인
+- 저는 이 방법으로 Build 성공함 :-) *"
+Local Server Mybatis 쿼리 로그에서 파라미터 ? 실제 값으로 치환하는 방법,"1. pom.xml 추가 후 -> clean -> maven install
+<dependency>
+<groupId>org.bgee.log4jdbc-log4j2</groupId>
+<artifactId>log4jdbc-log4j2-jdbc4</artifactId>
+<version>1.16</version>
+</dependency>
+2. src/main/resources/log4jdbc.log4j2.properties 추가
+log4jdbc.spylogdelegator.name=net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator
+log4jdbc.dump.sql.maxlinelength=0
+3. context-datasource.xml에서 driverClassName, url 변경
+<bean id=""dataSource"" class=""org.apache.commons.dbcp2.BasicDataSource"" destroy-method=""close"">
+<property name=""driverClassName"" value=""net.sf.log4jdbc.sql.jdbcapi.DriverSpy""/>
+<property name=""url"" value=""jdbc:log4jdbc:tibero:thin:@10.10.10.10:58630:tibero""/>
+<property name=""username"" value=""xxxxxx"" />
+<property name=""password"" value=""xxxxxx />
+</bean>
+4. tomcat edit config -> VM options 추가
+-Dlog4jdbc.drivers=com.tmax.tibero.jdbc.TbDriver"
+Lombok 모듈 eclipse 활성화하는 방법,"1. eclipse 에서 lombok 설치방법
+```vhdl
+Help -\> Install New Software -\> Work with 에
+lombok - https://projectlombok.org/p2 입력 후 Lombok select 후 Next 눌러서 인스톨함
+```
+![Untitled](Lombok%20%E1%84%86%E1%85%A9%E1%84%83%E1%85%B2%E1%86%AF%20eclipse%20%E1%84%92%E1%85%AA%E1%86%AF%E1%84%89%E1%85%A5%E1%86%BC%E1%84%92%E1%85%AA%E1%84%92%E1%85%A1%E1%84%82%E1%85%B3%E1%86%AB%20%E1%84%87%E1%85%A1%E1%86%BC%E1%84%87%E1%85%A5%E1%86%B8%200d7f96a1c3b64ca388ffdae87dc44303/Untitled.png)
+```erlang
+install 과정에 Trust 절차 있음
+설치 완료 후 eclipse 재시작하면 lombok 활성화 됨.
+```
+1. lombok 정상적으로 설치되었는지 확인 방법
+Help -> About Eclipse IDE -> Installation Details 버튼
+Installed Software 탭에서 lombok 으로 검색하면 아래와 같이 표시되면 정상적으로 설치된 것.
+![Untitled](Lombok%20%E1%84%86%E1%85%A9%E1%84%83%E1%85%B2%E1%86%AF%20eclipse%20%E1%84%92%E1%85%AA%E1%86%AF%E1%84%89%E1%85%A5%E1%86%BC%E1%84%92%E1%85%AA%E1%84%92%E1%85%A1%E1%84%82%E1%85%B3%E1%86%AB%20%E1%84%87%E1%85%A1%E1%86%BC%E1%84%87%E1%85%A5%E1%86%B8%200d7f96a1c3b64ca388ffdae87dc44303/Untitled%201.png)"
+MS SQL에서 만년 달력 테이블 생성은 어떻게 하나요?,"아래 쿼리문을 참고하여 만년 달력 테이블을 생성할 수 있습니다.
+```jsx
+-- 시작일
+DECLARE @StartDate  date = '20220811';
+-- 종료일
+DECLARE @CutoffDate date = DATEADD(DAY, -1, DATEADD(YEAR, 5, @StartDate));
+-- S_CALENDAR 테이블에 달력 데이터 추가
+;WITH seq(n) AS
+(
+SELECT 0 UNION ALL SELECT n + 1 FROM seq
+WHERE n < DATEDIFF(DAY, @StartDate, @CutoffDate)
+),
+d(d) AS
+(
+SELECT DATEADD(DAY, n, @StartDate) FROM seq
+),
+src AS
+(
+SELECT
+TheDate         = CONVERT(datetime, d),
+TheDay          = DATEPART(DAY,       d),
+TheDayName      = DATENAME(WEEKDAY,   d),
+TheWeek         = DATEPART(WEEK,      d),
+TheISOWeek      = DATEPART(ISO_WEEK,  d),
+TheDayOfWeek    = DATEPART(WEEKDAY,   d),
+TheMonth        = DATEPART(MONTH,     d),
+TheMonthName    = DATENAME(MONTH,     d),
+TheQuarter      = DATEPART(Quarter,   d),
+TheYear         = DATEPART(YEAR,      d),
+TheFirstOfMonth = DATEFROMPARTS(YEAR(d), MONTH(d), 1),
+TheLastOfYear   = DATEFROMPARTS(YEAR(d), 12, 31),
+TheDayOfYear    = DATEPART(DAYOFYEAR, d)
+FROM d
+)
+INSERT INTO S_CALENDAR (BASEDATE, DW)
+SELECT TheDate, TheDayName
+FROM src
+ORDER BY TheDate
+OPTION (MAXRECURSION 0);
+```"
+MS 팀즈에서 stackoverflow 에 등록된 정보 검색 및 공유하는 방법,"**STEP 1.** 채팅입력 하단의 ... 버튼 클릭
+![Untitled](MS%20%E1%84%90%E1%85%B5%E1%86%B7%E1%84%8C%E1%85%B3%E1%84%8B%E1%85%A6%E1%84%89%E1%85%A5%20stackoverflow%20%E1%84%8B%E1%85%A6%20%E1%84%83%E1%85%B3%E1%86%BC%E1%84%85%E1%85%A9%E1%86%A8%E1%84%83%E1%85%AC%E1%86%AB%20%E1%84%8C%E1%85%A5%E1%86%BC%E1%84%87%E1%85%A9%20%E1%84%80%E1%85%A5%E1%86%B7%E1%84%89%20f9f1943602a3464d92625d3c82fa0253/Untitled.png)
+**STEP 2.** 앱 검색에서 Stack Overflow for Team 검색및 추가
+![Untitled](MS%20%E1%84%90%E1%85%B5%E1%86%B7%E1%84%8C%E1%85%B3%E1%84%8B%E1%85%A6%E1%84%89%E1%85%A5%20stackoverflow%20%E1%84%8B%E1%85%A6%20%E1%84%83%E1%85%B3%E1%86%BC%E1%84%85%E1%85%A9%E1%86%A8%E1%84%83%E1%85%AC%E1%86%AB%20%E1%84%8C%E1%85%A5%E1%86%BC%E1%84%87%E1%85%A9%20%E1%84%80%E1%85%A5%E1%86%B7%E1%84%89%20f9f1943602a3464d92625d3c82fa0253/Untitled%201.png)
+**STEP 3.** 설치된 앱을 실행하여 검색
+![Untitled](MS%20%E1%84%90%E1%85%B5%E1%86%B7%E1%84%8C%E1%85%B3%E1%84%8B%E1%85%A6%E1%84%89%E1%85%A5%20stackoverflow%20%E1%84%8B%E1%85%A6%20%E1%84%83%E1%85%B3%E1%86%BC%E1%84%85%E1%85%A9%E1%86%A8%E1%84%83%E1%85%AC%E1%86%AB%20%E1%84%8C%E1%85%A5%E1%86%BC%E1%84%87%E1%85%A9%20%E1%84%80%E1%85%A5%E1%86%B7%E1%84%89%20f9f1943602a3464d92625d3c82fa0253/Untitled%202.png)
+**STEP 4.** 검색된 내용중 원하는 내용을 클릭하여 상세내용을 보러가거나 공유
+![Untitled](MS%20%E1%84%90%E1%85%B5%E1%86%B7%E1%84%8C%E1%85%B3%E1%84%8B%E1%85%A6%E1%84%89%E1%85%A5%20stackoverflow%20%E1%84%8B%E1%85%A6%20%E1%84%83%E1%85%B3%E1%86%BC%E1%84%85%E1%85%A9%E1%86%A8%E1%84%83%E1%85%AC%E1%86%AB%20%E1%84%8C%E1%85%A5%E1%86%BC%E1%84%87%E1%85%A9%20%E1%84%80%E1%85%A5%E1%86%B7%E1%84%89%20f9f1943602a3464d92625d3c82fa0253/Untitled%203.png)"
+"Mybatis에서 기간 (시작일, 종료일) 검색 쿼리","Mybatis에서 기간 (시작일, 종료일) 검색 쿼리는 아래와 같은 사항 고려하여 작성함
+1. 시작일, 종료일 따로 검색 조건 설정
+2. String으로 Frontend에서 전달된 값을 Date형으로 변환
+3. DB에 UTC형태로 저장되어 있을 경우 Local Date를 UTC로 변환
+```lisp
+AND (<![CDATA[
+PJ.PrjStartDate BETWEEN ufnConvertLocalToUTC(CONCAT(#{startDate}, ' 00:00:00')) AND ufnConvertLocalToUTC(CONCAT(#{endDate}, ' 23:59:59'))
+OR PJ.PrjEndDate   BETWEEN ufnConvertLocalToUTC(CONCAT(#{startDate}, ' 00:00:00')) AND ufnConvertLocalToUTC(CONCAT(#{endDate}, ' 23:59:59'))
+OR (
+PJ.PrjStartDate <= ufnConvertLocalToUTC(CONCAT(#{startDate}, ' 00:00:00'))
+AND PJ.PrjEndDate   >= ufnConvertLocalToUTC(CONCAT(#{endDate},   ' 23:59:59'))
+)
+]]>
+)
+```"
+MySQL DB 테이블 명세서 작성 쿼리,"```vbnet
+SELECT
+t1.table_name, t1.table_comment, column_name, data_type, column_type, column_key, is_nullable, column_default, extra, column_comment
+FROM
+(SELECT
+table_name, table_comment
+FROM
+information_schema.TABLES WHERE table_schema='simddle') t1,
+(SELECT
+table_name, column_name, data_type, column_type, column_key, is_nullable, column_default, extra, column_comment, ordinal_position
+FROM
+information_schema.COLUMNS WHERE table_schema='simddle') t2
+WHERE
+t1.table_name = t2.table_name
+ORDER BY
+t1.table_name, ordinal_position;
+```"
+MySQL 로그설정,[https://toshi15shkim.github.io/articles/2019-06/db-mysql-log](https://toshi15shkim.github.io/articles/2019-06/db-mysql-log)
+MySQL 환경설정,[https://hyorock.tistory.com/56](https://hyorock.tistory.com/56)
+ORACLE 개발 가이드-MyBatis 다중쿼리,"mysql 에서는 jdbc string 에 allowMultiQueries=true 를 설정하고, mapper 에 다중쿼리를 기록하면 되지만,
+ORACLE 에서는 이를 지원하지 않음
+따라서, mapper 에 다음과 같은 형식으로 multiline query 를 설정함
+{call
+declare
+begin
+update users set usernm = #{usernm} where userid = #{userid};
+update users set userpw = #{userpw} where userid = #{userid};
+end
+}"
+ORACLE 개발 가이드-키채번 방법,"select floor(to_char(sysdate, 'YYYYMMDDHH24MIDD') + DBMS_RANDOM.VALUE * 899999999999999) from dual"
+Salevis Care 자동 발송 개발 가이드,"Salevis Care 자동 발송 개발 가이드
+[https://softzion.sharepoint.com/:w:/s/msteams_d48474/EaSrqpYS4FBPouRTqaBzONYBbo3vwZaC6ZeYDeKB-htQfQ?e=KEVJfr](https://softzion.sharepoint.com/:w:/s/msteams_d48474/EaSrqpYS4FBPouRTqaBzONYBbo3vwZaC6ZeYDeKB-htQfQ?e=KEVJfr)"
+Salevis F/W Backend 개발 가이드 문서,"[BackEnd_DevelopmentGuide.pptx · master · Softzion / prm-salevis-was · GitLab]
+([https://gitlab.com/softzionrnd/prm-salevis-was/-/blob/master/BackEnd_DevelopmentGuide.pptx](https://gitlab.com/softzionrnd/prm-salevis-was/-/blob/master/BackEnd_DevelopmentGuide.pptx))
+코이카CRM 기준 - 2023/11/23일 / 이태민 주임 작성
+[https://softzion.sharepoint.com/:p:/s/msteams_d48474/ERPmiKTTPehGiEfR9RzwhIwBW7J_X8uXC-fHjHrE3eHZFg?e=aB2Ym9](https://softzion.sharepoint.com/:p:/s/msteams_d48474/ERPmiKTTPehGiEfR9RzwhIwBW7J_X8uXC-fHjHrE3eHZFg?e=aB2Ym9)"
+Salevis F/W Frontend 개발 가이드 문서,"[FrontEnd_DevelopmentGuide.pptx · master · Softzion / civasan-web · GitLab]
+([https://gitlab.com/softzionrnd/salevis-web-default/-/blob/master/FrontEnd_DevelopmentGuide.pptx](https://gitlab.com/softzionrnd/salevis-web-default/-/blob/master/FrontEnd_DevelopmentGuide.pptx))
+코이카CRM 기준 - 2023/11/23일 / 이태민 주임 작성
+[https://softzion.sharepoint.com/:p:/s/msteams_d48474/EeK5F3zubv5AmygtmASQqUEBzd2Jz6d6Wr79_yZU06hubQ?e=VxLFgJ](https://softzion.sharepoint.com/:p:/s/msteams_d48474/EeK5F3zubv5AmygtmASQqUEBzd2Jz6d6Wr79_yZU06hubQ?e=VxLFgJ)"
+Salevis F/W Frontend 개발 가이드 문서,"[FrontEnd_DevelopmentGuide.pptx · master · Softzion / civasan-web · GitLab]
+([https://gitlab.com/softzionrnd/salevis-web-default/-/blob/master/FrontEnd_DevelopmentGuide.pptx](https://gitlab.com/softzionrnd/salevis-web-default/-/blob/master/FrontEnd_DevelopmentGuide.pptx))
+코이카CRM 기준 - 2023/11/23일 / 이태민 주임 작성
+[https://softzion.sharepoint.com/:p:/s/msteams_d48474/EeK5F3zubv5AmygtmASQqUEBzd2Jz6d6Wr79_yZU06hubQ?e=VxLFgJ](https://softzion.sharepoint.com/:p:/s/msteams_d48474/EeK5F3zubv5AmygtmASQqUEBzd2Jz6d6Wr79_yZU06hubQ?e=VxLFgJ)"
+Salevis 서버 설치-Open Source Version,"1. Backend
+- WEB : Apache 2.4
+- WAS : Tomcat 8.5.70
+- Maven : 4.3.17
+- Spring F/W : 4.3.17
+- 전자정부 F/W : 3.7.0
+- JDK : 1.8
+- REDIS : 3.2.100
+- IDE : Eclipse Oxygen 3a Release (4.7.3a)
+2. Frontend
+- NPM : 6.1.0
+- Maven : 3.2.3
+- Gulp : 3.9.1
+- Bower : 1.8.4
+- Git : 2.14.1
+- AngularJS 1.5.11
+- IDE : Visual Studio Code 1.33.0"
+"Salevis 서버 설치-Salevis 서버 설치 정보 (Apache, Tomcat, Redis, 보안 취약점 설정)","Salevis 서버 설치 정보 (Apache, Tomcat, Redis, 보안설정) 가이드 문서를 공유합니다.
+Windows, Linux 서버에 따라서 각기 다르게 구성됩니다.
+Linux 용
+[https://softzion.sharepoint.com/:p:/s/msteams_d48474/EeEJ8zchtixPoBUIH7RmyiABxmM9EC30DRbENhqgiINBNQ?e=XlEfiN](https://softzion.sharepoint.com/:p:/s/msteams_d48474/EeEJ8zchtixPoBUIH7RmyiABxmM9EC30DRbENhqgiINBNQ?e=XlEfiN)
+Windows 용
+서버 설치 프로그램 (Apache, Tomcat, JDK)
+[https://softzion.sharepoint.com/:u:/s/msteams_d48474/EX3Q7xK5EQBJoZd3tRxCy0UBRa9XZFGU_pk08KKfKML5HQ?e=66v9YB](https://softzion.sharepoint.com/:u:/s/msteams_d48474/EX3Q7xK5EQBJoZd3tRxCy0UBRa9XZFGU_pk08KKfKML5HQ?e=66v9YB)
+서버 설치 가이드
+[https://softzion.sharepoint.com/:x:/s/msteams_d48474/EdATPtyTm9NEgVWqkxhYwLIBEu5Qvqynf2JONqrK2-3eqA?e=s8yUfb](https://softzion.sharepoint.com/:x:/s/msteams_d48474/EdATPtyTm9NEgVWqkxhYwLIBEu5Qvqynf2JONqrK2-3eqA?e=s8yUfb)
+Apache, Tomcat 설정파일 (표준협회 CRM, Windows용, SSL적용, Load Balance적용)
+[https://softzion.sharepoint.com/:f:/s/msteams_d48474/ElnmjYLZPhRHnw00xkyDKwIBZbtTlBZm1LlDP-cn4XCCpw?e=R3q2AK](https://softzion.sharepoint.com/:f:/s/msteams_d48474/ElnmjYLZPhRHnw00xkyDKwIBZbtTlBZm1LlDP-cn4XCCpw?e=R3q2AK)
+AJP 설정 정리된 블로그 글
+[http://gnujava.com/board/article_recent_view.jsp?board_no=6&article_no=2468&menu_cd=6&menu_high_cd=6&memu_cd=19](http://gnujava.com/board/article_recent_view.jsp?board_no=6&article_no=2468&menu_cd=6&menu_high_cd=6&memu_cd=19)
+소프트자이온, 보안 취약점 점검 레포트 (2022/10/13일)
+Windows 서버 레포트
+[https://softzion.sharepoint.com/:b:/s/msteams_d48474/EfA5RGGyWDNIvIONXYZe-bcB73jBD0DRhjlC2DP9r6xNhA?e=gPuyYr](https://softzion.sharepoint.com/:b:/s/msteams_d48474/EfA5RGGyWDNIvIONXYZe-bcB73jBD0DRhjlC2DP9r6xNhA?e=gPuyYr)
+Linux 서버 레포트
+[https://softzion.sharepoint.com/:b:/s/msteams_d48474/EelcGOb2W0hCqkqfWLndPMsBMCwbp72XfXbo-XXZvOw1cQ?e=gxqe2O](https://softzion.sharepoint.com/:b:/s/msteams_d48474/EelcGOb2W0hCqkqfWLndPMsBMCwbp72XfXbo-XXZvOw1cQ?e=gxqe2O)
+보안 취약점 설정 가이드
+[https://ssv.skill.or.kr/Security/unix-security-vulnerability](https://ssv.skill.or.kr/Security/unix-security-vulnerability)
+[https://softzion.sharepoint.com/:b:/s/msteams_d48474/Eel-S8IwiXRPm72jOBFdreQBjsD56fcJBmuNIY50mqe68w?e=wQ3x0X](https://softzion.sharepoint.com/:b:/s/msteams_d48474/Eel-S8IwiXRPm72jOBFdreQBjsD56fcJBmuNIY50mqe68w?e=wQ3x0X)
+Window 서버
+[https://ssv.skill.or.kr/Cloud-Security/windows-security-vulnerability](https://ssv.skill.or.kr/Cloud-Security/windows-security-vulnerability)
+Window PC
+[https://ssv.skill.or.kr/Cloud-Security/windows-pc-security-vulnerability](https://ssv.skill.or.kr/Cloud-Security/windows-pc-security-vulnerability)
+Tomcat 서버
+[https://ssv.skill.or.kr/Cloud-Security/tomcat-security-vulnerability](https://ssv.skill.or.kr/Cloud-Security/tomcat-security-vulnerability)
+MS SQL
+[https://ssv.skill.or.kr/Cloud-Security/db-mssql-security-vulnerability](https://ssv.skill.or.kr/Cloud-Security/db-mssql-security-vulnerability)
+MY SQL
+[https://ssv.skill.or.kr/Cloud-Security/db-mysql-security-vulnerability](https://ssv.skill.or.kr/Cloud-Security/db-mysql-security-vulnerability)
+REDIS
+[https://ssv.skill.or.kr/Cloud-Security/db-redis-security-vulnerability](https://ssv.skill.or.kr/Cloud-Security/db-redis-security-vulnerability)
+APACHE
+[https://ssv.skill.or.kr/Cloud-Security/apache-security-vulnerability](https://ssv.skill.or.kr/Cloud-Security/apache-security-vulnerability)
+IIS
+[https://ssv.skill.or.kr/Cloud-Security/iis-security-vulnerability](https://ssv.skill.or.kr/Cloud-Security/iis-security-vulnerability)
+Docker
+[https://ssv.skill.or.kr/Cloud-Security/docker-security-vulnerability](https://ssv.skill.or.kr/Cloud-Security/docker-security-vulnerability)"
+Salevis 서버 설치-Tomcat 운영 가이드,"[https://softzion.sharepoint.com/sites/msteams_d48474/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2Fmsteams%5Fd48474%2FShared%20Documents%2F%EC%A7%80%EC%8B%9D%EA%B3%B5%EC%9C%A0%2FSalevis%20%EA%B0%9C%EB%B0%9C%20%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%2FTomcat%5F9%2Ex%5F%EC%9A%B4%EC%98%81%EB%A9%94%EB%89%B4%EC%96%BC%2Epdf&parent=%2Fsites%2Fmsteams%5Fd48474%2FShared%20Documents%2F%EC%A7%80%EC%8B%9D%EA%B3%B5%EC%9C%A0%2FSalevis%20%EA%B0%9C%EB%B0%9C%20%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC&p=true&ga=1](https://softzion.sharepoint.com/sites/msteams_d48474/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2Fmsteams%5Fd48474%2FShared%20Documents%2F%EC%A7%80%EC%8B%9D%EA%B3%B5%EC%9C%A0%2FSalevis%20%EA%B0%9C%EB%B0%9C%20%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%2FTomcat%5F9%2Ex%5F%EC%9A%B4%EC%98%81%EB%A9%94%EB%89%B4%EC%96%BC%2Epdf&parent=%2Fsites%2Fmsteams%5Fd48474%2FShared%20Documents%2F%EC%A7%80%EC%8B%9D%EA%B3%B5%EC%9C%A0%2FSalevis%20%EA%B0%9C%EB%B0%9C%20%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC&p=true&ga=1)
+위 링크를 참조해주시기 바랍니다."
+Salevis 서버 셋팅 가이드 자료,"Salevis 서버 셋팅 가이드 자료
+1. Backend
+- WEB : Apache 2.4
+- WAS : Tomcat 8.5.70
+- Maven : 4.3.17
+- Spring F/W : 4.3.17
+- 전자정부 F/W : 3.7.0
+- JDK : 1.8
+- REDIS : 3.2.100
+- IDE : Eclipse Oxygen 3a Release (4.7.3a)
+2. Frontend
+- NPM : 6.1.0
+- Maven : 3.2.3
+- Gulp : 3.9.1
+- Bower : 1.8.4
+- Git : 2.14.1
+- AngularJS 1.5.11
+- IDE : Visual Studio Code 1.33.0
+Salevis 서버 설치 정보 (Apache, Tomcat, Redis, 보안설정) 가이드 문서를 공유합니다.
+Windows, Linux 서버에 따라서 각기 다르게 구성됩니다.
+[Linux 용] ([https://softzion.sharepoint.com/:p:/s/msteams_d48474/EeEJ8zchtixPoBUIH7RmyiABxmM9EC30DRbENhqgiINBNQ?e=XlEfiN](https://softzion.sharepoint.com/:p:/s/msteams_d48474/EeEJ8zchtixPoBUIH7RmyiABxmM9EC30DRbENhqgiINBNQ?e=XlEfiN))
+[Windows 용] ([https://softzion.sharepoint.com/:x:/s/msteams_d48474/EdATPtyTm9NEgVWqkxhYwLIBEu5Qvqynf2JONqrK2-3eqA?e=s8yUfb](https://softzion.sharepoint.com/:x:/s/msteams_d48474/EdATPtyTm9NEgVWqkxhYwLIBEu5Qvqynf2JONqrK2-3eqA?e=s8yUfb))
+[Tomcat 운영 가이드]
+([https://softzion.sharepoint.com/:b:/s/msteams_d48474/EWYm2HxZSvxIm-fEiYPS1JYBCgsHkdslu_Xbj0Muapikew?e=5GXkHK](https://softzion.sharepoint.com/:b:/s/msteams_d48474/EWYm2HxZSvxIm-fEiYPS1JYBCgsHkdslu_Xbj0Muapikew?e=5GXkHK))
+---
+KISA에서 제공하는 보안 가이드 입니다.
+Web, was서버 설치후 보안 체크시 활용하면 좋습니다.
+[https://softzion.sharepoint.com/:b:/s/msteams_d48474/EVC_d-z6J8lJu-kiVjy8t8sBPTQXPEttL2pKZWokJHLw4A](https://softzion.sharepoint.com/:b:/s/msteams_d48474/EVC_d-z6J8lJu-kiVjy8t8sBPTQXPEttL2pKZWokJHLw4A)"
+Salevis 서버 셋팅을 위한 가이드 자료,"KISA에서 제공하는 보안 가이드 입니다.
+Web, was서버 설치후 보안 체크시 활용하면 좋습니다.
+[https://softzion.sharepoint.com/:b:/s/msteams_d48474/EVC_d-z6J8lJu-kiVjy8t8sBPTQXPEttL2pKZWokJHLw4A](https://softzion.sharepoint.com/:b:/s/msteams_d48474/EVC_d-z6J8lJu-kiVjy8t8sBPTQXPEttL2pKZWokJHLw4A)
+---
+Salevis 서버 셋팅 가이드 자료
+1. Backend
+- WEB : Apache 2.4
+- WAS : Tomcat 8.5.70
+- Maven : 4.3.17
+- Spring F/W : 4.3.17
+- 전자정부 F/W : 3.7.0
+- JDK : 1.8
+- REDIS : 3.2.100
+- IDE : Eclipse Oxygen 3a Release (4.7.3a)
+2. Frontend
+- NPM : 6.1.0
+- Maven : 3.2.3
+- Gulp : 3.9.1
+- Bower : 1.8.4
+- Git : 2.14.1
+- AngularJS 1.5.11
+- IDE : Visual Studio Code 1.33.0
+Salevis 서버 설치 정보 (Apache, Tomcat, Redis, 보안설정) 가이드 문서를 공유합니다.
+Windows, Linux 서버에 따라서 각기 다르게 구성됩니다.
+---
+[Linux 용] ([https://softzion.sharepoint.com/:p:/s/msteams_d48474/EeEJ8zchtixPoBUIH7RmyiABxmM9EC30DRbENhqgiINBNQ?e=XlEfiN](https://softzion.sharepoint.com/:p:/s/msteams_d48474/EeEJ8zchtixPoBUIH7RmyiABxmM9EC30DRbENhqgiINBNQ?e=XlEfiN))
+[Windows 용] ([https://softzion.sharepoint.com/:x:/s/msteams_d48474/EdATPtyTm9NEgVWqkxhYwLIBEu5Qvqynf2JONqrK2-3eqA?e=s8yUfb](https://softzion.sharepoint.com/:x:/s/msteams_d48474/EdATPtyTm9NEgVWqkxhYwLIBEu5Qvqynf2JONqrK2-3eqA?e=s8yUfb))
+[Tomcat 운영 가이드]
+([https://softzion.sharepoint.com/:b:/s/msteams_d48474/EWYm2HxZSvxIm-fEiYPS1JYBCgsHkdslu_Xbj0Muapikew?e=5GXkHK](https://softzion.sharepoint.com/:b:/s/msteams_d48474/EWYm2HxZSvxIm-fEiYPS1JYBCgsHkdslu_Xbj0Muapikew?e=5GXkHK))"
+servlet-mapping 이 적용되지 않을 때,"servlet-mapping 에 url-pattern을 추가하여 로컬에서는 정상 동작을 하였는데,
+운영에서 제대로 반영되지 않았을 경우
+해당 서버의 아파치에 url-patteren 추가해야함
+vi /etc/httpd/conf.d/httpd-vhost.conf
+ProxyPassMatch ^/(**.*\.pattern**)$ balancer://tomcat
+systemctl restart httpd"
+Softzion Git 관리 가이드,"Softzion Git 관리 가이드 - 2023/11/27 , 이상목 연구원 작성
+[https://softzion.sharepoint.com/:p:/s/msteams_d48474/EbzcgzM2VZBPqZ0qVrAY8lMBO-y9CMW0bBSkF_1klt3i0w?e=CN49Vx](https://softzion.sharepoint.com/:p:/s/msteams_d48474/EbzcgzM2VZBPqZ0qVrAY8lMBO-y9CMW0bBSkF_1klt3i0w?e=CN49Vx)"
+Sparrow 클라우드의 정적/동적 분석,"| 동적 / https://sparrowfasoo.com/kr/product/dast/ | 정적 / https://sparrowfasoo.com/kr/product/sast/ |
+| --- | --- |
+| 웹 어플리케이션 취약점 분석 | 소스코드 보안 취약점 점검 |
+| 대표 URL로부터 포함된 하위 경로들을 자동으로 수집, 보안 취약점을 검출함. | 다양한 프로그래밍 언어와 프레임워크를 지원, 검출된 취약점의 위치와 실제 코드에 대한 수정 가이드를 제공함. |
+| 웹 주소를 입력하여 점검 진행 | 소스코드 압축파일을 업로드하여 점검 진행 |
+| 낫띵 | 압축파일 크기에 제한이 있음 |
+| 위시드마인드 기준 평균 6.5시간 소요 | 위시드마인드 기준 평균 10분 소요 |
+로그인 계정 안내 받으셨다면, **[여기](https://cloud.sparrowfasoo.com/pages/landing/ko)**에서 로그인 하시면 됩니다.
+스패로우 클라우드는 **무료계정**도 제공하고 있으니, 개인계정을 신청하셔서 **뭘 10회 무료 점검**도 하실 수 있습니다.
+![https://stackoverflowteams.com/c/softzion/images/s/6dbef952-5a0c-4015-9559-f3ca03718228.png](https://stackoverflowteams.com/c/softzion/images/s/6dbef952-5a0c-4015-9559-f3ca03718228.png)"
+SPF 등록 가이드,"스팸 메일 인식율을 줄이기 위해서 메일서버에 SPF 등록을 위한 가이드 자료
+[https://helpdesk.midasinsight.com/hc/ko/articles/900000287723--%EA%B0%80%EC%9D%B4%EB%93%9C-SPF-%EB%93%B1%EB%A1%9D-%EA%B0%80%EC%9D%B4%EB%93%9C](https://helpdesk.midasinsight.com/hc/ko/articles/900000287723--%EA%B0%80%EC%9D%B4%EB%93%9C-SPF-%EB%93%B1%EB%A1%9D-%EA%B0%80%EC%9D%B4%EB%93%9C)"
+SQL - LEFT JOIN 사용시 주의,"```r
+SELECT
+...
+FROM
+campaignimplcustomer C LEFT JOIN tenantcustomer T ON C.CustId = T.CustId
+WHERE
+C.TenantId = CONV( #{srchTenantId}, 36, 10 ) AND T.TcId = CONV(#{keyId}, 36, 10)
+와 같이 조건문을 사용하면 tenantcustomer 에 CustId 가 없는 항목이 SELECT 가 되지 않으므로 LEFT JOIN 의 의미가 없으므로 반드시 아래와 같이 사용해야 됩니다.
+SELECT
+...
+FROM
+campaignimplcustomer C LEFT JOIN tenantcustomer T ON C.CustId = T.CustId AND T.TcId = CONV(#{keyId}, 36, 10)
+WHERE
+C.TenantId = CONV( #{srchTenantId}, 36, 10 )
+```"
+SQL Server 성능 튜닝,"[https://towardsdev.com/sql-server-performance-tuning-all-methods-1694c12b5fa](https://towardsdev.com/sql-server-performance-tuning-all-methods-1694c12b5fa)
+번역 자료
+[https://softzion.sharepoint.com/:b:/s/msteams_d48474/ETe8cGU_APhGsZ9Uu7oCyXYBEGriQHXF95XNyq-CovX0-g?e=512KJE](https://softzion.sharepoint.com/:b:/s/msteams_d48474/ETe8cGU_APhGsZ9Uu7oCyXYBEGriQHXF95XNyq-CovX0-g?e=512KJE)
+SQL Server 성능 튜닝: 이 문서에서는 SQL Server 데이터베이스 및 쿼리의 성능을 개선하기 위한 다양한 방법, 팁 및 쿼리를 제공합니다.
+실행 계획: 이 문서에서는 실행 계획이 무엇인지, 실행 계획을 사용하여 누락된 인덱스를 식별하고 쿼리를 최적화하는 방법, 누락된 인덱스 세부 정보 옵션을 사용하여 인덱스를 생성하는 방법에 대해 설명합니다.
+통계 및 확장 이벤트: 이 문서에서는 데이터베이스의 통계를 모니터링 및 업데이트하고 쿼리 성능과 관련된 이벤트를 캡처하기 위해 set statistics io on 문, EXEC sp_updatestats 명령 및 확장 이벤트 기능을 사용하는 방법을 보여 줍니다.
+DBCC 명령: 이 문서에서는 데이터베이스의 무결성, 공간 사용량 및 메모리 상태를 확인하는 데 사용할 수 있는 몇 가지 DBCC 명령을 소개하고 다양한 옵션과 함께 사용하는 방법에 대한 예제를 제공합니다.
+모범 사례 및 도구: 이 문서에는 신중한 인덱싱, 루프 및 하위 쿼리 피하기, 데이터와 로그 파일 분리하기, SQL Server 버전 업데이트하기 등 SQL Server 성능 튜닝을 위한 몇 가지 모범 사례가 나와 있습니다. 또한 서버 및 데이터베이스의 성능을 측정하고 분석하는 데 사용할 수 있는 몇 가지 도구(예: 성능 모니터, 활동 모니터 및 SQL Server 프로파일러)에 대해서도 언급하고 있습니다."
+Tomcat 구동이 느린 경우,"Tomcat 구동 시,
+아래와 같은 메시지가 뜨면서 느리게 뜰때,
+Creation of SecureRandom instance for session ID generation using [SHA1PRNG]
+![Untitled](Tomcat%20%E1%84%80%E1%85%AE%E1%84%83%E1%85%A9%E1%86%BC%E1%84%8B%E1%85%B5%20%E1%84%82%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%20%E1%84%80%E1%85%A7%E1%86%BC%E1%84%8B%E1%85%AE%2008163aaf7a1646a99a137afac509bde6/Untitled.png)
+-Djava.security.egd=file:/dev/./urandom
+빨간색 부분 을 추가해주면 훨씬 빨라집니다.
+난수를 생성하는 부분에서 오래 걸리는 부분이라고 합니다."
+Troubleshooting - 문제해결-footable 문제,"angularjs 프레임워크를 사용할 때, 간혹 권한관리 기능에서 권한목록이 안 나오는 경우가 있습니다.
+이때, table 의 class 에서 footable 을 삭제하세요."
+Troubleshooting - 문제해결-gulp serve:dist 시 FATAL ERROR: CALL_AND_RETRY_LAST Allocation failed - JavaScript heap out of memory,"node 에서 처리할 메모리가 과다하게 초과함
+gulp serve:dist --max-old-space-size=8192"
+Troubleshooting - 문제해결-백엔드프레임워크 pom.xml 수정사항,"log4j 의 버전 2.8.2 을 2.17.1
+- > 서버시작할 때 log4j 오류나는 문제 해결
+```
+<plugins>
+<plugin>
+<groupId>org.apache.maven.plugins</groupId>
+<artifactId>maven-war-plugin</artifactId>
+<version>3.3.1</version>
+</plugin>
+</plugins>
+```
+- > maven install 시 오류 나는 문제 해결"
+TTA 의 V&V 시험 관련,"# **접수 및 결제 절차**
+1. TTA 한국정보통신기술협회 사이트 ( [https://sw.tta.or.kr/](https://sw.tta.or.kr/) )에서
+""시험인증 신청"" > ""확인 및 검증(V&V) 시험"" 접수.
+2. 접수번호 발급, 서류 담당자 배정 및 시험 합의서 양식 초안 받음.
+3. 사업계획서 > ""성능지표 목표 및 측정방법 "" 표에 명시된 내용으로 시험 합의서 초안을 우선 작성 후, 서류 담당자와의 전화 상담 및 메일 피드백을 통해 거듭 수정.
+1. 빠르면 1주, 지연시 1개월 가량 소요됨.
+2. 시험 합의서 초기 상담 준비 내용 : 시험 합의서 초안 (시험환경, 시험절차서 등)
+3. 상담 전 시험 합의서 초안 작성 > 상담 시 시험 환경 및 절차에 대한 협의 목적.
+4. 합의서 초안 생략 상담 > 시험 절차 및 방법에만 대한 안내 받음.
+4. 최종 시험합의 완료 후 시험 수수료 산정 및 납부.
+# **최종 시험 합의서 제출 및 결제 이후**
+1. 시험 담당자 배정, 현장형 / 내방형 진단 시험 방식 선택 및 일정 확정
+2. 시험 환경 구성 필수 시: 여분의 설비로 준비 (eg. 개발자 노트북)
+3. 시험 당일 방문, 시험 환경 및 코드 제품 시연 (약 1시간 소요 예상)
+4. 방문 후 약 1-2주 내로 시험 담당자의 결과보고서 / 시험성적서 초안 수령, 피드백 후 완성본 수령.
+### TTA 결과보고서 발급 이후
+""기업지원플러스 G48"" 에서 시험검사 발급승인 안내 알림 메일이 오게 됩니다."
+UTC to Local 설정 ,"DATETIME 에 대한 UTC 처리
+1. DB 서버 UTC 설정
+regdate 는 datetime 사용
+2. WAS 서버는 system 의 timezone 설정을 따라 감. 운영서버는 통상 UTC 설정을 하고 사용하는 것이 바람직
+3. 사용자개발환경 JVM에 UTC 설정 적용
+eclipse 에서
+Run --> Run configuration --> Apache tomcat --> Tomcat Server --> VM arguments 에
+-Duser.timezone=UTC
+을 추가
+Intellij Idea는 Run메뉴>Edit Configuration메뉴>Server Tab의 VM Options에 추가
+-Duser.timezone=UTC
+4. html 파일
+<span>{{vc.data.RegDate | utcToLocal:'yyyy-MM-dd h:mm a'}}</span>
+5. js 파일
+console.log($filter('utcToLocal')(vm.data.RegDate,'yyyy-MM-dd h:mm a'));
+6. mapper 의 select 에서는 값을 포맷하지 않고 select 함
+select RegDate from 테이블명
+7. mapper 의 insert 에서는 NOW 를 사용하면 UTC 시간으로 insert 됨
+8. 메타정보관리에서
+regdate 의 논리데이터유형 = 날짜형
+DATE 타입에 대한 UTC 처리 (birthday 등)
+1. DB 서버 UTC 설정
+birthday 는 date 사용
+2. mapper 의 select 에서는 값을 포맷하여 select 함
+select DATE_FORMAT(BirthDay, '%Y-%m-%d') AS BirthDay from 테이블명
+3. mapper 의 insert 에서는 YYYY-MM-DD 형태의 string 형으로 insert 함
+4. html, js 파일에서 filter 필요 없이 string 그대로 출력
+5. 메타정보관리에서
+birthday 의 논리데이터유형 = 문자형
+검색을 위해 FROM ~ TO 처리
+1. html 파일
+<input type=""text"" ng-model=""vc.RegDateFrom"" ng-change=""vc.srch.RegDateFrom = (vc.RegDateFrom | date: 'yyyy-MM-dd')"">
+<input type=""text"" ng-model=""vc.RegDateTo"" ng-change=""vc.srch.RegDateTo = (vc.RegDateTo | date: 'yyyy-MM-dd')"">
+2. js 파일
+getList() 함수와 getListCnt() 함수에 동일하게 아래와 같이 적용
+var data = angular.copy(vm.srch);
+data.RegDateFrom = $filter('localToUtc')(data.RegDateFrom, 'from');
+data.RegDateTo = $filter('localToUtc')(data.RegDateTo, 'to');
+=> 2019-09-16 ~ 2019-09-16 일때 2019-09-15 15:00:00 ~ 2019-09-16 14:59:59 로 변환됨
+3. mapper 의 select 에서는
+WHERE RegDate <![CDATA[>=]]> STR_TO_DATE(#{RegDateFrom}, '%Y-%m-%d %H:%i:%s')
+AND RegDate <![CDATA[<=]]> STR_TO_DATE(#{RegDateTo}, '%Y-%m-%d %H:%i:%s')"
+WeSeed CRM - slf4j does not exist,"IntelJ에서 maven 빌드 시
+slf4j does not exist 와 같은 에러가 발생하는 경우 해결법입니다. !
+에러 발생 이유 :
+기존 pom.xml 에 등록되어 있는 dependency는 Angular12 버전에 맞춰져 있어
+Angular16 버전인 WeSeed-CRM 에서는 dependency로 등록되어 있는 라이브러리를
+찾지 못하여 발생하는 이슈입니다.
+해결법 :
+1. 자사 .m2 파일을 저장해놓은 디렉터리로 이동
+- ex) C:\Users\사용자\.m2
+2. 새 디렉터리 생성 - 기존 repository만 존재
+![Untitled](WeSeed%20CRM%20-%20slf4j%20does%20not%20exist%20073c226a69f94187a294aafe5e35643c/Untitled.png)
+1. intelJ 설정에서 maven local path 지정
+![Untitled](WeSeed%20CRM%20-%20slf4j%20does%20not%20exist%20073c226a69f94187a294aafe5e35643c/Untitled%201.png)
+- Local repository → override 클릭 후 새로 생성한 repository로 path 변경
+1. 변경이 완료 되었다면 소스와 문서 다운로드
+![Untitled](WeSeed%20CRM%20-%20slf4j%20does%20not%20exist%20073c226a69f94187a294aafe5e35643c/Untitled%202.png)
+1. 다운이 완료되었다면 Maven Project Reload
+![Untitled](WeSeed%20CRM%20-%20slf4j%20does%20not%20exist%20073c226a69f94187a294aafe5e35643c/Untitled%203.png)
+2. was 폴더 lib 디렉터리 이동
+- ex) C:\Users\사용자\workspace\03_project\weseedcrm\weseedcrm-was\target\weseed-api-service-1.0.0\WEB-INF\lib
+3. lib 디렉터리에 파일 덮어쓰기
+- 아래 폴더 압축 풀어서 lib에 덮어쓰기 해주세요 ~
+[lib.zip](WeSeed%20CRM%20-%20slf4j%20does%20not%20exist%20073c226a69f94187a294aafe5e35643c/lib.zip)
+4. was - tomcat 실행하시면 빌드 잘 됩니다."
+WESEED Mind 화상통화 개발 현황 및 SendBird API 연동 가이드,"- **홈페이지** : [https://sendbird.com](https://sendbird.com/docs/calls/v1/javascript/getting-started/make-first-call)
+- **계정 문의** : 서비스 기획팀 김재영 과장
+- **연동 개발** : 개발3팀 권태영 책임
+- **일반 문의** : [jd.kim@sendbird.com](http://gw.softzion.com/mai/#)
+- **기술 문의** : [support@sendbird.com](http://gw.softzion.com/mai/#)
+---
+## **개요**
+WESEED Mind의 비대면 상담 용도로 화상 통화 기능이 필요.
+화상통화 API 제공 업체로 Azure 와 SendBird를 비교했는데 비용과 레코딩 파일 저장 기간의
+압도적 우세로 SendBird 선정.
+## **SendBird DirectCall VS GroupCall**
+본사 AI 연구개발 용도 녹취 파일이 필수로 필요하여 통화 종료 시 브라우저로 다운되는
+DirectCall 방식보다 클라우드 서버에 저장되는 GroupCall API로 개발 진행.
+기본 해상도는 1280x720p에 24fps로 별도 설정은 불가하고 네트워크 상황에 따라 자동 조절.
+GroupCall 진행 시 SendBird 홈페이지에서 Cloud 녹취 파일 저장 On, Off 설정 가능.
+1. DirectCall 특징
+- 1:1 통화에 특화 (Peer to Peer)
+- 비용이 저렴
+- 녹취 파일이 통화 종료 후 브라우저에 파일 다운로드 형식으로 저장
+- 내담자가 연결 되는 순간 즉시 양쪽 비디오, 마이크 활성화
+2. GroupCall 특징
+- 최대 6명 다자간 영상 통화 및 최대 100명 다자간 음성 통화 지원
+- DirectCall에 비해 비용이 2배 이상
+- 녹취파일이 클라우드 서버에 존재하고 2주간 다운로드(API 제공) 가능,
+다운로드에 메가바이트 당 비용이 발생 하지만 저렴한 편임
+- 방을 개설하면 상담사 비디오, 마이크가 활성화 되어 내담자 접속까지 준비 가능
+## WESEED Mind 비대면 상담 구현 현황
+GroupCall API는 다자간 통화 용도이지만 Mind 비대면 상담은 1:1로 진행되기 때문에
+1:1에 맞추어 개발이 완료된 상태이고 향후 다자간 통화가 필요할 경우
+다자간 통화 구현 컴포넌트에 remoteParticipantEntered 이벤트를 등록하여 참여자 입장 시
+RemoteView를 추가하는 방식으로 진행하면 됨. 현재 1:1 비대면 상담 로직은 아래와 같음.
+- 예약 시간 10분 전부터 비대면 상담 시작 가능 -> 상담사 방 개설
+- > 내담자에게 Push 알림 발송 -> 내담자가 알림 클릭 시 방 입장 -> 상담 종료
+## Source 설명
+- src/app/@core/service/video-group-call.service
+: GroupCall API 연동을 직접적으로 수행하는 Service
+1. `SendBirdCall.init(appId)`
+: API 연동 시 최초 호출 되는 Init 함수 appId는 SendBird 홈페이지 로그인 후 확인
+2. `authenticate(userId)`
+: SendBirdCall 권한 생성 함수. 1, 2번 항목이 수행 되어야 Room 생성 가능
+3. `createRoom(type: string, localVideoView?: HTMLMediaElement, audioView?: HTMLAudioElement)`
+: Room 생성, type (video, audio)에 따라 화상, 음성 통화 방이 생성 되고
+영상통화 일 경우 local video Element를 전달하면 영상이 자동 Play 되고
+음성통화 일 경우 audio Element를 전달하면 됨.
+4. `enterRoom(type: string, roomId: string, localVideoView?: HTMLMediaElement, remoteView?: HTMLMediaElement)`
+: Room 입장, roomId는 Room 생성 시 ScheduleCounsel 테이블 VideoCallRoomId
+Column에 저장되고 Push 알림으로 전송된 SchCnslId를 이용하여 조회.
+영상통화 일 경우 local, remote video Element를 전달하면 영상이 자동 Play 되고 음성통화 일 경우 audio Element를 전달하면 됨.
+5. `setRoomEvent()`
+: remoteParticipantEntered - 참여자 입장 시 이벤트,
+remoteParticipantExited - 참여자 퇴장 시 이벤트,
+remoteAudioSettingsChanged - 참여자 오디오 변경 시 이벤트,
+remoteVideoSettingsChanged - 참여자 비디오 변경 시 이벤트
+6. `setMic(enable:boolean)`
+: 마이크 활성화 설정
+7. `setCam(enable:boolean)`
+: 카메라 활성화 설정
+8. `exitRoom()`
+: Room 참여자가 종료 버튼 클릭 시 Room 나가기
+9. `dispose()`
+: Room 개설자가 종료 버튼 클릭 시 Room 삭제
+## Mobile Push 알림
+방 개설 시 Consulting.updateVideoCallRoomId Update 문이 실행 될 때 Notification이
+자동 감지해서 selectKey 값을 참조하여 Push 발송.
+Push 관련된 자세한 사항은 임선규 연구원에게 문의."
+Wiki-Backend 개발 가이드-AJP 설정,"[https://www.lesstif.com/system-admin/apache-httpd-tomcat-connector-mod_jk-reverse-proxy-mod_proxy-12943367.html](https://www.lesstif.com/system-admin/apache-httpd-tomcat-connector-mod_jk-reverse-proxy-mod_proxy-12943367.html)
+AJP 설정"
+Wiki-Backend 개발 가이드-Apache 1개에 Tomcat 2개 띄우기,"```xml
+Apach 설정
+{HTTP_HOME}/conf/httpd.conf
+<VirtualHost *:80>
+ServerAdmin abc@abc.com
+DocumentRoot ""/home/www/www.abc.com""         ServerName www.abc.com
+ServerAlias www.abc.co.kr www.abc.net
+ErrorLog ""/var/log/apache2/www.abc.com-error.log""
+CustomLog ""/var/log/apache2/www.abc.com-access.log"" common
+JkMount /*.jsp worker1
+JkMount /servlet/* worker1
+JkMount /*.action worker1
+JkMount /*/*.action worker1
+</VirtualHost>
+{HTTP_HOME}/conf/worker.properties
+: worker의 port를 서로 다르게 설정하고 뒤에 설정할 Tomcat의 설정 File인 server.xml의 Connector port 가 된다.
+workers.tomcat_home=/usr/local/tomcat5523, /usr/local/tomcat5523-web workers.java_home=/usr/local/java_1.6
+ps=/
+worker.list=worker1, worker2
+# mod_jk for 1st web
+worker.worker1.port=18009
+worker.worker1.host=localhost
+worker.worker1.type=ajp13
+worker.worker1.lbfactor=1
+# mod_jk for 2nd web
+worker.worker2.port=28009
+worker.worker2.host=localhost
+worker.worker2.type=ajp13
+worker.worker2.lbfactor=1
+Tomcat 설정 : 2개의 Tomcat 설정 File인 server.xml의 port를 각각 다르게 설정한다.
+{CATALINA_HOME}/conf/server.xml - 1st Tomcat
+<Server port=""18005"" shutdown=""SHUTDOWN"">
+```"
+"Wiki-Backend 개발 가이드-Illegal mix of collations (utf8mb4_unicode_ci,IMPLICIT) and (utf8mb4_general_ci,IMPLICIT) for operation '=’","```sql
+select ufnGetMainPageForUser(0, 11, 'app.dashboard');
+와 같이 ufnGetMainPageForUser 를 호출하면
+Illegal mix of collations (utf8mb4_unicode_ci,IMPLICIT) and (utf8mb4_general_ci,IMPLICIT) for operation '='
+에러가 발생합니다.
+원인은 = 로 비교할 필드가 collations character set 이 안 맞기 때문에 발생하는 문제라는데,
+104 라인에 아래 문장에서 발생합니다.
+WHERE T.pageUrl2 = vMainPage;
+그런데, T.pageUrl2 는 screen.PageUrl 로 COLLATE utf8mb4_unicode_ci 속성이 지정되어 있는데도 이런 오류가 발생하는 경우
+WHERE T.pageUrl2 COLLATE utf8mb4_general_ci = vMainPage;
+와 같이 수정하여 문제는 발생하지 않음.
+```"
+Wiki-Backend 개발 가이드-JAVA 벡엔드 동일 API 반복호출 방지 방안,"JAVA 백엔드에서
+모의해킹을 통한 동일 API 반복호출시 동일데이터가 저장되는 문제에 관하여
+SessionInterceptorApi.preHandle() 에 다음코드를 추가해 보았습니다.
+문제가 없을지 다른 코드리뷰를 해 주면 좋겠습니다.
+예상 되는 문제점은 다음과 같은데, 더 찾아주면 좋겠습니다.
+1. getRemoteAddr() 은 요청자 아이피인데, 동일 네트워크 망에서 다른 PC에서 오는 경우 같은 아이피로 간주될 수 있습니다.
+2. request.getQueryString() 은 query 스트링인데, query 스트링을 계속 바꿔가면서 호출하는 경우는 다른 API 호출로 간주되므로 막을 수 없음
+3. 같은 페이지에서 동일한 api 를 호출하는 경우 문제 발생하므로, query 스트링을 다르게 지정해야 됨
+예를 들어 한페이지에 여러 commoncode 호출시 각각의 commoncode 에 query 스트링 다르게 부여해야 됨
+4. userCacheAccessor 를 지우는 과정이 없기 때문에 무한정 적제될 우려 있음, 스케줄러로 초기화 필요
+if (StringUtils.equals(request.getMethod(), ""OPTIONS"")) { // preflight 때문에 넣어 주어야 됩니다.
+logger.debug(""request OPTIONS"");
+return true;
+}
+if (request.getRequestURI().indexOf(""/insert/"") == 0 || request.getRequestURI().indexOf(""/update/"") == 0 || request.getRequestURI().indexOf(""/delete/"") == 0) {
+String remote = request.getRemoteAddr();
+String url = remote + ""--"" + request.getRequestURI();
+Date d = (Date)userCacheAccessor.getUserModelerProcData(""CHECK-URL"", url, Date.class);
+Date now = new Date();
+if (d != null) {
+long sDiff = (now.getTime() - d.getTime()) / 1000;
+if (sDiff < 3) { // 3초이내에 호출
+logger.error(""same request is called in 3 seconds:"" + url);
+return false;
+}
+}
+userCacheAccessor.setUserModelerProcData(""CHECK-URL"", url, now);
+}"
+Wiki-Backend 개발 가이드-Java 소스코드에서 MyBatis interceptor 의 의한 암호화,"```xml
+<!-- sql-config.xml -->
+<configuration>
+<!-- 데이터베이스 상에서 암호화 사용할 때 옵션을 활성화 함 -->
+<plugins>
+<plugin interceptor=""egovframework.softzion.salevis.interceptor.Encryption""/>
+</plugins>
+</configuration>
+Encryption.java 코드에 encryption, decryption 코드 처리함.
+select 할 때는 decryption 코드가 동작하고, insert/update/delete 할 때는 encryption 코드가 동작함.
+```"
+Wiki-Backend 개발 가이드-mapper 파일명 및 필드명 네이밍 규칙,"mapper 폴더 하위에 목적에 맞게 폴더를 생성하고, 폴더하위에 파일을 생성함.
+반드시, 파일명과 namespace 명을 일치시킵니다.
+예를 들어, 파일명이 User.xml 일때, User.xml 내용의 <mapper namespace=""User""> 로 일치시킴
+이 부분이 일치되지 않는 경우 프론트에서 호출하는 User.getUserList 가 어디에 있는지 찾기기 힘듭니다.
+MySQL DB 의 기본 설정은 대소문자를 구분하기 때문에, 기본 설정을 사용하기 위해서는 다음 규칙을 따라야 합니다.
+1. 테이블명은 소문자로 통일
+2. 필드명은 Camel Case 로 UserId, RegDate, RegUser 와 같은 형태로, 프론트엔드 스크립트에서 사용하는 변수명과 동일하게 해야 됩니다.
+3. 쿼리문은 Json 데이터의 Key 값과 동일하게 다음과 같이 작성합니다.
+SELECT UserId, RegDate, RegUser FROM users
+만약 필드명이 userid, regdate, reguser 로 되어 있다면
+SELECT userid AS UserId, regdate AS RegDate, reguser AS RegUser FROM usres 로 작성해야 되기 때문에 이와 같이 Alias 문을 사용하지 않기 위해서 Key 값과 동일한 대소문자로 필드값을 작성해야 됩니다."
+Wiki-Backend 개발 가이드-MariaDB에서 테이블명세서 추출 쿼리,"```sql
+SELECT a.TABLE_NAME '테이블명', a.TABLE_COMMENT '논리테이블명', b.ORDINAL_POSITION '순번', b.COLUMN_NAME '컬럼명', b.DATA_TYPE '데이터 타입', b.COLUMN_TYPE '데이터 길이', b.COLUMN_KEY 'KEY', b.IS_NULLABLE 'NULL허용', b.EXTRA '자동여부', b.COLUMN_DEFAULT '디폴트값', b.COLUMN_COMMENT '컬럼설명'
+FROM information_schema.TABLES a
+JOIN information_schema.COLUMNS b ON a.TABLE_NAME = b.TABLE_NAME AND a.TABLE_SCHEMA = b.TABLE_SCHEMA
+WHERE a.TABLE_SCHEMA = 'DB명'
+ORDER BY a.TABLE_NAME, b.ORDINAL_POSITION;
+```"
+Wiki-Backend 개발 가이드-MS SQL 만년 달력 테이블 생성,"```sql
+DECLARE @StartDate  date = '20220811';
+DECLARE @CutoffDate date = DATEADD(DAY, -1, DATEADD(YEAR, 5, @StartDate));
+;WITH seq(n) AS
+(
+SELECT 0 UNION ALL SELECT n + 1 FROM seq
+WHERE n < DATEDIFF(DAY, @StartDate, @CutoffDate)
+),
+d(d) AS
+(
+SELECT DATEADD(DAY, n, @StartDate) FROM seq
+),
+src AS
+(
+SELECT
+TheDate         = CONVERT(datetime, d),
+TheDay          = DATEPART(DAY,       d),
+TheDayName      = DATENAME(WEEKDAY,   d),
+TheWeek         = DATEPART(WEEK,      d),
+TheISOWeek      = DATEPART(ISO_WEEK,  d),
+TheDayOfWeek    = DATEPART(WEEKDAY,   d),
+TheMonth        = DATEPART(MONTH,     d),
+TheMonthName    = DATENAME(MONTH,     d),
+TheQuarter      = DATEPART(Quarter,   d),
+TheYear         = DATEPART(YEAR,      d),
+TheFirstOfMonth = DATEFROMPARTS(YEAR(d), MONTH(d), 1),
+TheLastOfYear   = DATEFROMPARTS(YEAR(d), 12, 31),
+TheDayOfYear    = DATEPART(DAYOFYEAR, d)
+FROM d
+)
+INSERT INTO S_CALENDAR (BASEDATE, DW)
+SELECT TheDate, TheDayName
+FROM src
+ORDER BY TheDate
+OPTION (MAXRECURSION 0);
+```"
+Wiki-Backend 개발 가이드-MyBatis mapper 에서 foreach 를 사용하여 여러개의 sql 실행,"```lua
+<foreach item=""item"" index=""index"" collection=""ItemTypes"">
+INSERT INTO Sccustreserveitem
+(
+ReserveItemId,
+Type
+) VALUES (
+FLOOR(DATE_FORMAT(NOW(), '%Y%m%d%H%i%s') + RAND() * 899999999999999),
+#{item.type}
+);
+</foreach>
+와 같이 foreach 의 property 인 open, separator, close 를 선언하여 따로 "";"" 을 지정하지 말고, query 문에 ; 를 기입하도록 합니다.
+만약 properties 를 사용한다면 아래와 같이 separator="";"" close="";"" 를 선언합니다. 이렇게 해야지만 데이터가 없을 때 빈 ; 가 찍히지 않습니다.
+<foreach item=""item"" index=""index"" collection=""ItemTypes"" separator="";"" close="";"">
+INSERT INTO Sccustreserveitem
+(
+ReserveItemId,
+Type
+) VALUES (
+FLOOR(DATE_FORMAT(NOW(), '%Y%m%d%H%i%s') + RAND() * 899999999999999),
+#{item.type}
+)
+</foreach>
+다중쿼리를 실행하기 위해서는 jdbc connection string 에 allowMultiQueries=true 를 지정해 주어야 됨
+하지만 상기와 같은 방법은 데이터 array 수 만큼 INSERT 문이 실행되어 트랜젝션이 발생하므로, 아래와 같은 방법이 바람직하다.
+INSERT INTO Sccustreserveitem
+(
+ReserveItemId,
+Type
+) VALUES
+<foreach item=""item"" index=""index"" collection=""ItemTypes"" separator="","" close="""">
+(
+FLOOR(DATE_FORMAT(NOW(), '%Y%m%d%H%i%s') + RAND() * 899999999999999),
+#{item.type}
+)
+</foreach>
+그리고, foreach 문에서 FLOOR(DATE_FORMAT(NOW(), '%Y%m%d%H%i%s') + RAND() * 899999999999999) 와 같이 호출하면
+중복된 키값이 채번될 수 있으므로,
+(SELECT FLOOR(DATE_FORMAT(NOW(), '%Y%m%d%H%i%s') + RAND() * 899999999999999))
+와 같이 subquery 를 써 주면 된다.
+따라서,
+INSERT INTO Sccustreserveitem
+(
+ReserveItemId,
+Type
+) VALUES
+<foreach item=""item"" index=""index"" collection=""ItemTypes"" separator="","" close="""">
+(
+(SELECT FLOOR(DATE_FORMAT(NOW(), '%Y%m%d%H%i%s') + RAND() * 899999999999999)),
+#{item.type}
+)
+</foreach>
+```"
+Wiki-Backend 개발 가이드-MyBatis mapper 에서 foreach 를 사용하여 여러개의 sql 실행,"```lua
+<foreach item=""item"" index=""index"" collection=""ItemTypes"">
+INSERT INTO Sccustreserveitem
+(
+ReserveItemId,
+Type
+) VALUES (
+FLOOR(DATE_FORMAT(NOW(), '%Y%m%d%H%i%s') + RAND() * 899999999999999),
+#{item.type}
+);
+</foreach>
+와 같이 foreach 의 property 인 open, separator, close 를 선언하여 따로 "";"" 을 지정하지 말고, query 문에 ; 를 기입하도록 합니다.
+만약 properties 를 사용한다면 아래와 같이 separator="";"" close="";"" 를 선언합니다. 이렇게 해야지만 데이터가 없을 때 빈 ; 가 찍히지 않습니다.
+<foreach item=""item"" index=""index"" collection=""ItemTypes"" separator="";"" close="";"">
+INSERT INTO Sccustreserveitem
+(
+ReserveItemId,
+Type
+) VALUES (
+FLOOR(DATE_FORMAT(NOW(), '%Y%m%d%H%i%s') + RAND() * 899999999999999),
+#{item.type}
+)
+</foreach>
+다중쿼리를 실행하기 위해서는 jdbc connection string 에 allowMultiQueries=true 를 지정해 주어야 됨
+하지만 상기와 같은 방법은 데이터 array 수 만큼 INSERT 문이 실행되어 트랜젝션이 발생하므로, 아래와 같은 방법이 바람직하다.
+INSERT INTO Sccustreserveitem
+(
+ReserveItemId,
+Type
+) VALUES
+<foreach item=""item"" index=""index"" collection=""ItemTypes"" separator="","" close="""">
+(
+FLOOR(DATE_FORMAT(NOW(), '%Y%m%d%H%i%s') + RAND() * 899999999999999),
+#{item.type}
+)
+</foreach>
+그리고, foreach 문에서 FLOOR(DATE_FORMAT(NOW(), '%Y%m%d%H%i%s') + RAND() * 899999999999999) 와 같이 호출하면
+중복된 키값이 채번될 수 있으므로,
+(SELECT FLOOR(DATE_FORMAT(NOW(), '%Y%m%d%H%i%s') + RAND() * 899999999999999))
+와 같이 subquery 를 써 주면 된다.
+따라서,
+INSERT INTO Sccustreserveitem
+(
+ReserveItemId,
+Type
+) VALUES
+<foreach item=""item"" index=""index"" collection=""ItemTypes"" separator="","" close="""">
+(
+(SELECT FLOOR(DATE_FORMAT(NOW(), '%Y%m%d%H%i%s') + RAND() * 899999999999999)),
+#{item.type}
+)
+</foreach>
+```"
+Wiki-Backend 개발 가이드-Mybatis mapper 파일 수정시 자동 refresh,"context-mapper.xml 의
+<bean id=""sqlSessionFactory"" class=""softzion.common.datasource.RefreshableSqlSessionFactoryBean"">
+[Share](https://stackoverflowteams.com/c/softzion/a/153/5)
+[Edit](https://stackoverflowteams.com/c/softzion/posts/153/edit)
+Follow
+answered Sep 2, 202"
+Wiki-Backend 개발 가이드-MyBatis ORACLE에서 다중쿼리 실행,"```jsx
+<insert id=""insertMetaColumnBatch"" parameterType=""map"">
+{call
+declare
+begin
+<foreach item=""item"" index=""index"" collection=""lists"" open="""" separator="";"" close="";"">
+..... #{item. } ....
+</foreach>
+end
+}
+</insert>
+```
+오라클은 MySQL 과 같이 다중쿼리를 실행하기 위해서는 jdbc connection string 이 없음"
+Wiki-Backend 개발 가이드-MyBatis 에 RefreshableSqlSessionFactoryBean 적용으로 서버 재시작 없이 수정된 SQL문 즉시 적용,"```xml
+common-api 1.0.2 이상 지원
+context-mapper.xml 에 다음을 적용
+<!-- 3. SqlSessionFactoryBean 설정 -->
+<!-- bean id=""sqlSessionFactory"" class=""org.mybatis.spring.SqlSessionFactoryBean"" -->
+<bean id=""sqlSessionFactory"" class=""softzion.common.datasource.RefreshableSqlSessionFactoryBean"">
+```"
+Wiki-Backend 개발 가이드-MySQL 개인정보 필드 암호화,"```bash
+모든 전화번호(Mobile, TelNo)필드, 이메일(Email)필드 암호화합니다.
+Insert/Update 시 : HEX(AES_ENCRYPT(#{Mobile}, 'SALEVIS4'))
+Select 시 : CAST(AES_DECRYPT(UNHEX(Mobile), 'SALEVIS4') AS CHAR) AS Mobile
+Where 조건 사용시 : Mobile = HEX(AES_ENCRYPT(#{Mobile}, 'SALEVIS4'))
+전화번호의 경우 필드를 암호화 해 놓은 경우 검색시 like 검색을 할수가 없다.
+따라서, 국번 또는 전화번호 4자리 검색을 위해 Mobile(TelNo) 필드와 지역번호(02, 010) 필드, 국번필드(앞4자리), 전화번호(뒤4자리) 필드를 따로 가지게 하고, 검색시 다음과 같은 조건문을 사용한다.
+AND (Mobile = HEX(AES_ENCRYPT(#{Mobile}, 'SALEVIS4')) OR Mobile1 = HEX(AES_ENCRYPT(#{Mobile}, 'SALEVIS4')) OR Mobile2 = HEX(AES_ENCRYPT(#{Mobile}, 'SALEVIS4')) OR Mobile3 = HEX(AES_ENCRYPT(#{Mobile}, 'SALEVIS4')))
+또한, 전화번호 입력시 프론트에서 Mobile, TelNo, ContactMobile, ContactTelNo, Email, GdMobile 을 백엔드로 보내면, 백엔드에서 interceptor 에 의해 Encryption.java 에서 Mobile, Mobile1, Mobile2, Mobile3 와 같이 param 을 자동으로 쪼개서 생성해 준다.
+따라서,
+<if test='Mobile != null'>Mobile = HEX(AES_ENCRYPT(#{Mobile}, 'SALEVIS4')),</if>
+<if test='Mobile != null'>Mobile1 = HEX(AES_ENCRYPT(#{Mobile1}, 'SALEVIS4')),</if>
+<if test='Mobile != null'>Mobile2 = HEX(AES_ENCRYPT(#{Mobile2}, 'SALEVIS4')),</if>
+<if test='Mobile != null'>Mobile3 = HEX(AES_ENCRYPT(#{Mobile3}, 'SALEVIS4')),</if>
+와 같이 insert, update 를 하면 Mobile1, Mobile2, Mobile3 필드에도 쪼개진 값이 자동으로 들어간다.
+MySQL 의 AES_ENCRYPT 는 AES-128 만 지원함
+MySQL 의 PASSWORD 함수는 독립적인 암호화 알고리즘을 사용하며 암호화 결과로 41바이트 길이의 스트링으로 변환
+```"
+Wiki-Backend 개발 가이드-MySQL 달력 만들기,"```sql
+-- 지정범위의 주별 달력 만들기
+SELECT MIN(CASE WHEN A.DOW = 1 THEN A.DOFM END) AS Sun,
+MIN(CASE WHEN A.DOW = 2 THEN A.DOFM END) AS Mon,
+MIN(CASE WHEN A.DOW = 3 THEN A.DOFM END) AS Tue,
+MIN(CASE WHEN A.DOW = 4 THEN A.DOFM END) AS Wed,
+MIN(CASE WHEN A.DOW = 5 THEN A.DOFM END) AS Thu,
+MIN(CASE WHEN A.DOW = 6 THEN A.DOFM END) AS Fri,
+MIN(CASE WHEN A.DOW = 7 THEN A.DOFM END) AS Sat
+FROM (WITH RECURSIVE CALENDAR AS (SELECT 1                                   AS LEVEL,
+DAYOFMONTH('2022-01-01') AS DOFM,
+DAYOFWEEK('2022-01-01') AS DOW,
+WEEK('2022-01-01')      AS WOY
+UNION ALL
+SELECT CALENDAR.LEVEL + 1,
+DAYOFMONTH(DATE_ADD('2022-01-01', INTERVAL CALENDAR.LEVEL DAY)),
+DAYOFWEEK(DATE_ADD('2022-01-01', INTERVAL CALENDAR.LEVEL DAY)),
+WEEK(DATE_ADD('2022-01-01', INTERVAL CALENDAR.LEVEL DAY))
+FROM CALENDAR
+WHERE CALENDAR.LEVEL <= DATEDIFF('2022-12-31', '2022-01-01'))
+SELECT *
+FROM CALENDAR) A
+GROUP BY A.WOY
+ORDER BY A.WOY;
+-- 지정범위의 날짜 만들기
+WITH RECURSIVE CALENDAR AS (SELECT 1                                   AS LEVEL,
+'2022-01-01' AS D,
+DAYOFWEEK('2022-01-01') AS DOW,
+WEEK('2022-01-01')      AS WOY
+UNION ALL
+SELECT CALENDAR.LEVEL + 1,
+DATE_ADD('2022-01-01', INTERVAL CALENDAR.LEVEL DAY),
+DAYOFWEEK(DATE_ADD('2022-01-01', INTERVAL CALENDAR.LEVEL DAY)),
+WEEK(DATE_ADD('2022-01-01', INTERVAL CALENDAR.LEVEL DAY))
+FROM CALENDAR
+WHERE CALENDAR.LEVEL <= DATEDIFF('2022-12-31', '2022-01-01'))
+SELECT *
+FROM CALENDAR;
+```"
+Wiki-Backend 개발 가이드-MySQL 에서 DB LOCK 조회,"```sql
+SELECT straight_join
+dl.THREAD_ID
+, est.SQL_TEXT
+, dl.OBJECT_SCHEMA
+, dl.OBJECT_NAME
+, dl.INDEX_NAME
+, dl.LOCK_TYPE
+, dl.LOCK_MODE
+, dl.LOCK_STATUS
+, dl.LOCK_DATA
+FROM
+performance_schema.data_locks dl inner join performance_schema.events_statements_current est on dl.THREAD_ID = est.THREAD_ID
+ORDER BY est.TIMER_START,dl.OBJECT_INSTANCE_BEGIN;
+show processlist ;
+```"
+Wiki-Backend 개발 가이드-MySQL 테이블 명세서 출력 쿼리,"```sql
+SELECT A.TABLE_SCHEMA   AS DB,
+A.TABLE_NAME     AS Table_ID,
+A.TABLE_COMMENT  AS Table_NAME,
+B.COLUMN_NAME    AS Column_ID,
+B.COLUMN_COMMENT AS Column_Name,
+B.DATA_TYPE      AS Data_Type,
+CASE B.DATA_TYPE WHEN 'varchar' THEN B.CHARACTER_OCTET_LENGTH
+WHEN 'char' THEN B.CHARACTER_OCTET_LENGTH
+WHEN 'decimal' THEN CONCAT('(', B.NUMERIC_PRECISION, ',', B.NUMERIC_SCALE, ')')
+WHEN 'numeric' THEN CONCAT('(', B.NUMERIC_PRECISION, ',', B.NUMERIC_SCALE, ')')
+WHEN 'tinyint' THEN B.NUMERIC_PRECISION
+WHEN 'smallint' THEN B.NUMERIC_PRECISION
+WHEN 'mediumint' THEN B.NUMERIC_PRECISION
+WHEN 'int' THEN B.NUMERIC_PRECISION
+WHEN 'bigint' THEN B.NUMERIC_PRECISION
+WHEN 'date' THEN B.DATETIME_PRECISION
+WHEN 'datetime' THEN B.DATETIME_PRECISION
+WHEN 'time' THEN B.DATETIME_PRECISION
+WHEN 'timestamp' THEN B.DATETIME_PRECISION
+ELSE B.CHARACTER_OCTET_LENGTH END AS Col_Length,
+B.COLUMN_DEFAULT AS Default_Value,
+B.IS_NULLABLE AS Is_Nullables,
+CASE B.IS_NULLABLE WHEN 'NO' THEN 'N'
+WHEN 'YES' THEN 'Y' END AS Is_Null,
+CASE B.COLUMN_KEY WHEN 'PRI' THEN 'Y' ELSE '' END AS PK
+FROM INFORMATION_SCHEMA.TABLES A,
+INFORMATION_SCHEMA.COLUMNS B
+WHERE A.TABLE_NAME = B.TABLE_NAME
+AND A.TABLE_SCHEMA = B.TABLE_SCHEMA
+AND A.TABLE_TYPE = 'BASE TABLE'
+AND A.TABLE_SCHEMA in ('civasan')
+order by Table_ID, B.ORDINAL_POSITION ;
+```"
+Wiki-Backend 개발 가이드-Mysql 페이징 속도 개선 방법,"[https://blog.lulab.net/database/optimize-pagination-sql-by-join-instead-of-limit/](https://blog.lulab.net/database/optimize-pagination-sql-by-join-instead-of-limit/)
+macustomercluster 는 2,239,865 건, where ClusterNo = '9999' 는 233,647 건
+select p.CustomerClusterId, p.CustomerId, p.CustomerName, p.ClusterNo from
+( select CustomerClusterId from macustomercluster where ClusterNo = '9999' LIMIT 233530, 10
+) q JOIN macustomercluster p ON p.CustomerClusterId = q.CustomerClusterId;
+=> 0.156초
+select p.CustomerClusterId, p.CustomerId, p.CustomerName, p.ClusterNo from macustomercluster p where ClusterNo = '9999' LIMIT 233540, 10;
+=> 0.483초"
+Wiki-Backend 개발 가이드-MySQL에서 Insert/Update,"```sql
+테이블구조 :
+CREATE TABLE tb_book (
+mem_id VARCHAR(30)
+, mem_contents VARCHAR(1000)
+, del_flag CHAR(1) DEFAULT 'N'
+, del_date DATETIME DEFAULT '1970-01-01 00:00:00'
+);
+ALTER TABLE tb_profile ADD UNIQUE (mem_id, del_date);
+INSERT/UPDATE :
+INSERT INTO tb_profile (
+mem_id
+, mem_contents
+) VALUES (
+'james'
+, '페어마운틴고등학교를 졸업하고......'
+)
+ON DUPLICATE KEY UPDATE
+mem_contents = '그가 연기자로서 출연한 작품은......';
+DELETE :
+UPDATE tb_profile SET del_flag = 'Y', del_date = NOW() WHERE mem_id='james' AND del_flag = 'N'
+```"
+"Wiki-Backend 개발 가이드-ORACLE 테이블스페이스생성, 사용자생성","1. su - oracle
+2. sqlplus / as sysdba
+3. 테이블스페이스 생성 :
+CREATE TABLESPACE devtbs DATAFILE '/u01/app/oracle/oradata/devtbs_data.dbf' SIZE 10M AUTOEXTEND ON NEXT 10M;
+4. 사용자생성 :
+CREATE USER devuser IDENTIFIED BY devpass
+DEFAULT TABLESPACE devtbs
+TEMPORARY TABLESPACE temp;
+5. 권한부여 :
+GRANT CONNECT, RESOURCE, CREATE JOB, CREATE VIEW, CREATE ANY CONTEXT TO devuser;
+GRANT EXECUTE ON DBMS_CRYPTO TO devuser;
+6. 사용자삭제 :
+DROP USER devuser CASCADE  (사용자가 생성한 table 이 있을 때, CASCADE 옵션 필요)"
+Wiki-Backend 개발 가이드-ORACLE에서 Insert/Update,"오라클에서는 MySQL에서 처럼 인덱스 없이도 SQL문 기록한 조건에 따라 Insert/Update 가 가능함
+MERGE INTO TB_SCORE S
+USING TMP_SCORE T
+ON (S.COURSE_ID = T.COURSE_ID AND S.STUDENT_ID = T.STUDENT_ID)
+WHEN MATCHED THEN
+UPDATE SET S.SCORE = T.SCORE
+WHEN NOT MATCHED THEN
+INSERT (S.COURSE_ID, S.STUDENT_ID, S.SCORE)
+VALUES (T.COURSE_ID, T.STUDENT_ID, T.SCORE);"
+Wiki-Backend 개발 가이드-REDIS 세션정보를 저장하는,"Backend 에서 REDIS 를 사용하는 목적은 WAS서버들 간에 세션정보를 공유하기 위함입니다. WAS 서버를 이중화하게 될 경우 WAS 서버간의 세션을 공유하기 위해 별도의 기술을 사용해야 됩니다.
+예를 들어 톰캣의 경우 All-to-all Session Replication 설정을 통해 세션클러스터링을 할 수도 있습니다. 하지만 가장 좋은 방법은 현재 Salevis4 에서 사용하고 있는것과 같이 Session Storage 를 분리하는 방식입니다.
+REDIS 는 Session Storage 역할을 수행합니다. Backend REDIS 설정시 다음 사항을 고려해 주세요.
+- 통상은 REDIS 서버 포트인 6379 가 firewall 에서 안 열려 있기 때문에 외부에서 접속할 수는 없지만,
+firewall 도 열려 있고, password 가 설정되어 있지 않은 경우는 매우 위험할 수 있으므로, password 설정을 꼭 해 주세요.
+- LINUX의 REDIS 서버의 password 설정은 /etc/redis/redis.conf 파일에서
+requirepass YOURPASSWORD
+에 설정합니다. 설정후 재시작은 systemctl redis restart
+Windows REDIS 서버의 password 설정은 C:\Program Files\Redis\redis.windows-service.conf 파일에서 설정합니다.
+설정후 재시작은 windows 서비스에서 redis 재시작 합니다.
+- Salevis4 backend 서버에서는 config-prd.properties 파일에서
+salevis4.redis.connection.password=YOURPASSWORD
+에 설정합니다.
+- REDIS password 는 szrnd20210416 으로 모든 프로젝트에서 동일하게 사용합니다. 개발시 로컬 redis 패스워드를 일일히 바꿀 수 없으므로 일괄통일해서 사용합니다.
+REIDIS 에 저장되는 세션정보는 다음 그림과 같습니다.
+![Untitled](Wiki-Backend%20%E1%84%80%E1%85%A2%E1%84%87%E1%85%A1%E1%86%AF%20%E1%84%80%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%83%E1%85%B3-REDIS%20%E1%84%89%E1%85%A6%E1%84%89%E1%85%A7%E1%86%AB%E1%84%8C%E1%85%A5%E1%86%BC%E1%84%87%E1%85%A9%E1%84%85%E1%85%B3%E1%86%AF%20%E1%84%8C%E1%85%A5%E1%84%8C%E1%85%A1%2063df52baa5c6425ba73047174e1f74ac/Untitled.png)
+USER_CACHE - USER_CACHE:테넌트아이디 Bucket에 USERID 로 key 를 Generate 해서 저장합니다.
+value 는 logincontroller 에서 MySession 이라는 객체를 생성하여 저장하는데 common-api 에서 그림과 같이 json string 형태로 변환하여 저장됩니다.
+REDIS 는 Bucket 구조를 사용할수 있는데 그림과 같은 폴더구조라고 보시면 됩니다.
+Bucket 밑에는 문서가 있는데 문서는 Hash 테이블 구조의 key / value 형식의 list 입니다.
+위의 그림은 REDIS 를 GUI 로 관리할 수 있게 해 주는 redis desktop manager 입니다. redis desktop manager 는 현재 유료버전으로 바뀌었으며,
+[https://softzion.sharepoint.com/sites/msteams_d48474/Shared%20Documents/%EC%A7%80%EC%8B%9D%EA%B3%B5%EC%9C%A0/redis-desktop-manager-0.8.8.384.zip](https://softzion.sharepoint.com/sites/msteams_d48474/Shared%20Documents/%EC%A7%80%EC%8B%9D%EA%B3%B5%EC%9C%A0/redis-desktop-manager-0.8.8.384.zip)
+에서 무료버전일때 프로그램을 다운로드 받을 수 있습니다.
+REDIS 데이터 커맨드창에서 확인하기
+![Untitled](Wiki-Backend%20%E1%84%80%E1%85%A2%E1%84%87%E1%85%A1%E1%86%AF%20%E1%84%80%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%83%E1%85%B3-REDIS%20%E1%84%89%E1%85%A6%E1%84%89%E1%85%A7%E1%86%AB%E1%84%8C%E1%85%A5%E1%86%BC%E1%84%87%E1%85%A9%E1%84%85%E1%85%B3%E1%86%AF%20%E1%84%8C%E1%85%A5%E1%84%8C%E1%85%A1%2063df52baa5c6425ba73047174e1f74ac/Untitled%201.png)
+REDIS 세션에는 타임아웃 기능이 있습니다.
+1. 설정은 config-prd.properties 파일에서 다음을 설정합니다.
+# redis Token & Token Cookie expire Time TimeUnit : HOURS, MINUTES
+com.softz.cookie.token.expire_timeunit=HOURS
+# redis Token & Token Cookie expire Time
+com.softz.cookie.token.expire_time=24
+- HOURS, 24 의 경우 24시간
+- MINUTES, 30 의 경우 30분
+2. 세션 타임아웃 기능 동작 방식은
+- REDIS 에서 세션정보는 아래와 같이 디렉토리 구조로 저장되며,
+USER_CACHE:테넌트아이디 디렉토리 하위에 userkey 별 세션정보가 key & value 형태로 저장됩니다.
+- redis 는 각 디렉토리별 타임아웃 시간을 지정할 수 있으며, 디렉토리가 최초 생성될 때 config-prd.properties 에 지정된 시간으로 timeout 설정을 하며, 이 시간이 경과되면 디렉토리가 자동으로 삭제됩니다.
+- 디렉토리 밑에 어떤 key 를 access(조회) 하더라도, 해당디렉토리는 시간이 연장되기 때문에 디렉토리는 삭제되지 않습니다.
+- 단, key 에 access(조회) 할 때, value 에 담긴 MySession.accesstime 정보를 현재시간으로 갱신하도록 하여, 삭제되지 않은 key 값에 대해서도 타임아웃 여부를 체크하는 이중 타임아웃 체크 구조 입니다.
+- Redis desktop manager 에서 디렉토리를 선택하면 우측상단에 TTL 값이 나오는데, 이 값이 만료까지 남은 초 입니다. 선택할 때 마다 계속 줄어드는 것을 확인할 수 있습니다.
+- ** requirepass 는 2개의 파일에 모두 수정해야 합니다. redis.windows.conf파일과 redis.windows-service.conf
+모바일에서 로그인하는 경우는 세션이 만료되지 않아야 됩니다.
+따라서 이를 위해 모바일용 세션을 처리하는 방법은 userkey 앞부분에 ""MCACHE"" 라는 문자열을 붙이면 해당 userkey 는 redis 모듈에서 TTL 을 체크하지 않습니다.
+MCACHE 가 붙은 userkey 들은 아래 그림과 같이 MOBILE_CACHE 라는 상위폴더에 MOBILE_CACHE:테넌트아이디 키에 생성되며, 해당 키는 TTL: -1 로 TTL 체크를 하지 않습니다.
+![Untitled](Wiki-Backend%20%E1%84%80%E1%85%A2%E1%84%87%E1%85%A1%E1%86%AF%20%E1%84%80%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%83%E1%85%B3-REDIS%20%E1%84%89%E1%85%A6%E1%84%89%E1%85%A7%E1%86%AB%E1%84%8C%E1%85%A5%E1%86%BC%E1%84%87%E1%85%A9%E1%84%85%E1%85%B3%E1%86%AF%20%E1%84%8C%E1%85%A5%E1%84%8C%E1%85%A1%2063df52baa5c6425ba73047174e1f74ac/Untitled%202.png)"
+Wiki-Backend 개발 가이드-REDIS 세션정보를 저장하는,"Backend 에서 REDIS 를 사용하는 목적은 WAS서버들 간에 세션정보를 공유하기 위함입니다. WAS 서버를 이중화하게 될 경우 WAS 서버간의 세션을 공유하기 위해 별도의 기술을 사용해야 됩니다.
+예를 들어 톰캣의 경우 All-to-all Session Replication 설정을 통해 세션클러스터링을 할 수도 있습니다. 하지만 가장 좋은 방법은 현재 Salevis4 에서 사용하고 있는것과 같이 Session Storage 를 분리하는 방식입니다.
+REDIS 는 Session Storage 역할을 수행합니다. Backend REDIS 설정시 다음 사항을 고려해 주세요.
+- 통상은 REDIS 서버 포트인 6379 가 firewall 에서 안 열려 있기 때문에 외부에서 접속할 수는 없지만,
+firewall 도 열려 있고, password 가 설정되어 있지 않은 경우는 매우 위험할 수 있으므로, password 설정을 꼭 해 주세요.
+- LINUX의 REDIS 서버의 password 설정은 /etc/redis/redis.conf 파일에서
+requirepass YOURPASSWORD
+에 설정합니다. 설정후 재시작은 systemctl redis restart
+Windows REDIS 서버의 password 설정은 C:\Program Files\Redis\redis.windows-service.conf 파일에서 설정합니다.
+설정후 재시작은 windows 서비스에서 redis 재시작 합니다.
+- Salevis4 backend 서버에서는 config-prd.properties 파일에서
+salevis4.redis.connection.password=YOURPASSWORD
+에 설정합니다.
+- REDIS password 는 szrnd20210416 으로 모든 프로젝트에서 동일하게 사용합니다. 개발시 로컬 redis 패스워드를 일일히 바꿀 수 없으므로 일괄통일해서 사용합니다.
+REIDIS 에 저장되는 세션정보는 다음 그림과 같습니다.
+![Untitled](Wiki-Backend%20%E1%84%80%E1%85%A2%E1%84%87%E1%85%A1%E1%86%AF%20%E1%84%80%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%83%E1%85%B3-REDIS%20%E1%84%89%E1%85%A6%E1%84%89%E1%85%A7%E1%86%AB%E1%84%8C%E1%85%A5%E1%86%BC%E1%84%87%E1%85%A9%E1%84%85%E1%85%B3%E1%86%AF%20%E1%84%8C%E1%85%A5%E1%84%8C%E1%85%A1%2080b5e54d767b42f3bf7d5af8e0774bff/Untitled.png)
+USER_CACHE - USER_CACHE:테넌트아이디 Bucket에 USERID 로 key 를 Generate 해서 저장합니다.
+value 는 logincontroller 에서 MySession 이라는 객체를 생성하여 저장하는데 common-api 에서 그림과 같이 json string 형태로 변환하여 저장됩니다.
+REDIS 는 Bucket 구조를 사용할수 있는데 그림과 같은 폴더구조라고 보시면 됩니다.
+Bucket 밑에는 문서가 있는데 문서는 Hash 테이블 구조의 key / value 형식의 list 입니다.
+위의 그림은 REDIS 를 GUI 로 관리할 수 있게 해 주는 redis desktop manager 입니다. redis desktop manager 는 현재 유료버전으로 바뀌었으며,
+[https://softzion.sharepoint.com/sites/msteams_d48474/Shared%20Documents/%EC%A7%80%EC%8B%9D%EA%B3%B5%EC%9C%A0/redis-desktop-manager-0.8.8.384.zip](https://softzion.sharepoint.com/sites/msteams_d48474/Shared%20Documents/%EC%A7%80%EC%8B%9D%EA%B3%B5%EC%9C%A0/redis-desktop-manager-0.8.8.384.zip)
+에서 무료버전일때 프로그램을 다운로드 받을 수 있습니다.
+REDIS 데이터 커맨드창에서 확인하기
+![Untitled](Wiki-Backend%20%E1%84%80%E1%85%A2%E1%84%87%E1%85%A1%E1%86%AF%20%E1%84%80%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%83%E1%85%B3-REDIS%20%E1%84%89%E1%85%A6%E1%84%89%E1%85%A7%E1%86%AB%E1%84%8C%E1%85%A5%E1%86%BC%E1%84%87%E1%85%A9%E1%84%85%E1%85%B3%E1%86%AF%20%E1%84%8C%E1%85%A5%E1%84%8C%E1%85%A1%2080b5e54d767b42f3bf7d5af8e0774bff/Untitled%201.png)
+REDIS 세션에는 타임아웃 기능이 있습니다.
+1. 설정은 config-prd.properties 파일에서 다음을 설정합니다.
+# redis Token & Token Cookie expire Time TimeUnit : HOURS, MINUTES
+com.softz.cookie.token.expire_timeunit=HOURS
+# redis Token & Token Cookie expire Time
+com.softz.cookie.token.expire_time=24
+- HOURS, 24 의 경우 24시간
+- MINUTES, 30 의 경우 30분
+2. 세션 타임아웃 기능 동작 방식은
+- REDIS 에서 세션정보는 아래와 같이 디렉토리 구조로 저장되며,
+USER_CACHE:테넌트아이디 디렉토리 하위에 userkey 별 세션정보가 key & value 형태로 저장됩니다.
+- redis 는 각 디렉토리별 타임아웃 시간을 지정할 수 있으며, 디렉토리가 최초 생성될 때 config-prd.properties 에 지정된 시간으로 timeout 설정을 하며, 이 시간이 경과되면 디렉토리가 자동으로 삭제됩니다.
+- 디렉토리 밑에 어떤 key 를 access(조회) 하더라도, 해당디렉토리는 시간이 연장되기 때문에 디렉토리는 삭제되지 않습니다.
+- 단, key 에 access(조회) 할 때, value 에 담긴 MySession.accesstime 정보를 현재시간으로 갱신하도록 하여, 삭제되지 않은 key 값에 대해서도 타임아웃 여부를 체크하는 이중 타임아웃 체크 구조 입니다.
+- Redis desktop manager 에서 디렉토리를 선택하면 우측상단에 TTL 값이 나오는데, 이 값이 만료까지 남은 초 입니다. 선택할 때 마다 계속 줄어드는 것을 확인할 수 있습니다.
+- ** requirepass 는 2개의 파일에 모두 수정해야 합니다. redis.windows.conf파일과 redis.windows-service.conf
+모바일에서 로그인하는 경우는 세션이 만료되지 않아야 됩니다.
+따라서 이를 위해 모바일용 세션을 처리하는 방법은 userkey 앞부분에 ""MCACHE"" 라는 문자열을 붙이면 해당 userkey 는 redis 모듈에서 TTL 을 체크하지 않습니다.
+MCACHE 가 붙은 userkey 들은 아래 그림과 같이 MOBILE_CACHE 라는 상위폴더에 MOBILE_CACHE:테넌트아이디 키에 생성되며, 해당 키는 TTL: -1 로 TTL 체크를 하지 않습니다.
+![Untitled](Wiki-Backend%20%E1%84%80%E1%85%A2%E1%84%87%E1%85%A1%E1%86%AF%20%E1%84%80%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%83%E1%85%B3-REDIS%20%E1%84%89%E1%85%A6%E1%84%89%E1%85%A7%E1%86%AB%E1%84%8C%E1%85%A5%E1%86%BC%E1%84%87%E1%85%A9%E1%84%85%E1%85%B3%E1%86%AF%20%E1%84%8C%E1%85%A5%E1%84%8C%E1%85%A1%2080b5e54d767b42f3bf7d5af8e0774bff/Untitled%202.png)"
+Wiki-Backend 개발 가이드-rotatelogs 를 이용한 tomcat 서버 catalina.out 날짜별 생성,"```bash
+catalina.sh 에 다음을 수정
+1. catalina.out 을 생성하는 구문 주석처리 (if 문 안에 있을 때는 주석처리하면 오류나기 때문에 echo 로 변경, if 문 안에 있지 않으면 #로 주석처리 해도 됨)
+변경전 :   if [ -z ""$CATALINA_OUT_CMD"" ] ; then
+touch ""$CATALINA_OUT""
+else
+변경후 :   if [ -z ""$CATALINA_OUT_CMD"" ] ; then
+echo ""$CATALINA_OUT""
+else
+2. catalina.out 을 기록하는 부분 변경 (if else 문에 의해 두군데 있음)
+변경전 :  >> ""$CATALINA_OUT"" 2>&1 ""&""
+변경후 :  2>&1 ""&"" | /usr/sbin/rotatelogs ""$CATALINA_OUT"".%Y-%m-%d.log 86400 540 &
+* rotatelogs 는 apache 용 파일
+* Log 파일 날짜 : UTC타임기준 2021-08-22 15:00 ~ 2021-08-22 14:59 (GMT9기준 2021-08-23 00:00 ~ 2021-08-23 23:59) -> catalina.out.2021-08-23.log 에 생성
+* 86400 은 86400초 = 24시간 이므로 24시간에 파일이 새로 생성됨.
+* 540 은 540분 = 9시간 이므로 GMT9 기준으로 파일이 생성됨.
+```"
+Wiki-Backend 개발 가이드-Saleviscare 서버 설정에서 tomcat-care.pid 에 process no 가 rotatelog process no 가 저장 되는 문제,"[catalina.sh](http://catalina.sh/) 에서 아래와 같이 소스 변경
+if [ ! -z ""$CATALINA_PID"" ]; then
+#echo $! > ""$CATALINA_PID""
+ps -ef | grep apache-tomcat-8.5.61-1 | grep java | grep -v grep | awk '{print $2}' > $CATALINA_PID
+fi"
+Wiki-Backend 개발 가이드-Saleviscare 의 campaignimplcustomer 테이블와 과거 데이터를 campaignimplcustomerbak 으로 이관하는 쿼리,"```sql
+START TRANSACTION;
+insert into campaignimplcustomerbak
+(CmpgnImplCustId, CmpgnImplId, CmpgnId, CustId, CmpgnChannel, StartDate, FromNm, FromInfo, ToNm, ToInfo, SendTitle, SendMessage, SendMessage2, KakaoTemplateKey, ResultDate, ResultYN, ResultCode, UnitPrice, CalculatedYN, SendType, SendStatus, ErrYN, DenyYN, DupYN, DirectYN, MMSFileId, RegDate, RegUser, EdtDate, EdtUser, DelDate, DelUser, DelYN, BranchId, TenantId, ReserveId1, ReserveId2, SmsSituationAutoId)
+SELECT CmpgnImplCustId, CmpgnImplId, CmpgnId, CustId, CmpgnChannel, StartDate, FromNm, FromInfo, ToNm, ToInfo, SendTitle, SendMessage, SendMessage2, KakaoTemplateKey, ResultDate, ResultYN, ResultCode, UnitPrice, CalculatedYN, SendType, SendStatus, ErrYN, DenyYN, DupYN, DirectYN, MMSFileId, RegDate, RegUser, EdtDate, EdtUser, DelDate, DelUser, DelYN, BranchId, TenantId, ReserveId1, ReserveId2, SmsSituationAutoId
+FROM campaignimplcustomer WHERE regdate < '2021-07-11 08:59:59';
+delete from saleviscare.campaignimplcustomer WHERE regdate < '2021-07-11 08:59:59';
+COMMIT;
+```"
+Wiki-Backend 개발 가이드-SMTP 메일보내기에서 SSL 접속오류,"```less
+JAVA was 소스에서 Mail 보내는 부분에
+p.put(""mail.smtp.socketFactory.port"", config_mailSmtpSocketFactoryPort);
+p.put(""mail.smtp.socketFactory.class"", config_mailSmtpSocketFactoryClass);
+p.put(""mail.smtp.socketFactory.fallback"", ""false"");
+가 있습니다. 그런데, SMTP 서버에서 ssl 접속설정이 안 되어 있으면
+p.put(""mail.smtp.starttls.enable"", ""false"");
+여도 무조건 접속을 시도하기 때문에, 오류로 인하여 메일 발송이 안됩니다.
+따라서, 소스를 아래와 같이 수정하고 사용해야 됩니다.
+if (""true"".equals(config_mailSmtpStarttlsEnable)) {
+p.put(""mail.smtp.socketFactory.port"", config_mailSmtpSocketFactoryPort);
+p.put(""mail.smtp.socketFactory.class"", config_mailSmtpSocketFactoryClass);
+p.put(""mail.smtp.socketFactory.fallback"", ""false"");
+}
+```"
+Wiki-Backend 개발 가이드-Spring 스케줄러 CRON 표현식,"초    |   분   |   시   |   일   |   월   |  요일  |   연도
+0~59 | 0~59 | 0~23 | 1~31 | 1~12  |   0~6  | 생략가능
+요일 : 0 (일요일) ~ 6( 토요일)
+? : 설정 값 없을 때 - 일과 요일 에서만 사용가능
+- : 모든조건
+시작시간/단위 : 시작시간부터 해당 단위 때
+시작범위-끝범위 : 시작범위 부터 끝범위까지
+L : 마지막 - 일, 요일 에서만 사용가능
+W : 가장 가까운 평일 찾는다 - 일 에서만 사용가능
+ex) 10W
+- 10일이 평일 일 때 : 10일에 실행
+- 10일이 토요일 일 때 : 가장 가까운 평일인 금요일(9일)에 참
+- 10일이 일요일 일 때 : 가장 가까운 평일인 월요일(11일)에 참
+# : 몇주 째인지 찾는다 - 요일 에서만 사용가능
+ex) 3#2 : 수요일#2째주 에 참
+예제
+1. 매월 10일 오전 11시0 0 11 10 * *
+2. 매일 오후 2시 5분 0초0 5 14 * * *
+3. 10분마다 도는 스케줄러 : 10분 0초, 20분 0초...0 0/10 * * *
+4. 조건에서만 실행되는 스케줄러 : 10분 0초, 11분 0초 ~ 15분 0초까지 실행0 10-15 * * *"
+Wiki-Backend 개발 가이드-SSL 인증서 발급절차,"```markdown
+[고객사]
+1. https://www.sslcert.co.kr/ 이동 후 가입
+2. https://www.sslcert.co.kr/manage 이동 후
+- 좌측 메뉴 담당자 설정 > 기본 관리자 등록
+3. 관리자 등록 후 좌측 메뉴 '인증서 신청하기'
+- 상품선택 (Setigo PositiveSSL)* 단일 도메인 제공
+- 도메인(CN) 입력 : everybranch.co.kr
+* ex) www.naver.com (x), naver.com (o)
+-  웹서버 선택 (Apache)
+-  기본 CN 도메인 인증방법 선택 (HTTP)
+4. 결제 후 '인증서 관리' > '인증 진행중' 이동
+- 주문번호 클릭 후 들어가서 'DCV' 인증 파일 다운
+- 소프트자이온에 전달
+[소프트자이온]
+5. 웹서버 루트경로에 .well-known/pki-validation/발급받은txt파일
+를 복사
+[고객사]
+6. https://www.sslcert.co.kr/manage 접속 후
+- 좌측 메뉴 '인증서 관리' > '인증 진행중' 이동
+- 주문 우측 '상세보기' 버튼 클릭
+- DCV : HTTP/s 인증란에 '검증테스트' 클릭후 정상 확인
+- '검증요청하기' 클릭
+7. 1 ~ 3시간 후
+- 좌측 메뉴 '인증서 관리' > '발급완료' 이동
+- 다운로드 클릭 후 압축파일을 소프트자이온에에 전달
+```"
+Wiki-Backend 개발 가이드-Telnet 으로 메일 보내기 테스트,"**0**
+telnet mailserver.com 25(enter)
+EHLO mailserver.com (enter)
+AUTH LOGIN(enter)
+base64 로 인코딩된 SMTP 계정(enter)
+base64 로 인코딩된 SMTP 계정의 비번(enter)
+![Untitled](Wiki-Backend%20%E1%84%80%E1%85%A2%E1%84%87%E1%85%A1%E1%86%AF%20%E1%84%80%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%83%E1%85%B3-Telnet%20%E1%84%8B%E1%85%B3%E1%84%85%E1%85%A9%20%E1%84%86%E1%85%A6%E1%84%8B%E1%85%B5%E1%86%AF%20%E1%84%87%E1%85%A9%E1%84%82%E1%85%A2%E1%84%80%E1%85%B5%20365a73de24be481686bc327a595a792e/Untitled.png)
+MAIL FROM:<보내는 메일 주소>(enter)
+RCPT TO:<받는 메일 주소>(enter)
+data(enter)
+subject:메일제목(enter)
+from:보내는사람(enter)
+to:받는사람(enter)(enter)
+이메일 내용(enter)
+.(enter)
+![Untitled](Wiki-Backend%20%E1%84%80%E1%85%A2%E1%84%87%E1%85%A1%E1%86%AF%20%E1%84%80%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%83%E1%85%B3-Telnet%20%E1%84%8B%E1%85%B3%E1%84%85%E1%85%A9%20%E1%84%86%E1%85%A6%E1%84%8B%E1%85%B5%E1%86%AF%20%E1%84%87%E1%85%A9%E1%84%82%E1%85%A2%E1%84%80%E1%85%B5%20365a73de24be481686bc327a595a792e/Untitled%201.png)"
+Wiki-Backend 개발 가이드-Tomcat server 에 JNDI 설정,"JNDI 는 Tomcat Server 에서 제어하면서 하나의 커넥션 풀을 가지고, 여러 웹어플리케이션에서 공유하여 사용하기 때문에 DB커넥션 풀이 효과적으로 관리된다.
+일반적으로 JDBC는 데이터베이스풀 방식을 사용하지 않고 DB에서 정보를 가져올때마다 매번 디비연결을 열고 닫는다.
+따라서, 상용 어플에는 비효율적인 JDBC 방식을 사용하지 않도록 하는 것이 좋다.
+JDBC 방식은 장시간 사용을 하지 않을 때 커넥션이 끊기기 때문에, autoReconnectForPools=true 옵션을 켜 놓고 사용하지만,
+JNDI 는 이 옵션을 끄고 사용해도 문제가 없다.
+- server.xml (빨간색 글씨)의 설정은 변경 필요)
+<GlobalNamingResources>
+<Resource auth=""Container"" description=""User database that can be updated and saved"" factory=""org.apache.catalina.users.MemoryUserDatabaseFactory"" name=""UserDatabase"" pathname=""conf/tomcat-users.xml"" type=""org.apache.catalina.UserDatabase""/>
+<Resource name=""**jdbc/salevisDB**""
+auth=""Container""
+type=""javax.sql.DataSource""
+driverClassName=""net.sf.log4jdbc.sql.jdbcapi.DriverSpy""
+url=""jdbc:log4jdbc:mysql://**DB서버IP:DB서버포트/DB명**?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&autoReconnectForPools=true&verifyServerCertificate=false&useSSL=false&serverTimezone=UTC""
+username=""**DB접속계정**""
+password=""**DB접속계정암호**""
+poolPreparedStatements=""true""
+maxOpenPreparedStatements=""50""
+validationQuery=""select 1""
+testWhileIdle=""true""
+timeBetweenEvictionRunsMillis=""7200000""
+/>
+</GlobalNamingResources>
+<Service name=""Catalina"">
+...........
+<Engine defaultHost=""localhost"" name=""Catalina"">
+...........
+<Host appBase=""webapps"" autoDeploy=""true"" name=""localhost"" unpackWARs=""true"">
+...........
+<Context docBase=""prm-salevis-was"" path="""" reloadable=""false"" source=""org.eclipse.jst.jee.server:prm-salevis-was"">
+<ResourceLink global=""**jdbc/salevisDB**"" name=""**jdbc/salevisDB**"" auth=""Container"" type=""javax.sql.DataSource"" />
+</Context>
+</Host>
+</Engine>
+</Service>
+- context-datasource.xml
+<!-- JNDI 설정 -->
+<bean id=""dataSourceCommon"" class=""org.springframework.jndi.JndiObjectFactoryBean"">
+<property name=""jndiName"" value=""java:comp/env/**jdbc/salevisDB**"" />
+</bean>
+<bean id=""dataSource"" class=""org.springframework.jndi.JndiObjectFactoryBean"">
+<property name=""jndiName"" value=""java:comp/env/**jdbc/salevisDB**"" />
+</bean>"
+Wiki-Backend 개발 가이드-userkey 생성방법 변경,"```erlang
+기존은 LoginController.java 의 /login/login.json API 에서 userkey 를 userId 를 SHA256 으로 암호화해서 생성합니다.
+하지만, 이 경우 중복로그인 했다가 로그아웃을 하면 redis 에서 세션이 지워지기 때문에, 이전 사용하던 자리에서 사용이 불가한 문제가 발생합니다.
+이를 해결하기 위해 다음과 같이 userkey 를 random 으로 생성하도록 합니다.
+//String userkey = encryptLicenseString(String.valueOf(resList.get(0).get(""userId"")));  // 변경전
+String userkey = UUID.randomUUID().toString().replace(""-"", """")  + System.currentTimeMillis();  // 변경후
+```"
+"Wiki-Backend 개발 가이드-WEB, WAS 서버 SSL 적용 방법","[https://cert.crosscert.com/category/manual/](https://cert.crosscert.com/category/manual/)
+by benni on 2021.10.26.
+톰캣에 SSL 적용하는 방안 관련하여 웹에 나와있는 가이드 (목록 상위 10) 들은 x509, pkcs, keystore 등등 여러 사항에 대하여 복잡하고 옛된 방안을 제시하여, 결국에는 안 되고 헷갈리고 시간 낭비만 일으킵니다.
+코모도ssl에 제공되는 [가이드](https://www.comodossl.co.kr/certificate/ssl-installation-guides.aspx)는 `.pfx` 파일을 사용하는 방안으로 가장 간단하고 여러 서버(apache, nginx, 등)에도 동일하게 반영되는 방안으로, 이번 GS인증 작업(톰캣) 중에 검증 되었으며, 현재 AICRM 서버 (nginx) 에도 사용되고 있음을 공유드립니다.
+[https://www.comodossl.co.kr/certificate/ssl-installation-guides.aspx](https://www.comodossl.co.kr/certificate/ssl-installation-guides.aspx)"
+Wiki-Backend 개발 가이드-Wiki-Backend 개발 가이드,"common-api.jar 1.0.2 이상 지원
+- Backend login/login.json 처리 부분에 다음 코드 추가
+if (request.get(""forceLogin"") != null && (boolean)request.get(""forceLogin"") == true) {
+Boolean found = clearUserModelerUserkeyByLoginId(s.tenantid, s.loginid);
+} else {
+Set<String> userkey_same = getUserModelerUserkeyByLoginId(s.tenantid, s.loginid);
+if (userkey_same != null && !userkey_same.isEmpty()) {
+return super.makeResponseData(HttpStatus.OK, ""LOGIN.MSG.DUPLICATEACCESS"");
+}
+}
+- Fronend login.component.js 에 다음 코드 추가
+vm.doLogin = function(forceLogin) {
+vm.loginInfo.forceLogin = forceLogin;
+var prms = loginApi.doLogin().post(vm.loginInfo).$promise;
+prms.then(function(data) {
+if (data && data.responseVO && data.responseVO.header.status == CONSTANT.HttpStatus.OK) {
+if (data.responseVO.body.docCnt > 0) {
+if (data.responseVO.body.docs[0].message == 'LOGIN.MSG.DUPLICATEACCESS') {
+gConfirm('', $translate.instant('LOGIN.MSG.DUPLICATEACCESS'), {
+btn : '',
+fn : function(){
+vm.dataloader = false;
+doLogin(true);
+}
+}, {
+btn : '',
+fn : function(){
+vm.dataloader = false;
+}
+});
+return;
+}
+setUserSession(vm, data);"
+Wiki-Backend 개발 가이드-대용량 엑셀 다운로드,"[https://jayceepark.github.io/posts/2018-08-10/use_poi_bulk_excel](https://jayceepark.github.io/posts/2018-08-10/use_poi_bulk_excel)
+대용량 엑셀 다운로드"
+Wiki-Backend 개발 가이드-동일 API 반복호출로 데이터가 중복저장 되는 문제 방지 방안 (보안점검),"SessionInterceptor.preHandle 에 추가
+```
+if (StringUtils.equals(request.getMethod(), ""OPTIONS"")) { // preflight 때문에 넣어 주어야 됩니다.
+logger.debug(""request OPTIONS"");
+return true;
+}
+if (request.getRequestURI().indexOf(""/insert/"") == 0 || request.getRequestURI().indexOf(""/update/"") == 0 || request.getRequestURI().indexOf(""/delete/"") == 0) { // insert, update, delete 의 경우가 동작
+String remote = request.getRemoteAddr();
+String url = remote + ""--"" + request.getRequestURI();
+Date d = (Date)userCacheAccessor.getUserModelerProcData(""CHECK-URL"", url, Date.class);
+Date now = new Date();
+if (d != null) {
+long sDiff = (now.getTime() - d.getTime()) / 1000;
+if (sDiff < 3) { // 3초이내에 호출
+logger.error(""same request is called in 3 seconds:"" + url);
+return false;
+}
+}
+userCacheAccessor.setUserModelerProcData(""CHECK-URL"", url, now);
+}
+```"
+Wiki-Backend 개발 가이드-리눅스 디스크 용량 체크 명령어,"sudo lsblk -o NAME,FSTYPE,SIZE,MOUNTPOINT,LABEL"
+"Wiki-Backend 개발 가이드-서버 백업 설정 (파일, DB)","서버의 파일을 백업 받는 방법은 솔루션을 이용할 수도 있겠지만, 주기적으로 linux 의 crontab 을 이용하여 백업 받는 방법이 있겠습니다.
+1. 서버 파일 백업 방법([https://idchowto.com/crontab%ec%9d%84-%ec%9d%b4%ec%9a%a9%ed%95%98%ec%97%ac-%ec%a3%bc%ea%b8%b0%ec%a0%81%ec%9d%b8-%eb%8d%b0%ec%9d%b4%ed%84%b0-%eb%b0%b1%ec%97%85%ed%95%98%ea%b8%b0/](https://idchowto.com/crontab%ec%9d%84-%ec%9d%b4%ec%9a%a9%ed%95%98%ec%97%ac-%ec%a3%bc%ea%b8%b0%ec%a0%81%ec%9d%b8-%eb%8d%b0%ec%9d%b4%ed%84%b0-%eb%b0%b1%ec%97%85%ed%95%98%ea%b8%b0/))
+#!/bin/bash
+#~/cron/file_backup.sh
+date=$(date +%Y%m%d%H%M)
+backup=""backup$date.tar.gz""
+#echo $backup
+cd /home
+tar -zcvf /backup/$backup /opt/home/tomcat/webapps
+# 30일 이전거 지우기
+find /backup -mtime +30 -name ""backup*.tar.gz"" -exec rm -rf {} \;
+스크립트가 구동될때 현재 날짜(년월일시분)를 압축파일을 만들 이름에 넣어 백업된 날짜를 확인할 수 있습니다.
+tar 를 이용하여 /home/test를 압축하여 백업데이터가 들어갈 /backup에 설정한 이름(변수 $backup)을 넣어 만들어지게 합니다.
+find 명령어로 /backup에 30일이지난 backup*.tar.gz를 삭제하는 구문이 있습니다.
+1. DB 백업방법([https://stove99.github.io/linux/2019/04/04/Database-Backup/](https://stove99.github.io/linux/2019/04/04/Database-Backup/))
+#!/bin/bash
+#~/cron/mysql_backup.sh
+date=$(date +%Y%m%d%H%M)
+backup=""db_$date.sql""
+#echo $backup
+/usr/bin/mysqldump -uroot -p비밀번호 백업할db명 > /backup/$backup
+# 30일 이전거 지우기
+find /backup -mtime +30 -name ""db_*.sql"" -exec rm -rf {} \;
+1. 상기 두개의 shell 을 crontab 에 등록하여 매일 새벽3시에 백업을 실행시킬 수 있습니다.
+crontab -e
+# 매일 새벽 3시에 파일백업돌리기
+0 3 * * * ~/cron/file_backup.sh
+# 매일 새벽 4시에 백업돌리기
+0 4 * * * ~/cron/mysql_backup.sh
+1. rotatelog_remove.sh
+tomcat log 파일 30일 이전거 지우기
+#!/bin/bash
+#~/cron/rotatelog_remove.sh
+# 30일 이전거 지우기
+find /usr/local/tomcat/apach-tomcat/log -mtime +30 -name ""catalina.out.*.log"" -exec rm -rf {} \;"
+Wiki-Backend 개발 가이드-원격디버깅,"```bash
+1. tomcat 설정
+/bin/catalina.sh 파일 안에. 아래 부분 추가 (통상 234 라인에 추가 )
+JAVA_OPTS=""$JAVA_OPTS -Dorg.apache.catalina.security.SecurityListener.UMASK=`umask`""  # 원래 있는 내용
+JAVA_OPTS=""$JAVA_OPTS -Xdebug -Xrunjdwp:transport=dt_socket,address=8000,server=y,suspend=n"" # 새로 추가할 내용
+2. 8000번 방화벽 open
+/etc/sysconfig/iptables 에서 8000 번 추가후 service iptables restart
+3. tomcat 재시작
+4. 디버깅 시작 (eclipse)
+Run -> Debug Configuration -> Remote Java Application - New Configuration : Host 와 Port 입력하여 등록
+설정완료 후 Debug 버튼 클릭
+소스에 break point 설정하고, 브라우저에서 백엔드서버의 API 서비스를 호출하면 break 됨
+5. 디버깅 중단 (eclipse)
+Run -> Disconnect
+```"
+Wiki-Backend 개발 가이드-이클립스에 tab to space 설정하기,"1. 이클립스 상단 메뉴들 중 [Window] -> [Preferences] 를 차례로 클릭하여 설정 팝업을 띄운다.
+< 텍스트 파일 설정 >
+2. 설정 팝업에서 [General] -> [Editors] -> [Text Editors] 를 차례로 클릭하고
+우측의 ""Insert spaces for tabs"" 체크박스를 체크, Line width: 200, Indentation size: 2 로 설정
+< 자바 파일 설정 >
+3. 2번과 동일하게 [Java] -> [Code Style] -> [Formatter] 를 차례로 클릭하고 우측의 ""Edit"" 버튼을 클릭한다.
+4. Indentation tab 의 [Tab policy] 항목을 ""Tab only"" 에서 ""Spaces only"" 로 바꾸고, Indentation size: 2, Tab size: 2 로 설정
+5. Line Wrapping tab 의 Maximum line width: 200 설정
+6. Comments tab 의 Maximum width for comments: 200 설정
+7. 상단의 profile name을 적절하게 변경한다. (Ex.Eclipse Tab-to-Space)
+< JavaScript 도 자바 파일설정과 동일하게 설정 >
+< XML 파일 설정 >
+8. 2번과 동일하게 [XML] -> [XML Files] -> [Editor] 에서 ""Indent using spaces"" 라디오버튼을 체크한다. Line width: 200, Indentation size: 2 로 설정
+< Web 의 CSS, HTML 파일 설정 >
+9. 2번과 동일하게 [Web] -> [CSS files, HTML files] -> [Editor] 에서 ""Indent using spaces"" 라디오버튼을 체크한다. Line width: 200, Indentation size: 2 로 설정
+- 적용을 하면 설정 완료된다. (설정을 완료하였다 하더라고 이미 작성된 파일들에는 적용되지 않으므로 프로젝트 시작 전에 미리 세팅하는 것이 좋다.)
+- 이미 작성된 문서는 Ctrl+A 로 모두 선택한 후 Ctrl+Shift+F 를 누르면 전체 포맷팅이 됨. 안 되는 경우는 Ctrl+A, Ctrl+X 로 잘라내기를 한 후 Ctrl+V 로 붙여 넣기 하면 적용됨
+- [General] -> [Editor] -> [Text Editors] 에서 Show print margin 과 Show line numbers 는 체크하고 사용하면 tab/space 를 구분할 수 있어 편리하다."
+Wiki-Backend 개발 가이드-자바 유료/무료 버전,"[https://broccolies.com/2021/03/24/%EC%98%A4%EB%9D%BC%ED%81%B4-java-sejre-jdk-%EC%9C%A0%EC%83%81%EB%B2%84%EC%A0%84/](https://broccolies.com/2021/03/24/%EC%98%A4%EB%9D%BC%ED%81%B4-java-sejre-jdk-%EC%9C%A0%EC%83%81%EB%B2%84%EC%A0%84/)
+자바 유료/무료 버전"
+"Wiki-Backend 개발 가이드-톰캣 한글 깨짐 (웹 페이지 한글 깨짐, 한글 입력 안됨, 로그 한글 깨짐)","[https://blog.naver.com/baekmg1988/221302236018](https://blog.naver.com/baekmg1988/221302236018)
+톰캣이 한글 깨질때"
+Wiki-Backend 개발 가이드-하나의 API 에서 Mybatis 의 Interceptor 는 두번 호출되지 않는 구조,"java salevis 프레임워크의 Mybatis 에서 Encryption interceptor 는 하나의 API 에서 한번만 호출되는 구조입니다.
+내부적으로 한번만 호출하도록 EncryptionProcessed 라는 설정을 해 놓았습니다.
+예를 들어, API 를 작성하고, 컨트롤러에r
+baseService.baseInsert(""CampaignImpl.insertCampaignImplCustomer"", param, session, false);
+baseService.baseUpdate(""Login.updateCountVerificationCode"", param, session, false);
+와 같이 두번을 연속해서 Mybatis 를 접속하면 두번째 접속에서는 Encryption interceptor 가 호출되지 않습니다.
+이때,
+baseService.baseInsert(""CampaignImpl.insertCampaignImplCustomer"", param, session, false);
+param.remove(""EncryptionProcessed"");
+baseService.baseUpdate(""Login.updateCountVerificationCode"", param, session, false);
+와 같이 초기화하는 코드 param.remove(""EncryptionProcessed""); 를 넣어 줘야 됩니다."
+Windows / Linux 서버 보안 취약점 설정,"### 내용
+Windows / Linux 서버 보안 취약점 설정 가이드 문서
+1. OS 별 설정
+1. Windows
+2. Linux
+2. WEB
+1. APACHE
+2. IIS
+3. WAS
+1. TOMCAT
+---
+### 답변
+한국 인터넷 진흥원 웹서버 보안 강화 안내
+[https://softzion.sharepoint.com/:b:/s/msteams_d48474/EXmN4zEx5Y1Klwt_5q5VKroBRHsuGtiu6gNfUWDypmbVcQ?e=Nq7zHo](https://softzion.sharepoint.com/:b:/s/msteams_d48474/EXmN4zEx5Y1Klwt_5q5VKroBRHsuGtiu6gNfUWDypmbVcQ?e=Nq7zHo)
+윈도우 IIS 보안 설정
+[https://dazemonkey.tistory.com/119](https://dazemonkey.tistory.com/119)
+보안 취약점 설정 가이드
+[https://ssv.skill.or.kr/Security/unix-security-vulnerability](https://ssv.skill.or.kr/Security/unix-security-vulnerability)
+[https://softzion.sharepoint.com/:b:/s/msteams_d48474/Eel-S8IwiXRPm72jOBFdreQBjsD56fcJBmuNIY50mqe68w?e=wQ3x0X](https://softzion.sharepoint.com/:b:/s/msteams_d48474/Eel-S8IwiXRPm72jOBFdreQBjsD56fcJBmuNIY50mqe68w?e=wQ3x0X)
+Window 서버
+[https://ssv.skill.or.kr/Cloud-Security/windows-security-vulnerability](https://ssv.skill.or.kr/Cloud-Security/windows-security-vulnerability)
+Window PC
+[https://ssv.skill.or.kr/Cloud-Security/windows-pc-security-vulnerability](https://ssv.skill.or.kr/Cloud-Security/windows-pc-security-vulnerability)
+Tomcat 서버
+[https://ssv.skill.or.kr/Cloud-Security/tomcat-security-vulnerability](https://ssv.skill.or.kr/Cloud-Security/tomcat-security-vulnerability)
+MS SQL
+[https://ssv.skill.or.kr/Cloud-Security/db-mssql-security-vulnerability](https://ssv.skill.or.kr/Cloud-Security/db-mssql-security-vulnerability)
+MY SQL
+[https://ssv.skill.or.kr/Cloud-Security/db-mysql-security-vulnerability](https://ssv.skill.or.kr/Cloud-Security/db-mysql-security-vulnerability)
+REDIS
+[https://ssv.skill.or.kr/Cloud-Security/db-redis-security-vulnerability](https://ssv.skill.or.kr/Cloud-Security/db-redis-security-vulnerability)
+APACHE
+[https://ssv.skill.or.kr/Cloud-Security/apache-security-vulnerability](https://ssv.skill.or.kr/Cloud-Security/apache-security-vulnerability)
+IIS
+[https://ssv.skill.or.kr/Cloud-Security/iis-security-vulnerability](https://ssv.skill.or.kr/Cloud-Security/iis-security-vulnerability)
+Docker
+[https://ssv.skill.or.kr/Cloud-Security/docker-security-vulnerability](https://ssv.skill.or.kr/Cloud-Security/docker-security-vulnerability)"
+Windows / Linux 서버 보안 취약점 설정,"1. OS 별 설정
+1. Windows
+2. Linux
+2. WEB
+1. APACHE
+2. IIS
+3. WAS
+1. TOMCAT
+---
+한국 인터넷 진흥원 웹서버 보안 강화 안내
+[https://softzion.sharepoint.com/:b:/s/msteams_d48474/EXmN4zEx5Y1Klwt_5q5VKroBRHsuGtiu6gNfUWDypmbVcQ?e=Nq7zHo](https://softzion.sharepoint.com/:b:/s/msteams_d48474/EXmN4zEx5Y1Klwt_5q5VKroBRHsuGtiu6gNfUWDypmbVcQ?e=Nq7zHo)
+윈도우 IIS 보안 설정
+[https://dazemonkey.tistory.com/119](https://dazemonkey.tistory.com/119)
+보안 취약점 설정 가이드
+[https://ssv.skill.or.kr/Security/unix-security-vulnerability](https://ssv.skill.or.kr/Security/unix-security-vulnerability)
+[https://softzion.sharepoint.com/:b:/s/msteams_d48474/Eel-S8IwiXRPm72jOBFdreQBjsD56fcJBmuNIY50mqe68w?e=wQ3x0X](https://softzion.sharepoint.com/:b:/s/msteams_d48474/Eel-S8IwiXRPm72jOBFdreQBjsD56fcJBmuNIY50mqe68w?e=wQ3x0X)
+Window 서버
+[https://ssv.skill.or.kr/Cloud-Security/windows-security-vulnerability](https://ssv.skill.or.kr/Cloud-Security/windows-security-vulnerability)
+Window PC
+[https://ssv.skill.or.kr/Cloud-Security/windows-pc-security-vulnerability](https://ssv.skill.or.kr/Cloud-Security/windows-pc-security-vulnerability)
+Tomcat 서버
+[https://ssv.skill.or.kr/Cloud-Security/tomcat-security-vulnerability](https://ssv.skill.or.kr/Cloud-Security/tomcat-security-vulnerability)
+MS SQL
+[https://ssv.skill.or.kr/Cloud-Security/db-mssql-security-vulnerability](https://ssv.skill.or.kr/Cloud-Security/db-mssql-security-vulnerability)
+MY SQL
+[https://ssv.skill.or.kr/Cloud-Security/db-mysql-security-vulnerability](https://ssv.skill.or.kr/Cloud-Security/db-mysql-security-vulnerability)
+REDIS
+[https://ssv.skill.or.kr/Cloud-Security/db-redis-security-vulnerability](https://ssv.skill.or.kr/Cloud-Security/db-redis-security-vulnerability)
+APACHE
+[https://ssv.skill.or.kr/Cloud-Security/apache-security-vulnerability](https://ssv.skill.or.kr/Cloud-Security/apache-security-vulnerability)
+IIS
+[https://ssv.skill.or.kr/Cloud-Security/iis-security-vulnerability](https://ssv.skill.or.kr/Cloud-Security/iis-security-vulnerability)
+Docker
+[https://ssv.skill.or.kr/Cloud-Security/docker-security-vulnerability](https://ssv.skill.or.kr/Cloud-Security/docker-security-vulnerability)"
+Windows 운영 체제 시작 시 파이썬 스크립트 자동 실행 어떻게 하나요?,"### 내용
+컴퓨터 시작 시 자동으로 파이썬 스크립트를 실행할 수 있으면 좋겠는데요. 어떻게 하면 되죠?
+---
+### 답변
+일단 간단히 Windows 10 시작 프로그램 등록 절차에 대하여 설명 드립니다.
+`Windows logo + R key`로 Run 프롬트를 여시고, `shell:startup` 입력 & 실행하시면 **시작프로그램(Startup)** 폴더가 뜹니다.
+자동 실행하시려는 프로그램의 **바로가기** 를 생성하고 (`우클릭 + 바로가기 만들기`), 바로가기 파일을 시작프로그램 폴더로 옮겨주시면 컴퓨터 시작 시 자동으로 실행됩니다 (단일 프로그램인 경우 바로가기가 필요 없습니다).
+시작프로그램에 batch 파일(.bat)도 등록이 가능합니다.
+파이썬 스크립트를 실행하는 batch 파일을 만들어서 시작프로그램에 등록하면 파이썬 스크립트가 자동으로 실행됩니다. 밑에 예시로 설명드립니다.
+파이썬 스크립트 (`main.py`)
+```python
+print('Hello World!')
+```
+batch 파일 (`automate.bat`)
+```bash
+@echo off
+cmd /k ""cd /d D:/pyjects/test/env/Scripts & activate & cd /d D:/pyjects/test & python main.py""
+```
+`automate.bat`은 다음과 같은 작업을 합니다.
+1. 가상환경 폴더 위치로 이동
+2. 가상환경 활성화
+3. 파이썬 스크립트 파일 위치로 이동
+4. 파이썬 스크립트 실행
+시작프로그램에 등록 후 컴퓨터 재시작하면 콘솔이 뜨고 `Hello World`가 입력되는 것을 확인할 수 있습니다."
+Windows 운영 체제에 여러 버전의 파이썬 설치 시 원하는 버전 선택 어떻게 하나요?,"### 내용
+Windows 운영 체제에 파이썬 3.7 버전하고 파이썬 3.9 버전을 설치했는데, 콘솔에 `python` 또는 `python3` 치면 계속 3.9 버전이 뜨네요. 원하는 버전을 어떻게 선택해서 실행하죠?
+---
+### 답변
+[Windows 파이썬 설치 방안](https://stackoverflowteams.com/c/softzion/a/34/6)에 따라 **Windows Installer** 로 설치하신 경우, 자동으로 [Python Launcher](https://docs.python.org/3/using/windows.html#python-launcher-for-windows)가 설치되었을 겁니다. 따라서, 콘솔에서 `python` 대신에 `py`를 사용하시면 되며, 버전에 맞추어 `py -버전`를 입력하시면 해당 버전의 파이썬 interactive shell 이 뜹니다 (예: `py -3.7`).
+원하시는 버전으로 파이썬 스크립트를 실행하시려는 경우, `py -버전 실행파일.py`와 같이 해주시면 됩니다 (예: `py -3.9 script.py`).
+원하시는 버전으로 가상환경을 구축하시려는 경우, `py -버전 -m venv env`와 같이 해주시면 `env`라는 이름의 폴더가 생성되며 가상환경이 구축됩니다 (예: `py -3.8 -m venv env`). 가상환경을 활성화 하신 후 `python` 실행 시 지정되었던 버전으로 파이썬이 실행됩니다.
+아나콘다로 파이썬을 설치하신 경우, 콘다 가상환경 생성 시 파이썬 버전을 지정할 수 있으며, 가상환경을 활성화한 후 `python` 실행 시 지정되었던 버전으로 파이썬이 실행됩니다."
+Windows 운영 체제에 파이썬 설치 어떻게 하나요?,"### 답변
+# **Windows 파이썬 설치 가이드**
+WINDOWS 운영체제 위주로 파이썬 설치 방안을 설명드립니다.
+파이썬 설치 방안은 두 가지로 나뉩니다:
+- 파이썬 설치
+- 아나콘다 설치
+**파이썬 설치**는 말 그대로 파이썬만 설치하는 것으로, 공식 파이썬 사이트에서 제공하는 installer로 설치됩니다.
+**아나콘다 설치**는 데이터 과학 전용 도구 관리 프로그램인 아나콘다(Anaconda)를 설치함으로서 Conda 패키지 매니저와 함께 파이썬을 설치하는 것으로, 아나콘다 사이트에서 제공하는 installer로 설치됩니다.
+참고로, 파이썬 설치와 아나콘다 설치 둘 다 해도 문제 없습니다.
+*필요하신 파이썬 버전은 꼭 확인하시길 바랍니다.*
+## 파이썬 설치
+[공식 파이썬 다운로드 페이지](https://www.python.org/downloads/)에 들어가신 후 밑으로 조금 스크롤 하시면, 여러 버전의 파이썬 목록이 보입니다.
+원하시는 버전 선택하시고 링크 따라가시면 해당 버전 설명 페이지로 옮겨지며, **FILES** 섹션 아래 다운로드 목록에 **Windows installer (64-bit)** 를 선택하시면 됩니다.
+다운로드된 installer 파일을 실행하시고 권장사항만 따라서 설치하시면 됩니다.
+### 참고사항
+1. 기본 설치 위치는 `C:/Users/사용자/AppData/Local/Programs/Python/Python버전` 입니다. `C:/Program Files` 등 권한(Permission) 설정이 되어있는 위치에 설치하시면 추후에 패키지 설치 중 에러가 발생할 수 있습니다.
+2. 윈도우 사용자명이 영어로 되어 있지 않은 경우, 설치 시 에러가 발생할 수 있습니다.
+3. 여러 버전이 필요하신 경우, 각 버전의 파이썬을 모두 다운로드 하셔야 합니다.
+## 아나콘다 설치
+[아나콘다 다운로드 페이지](https://www.anaconda.com/products/distribution#windows)에 들어가신 후 다운로드 버튼을 누르시면 됩니다. 아나콘다 버전과 같이 다운로드되는 파이썬 버전은 크게 상관 없습니다.
+다운로드된 installer 파일을 실행하시고 권장사항만 따라서 설치하시면 됩니다.
+### 참고사항
+1. 아나콘다 설치 위치에 파이썬이 같이 설치됩니다. 파이썬 설치 참고사항 1번과 마찬가지로 권한 설정된 위치에 설치하면 에러가 발생합니다.
+2. 아나콘다는 파이썬 외 다른 도구들이 함께 설치됨으로, 파이썬만 필요하신 경우 [미니콘다](https://docs.conda.io/en/latest/miniconda.html#latest-miniconda-installer-links)를 설치하시면 됩니다.
+3. 파이썬 버전은 아나콘다 가상환경을 생성할 때 정하시면 됩니다.
+## 기타 설치 방안
+1. Windows Store를 통해 파이썬 설치가 가능하되, 여러저러 문제가 많기 때문에 권장 드리지 않습니다.
+2. Chocolatey를 통해 파이썬 설치 (확인해보진 않았습니다)
+3. WSL에 파이썬 설치 (리눅스 파이썬 설치 방안 참고)
+4.
+---
+### 댓글
+Python도 버전이 여러개가 있던데요, 어떤 버전을 사용하는게 가장 안정적인지요?
+– [최원영](https://stackoverflowteams.com/c/softzion/users/1/)
+[May 3, 2022 at 7:18](https://stackoverflowteams.com/c/softzion/questions/33#comment3_34)
+[@최원영](https://stackoverflowteams.com/c/softzion/users/1/) Stackoverflow 규정에 따라 문의사항은 따로 문의글로 남겨주시길 바랍니다! 😄 어느 언어나 마찬가지로, 오래되고 업데이트가 유지되고 있는 버전이 제일 좋습니다. 현재 2022년 기준으로 3.7 버전이 제일 안정적이되, 23년도에 EOL될 예정이니 3.8 버전 위주로 작업하는게 권장됩니다.
+– user6
+[May 3, 2022 at 7:25](https://stackoverflowteams.com/c/softzion/questions/33#comment4_34)"
+XSS 시큐어코딩 지적 사항 해결 절차1,"크로스 사이트 스크립트 체커는 검증되지 않은 외부 입력값을 HTML에 포함시키는 코드를 검출합니다.외부 입력값에 스크립트가 삽입되지 않도록 문자 변환 함수 또는 메소드를 사용하여 <, >, &, "" 등을 <, >, &, "" 로 대체합니다. HTML 태그를 사용하도록 허용하는 게시판에서는 허용되는 HTML 태그를 화이트 리스트로 작성하여 리스트에 포함된 태그만 지원하도록 합니다.
+1. return super.makeResponseData(HttpStatus.OK, param);
+---
+```perl
+시큐어코딩 지적 사항으로 controller 에서 makeResponseData 를 할때,
+escapehtml 을 하지 않아서 XSS 문제가 발생할 수 있음
+1.개요 :
+1)백엔드에서는 escapehtml 을 통해 <, >, &, "" 등을 &lt;, &gt;, &amp;, &quot; 로 대체, 대체가 발생한 key 값 정보를 response 데이터에 같이 보냄
+2)프론트에서는 api 호출후 데이터 수신부에서 대체가 발생한 key 값 데이터를 unescapehtml 실행함
+2.백엔드 :
+common-api.jar 내부의 CommonController.makeResponseData 에서docs 가 있는 경우, docs 의 데이터를 개별적으로 escapehtml 하고,
+escapehtml 로 인코딩된 데이터가 존재하는 경우 ""encElements"" key(필드) 를 생성하고, 해당 key(필드) 에 escapehtml 로 변화가 있는 key(필드) 명을 value 로 지정함.
+여러개의 key(필드) 일때 ','를 구분자로 하여 스트링으로 지정함.
+적용된 responseDate 의 예)
+- 원본 데이터 docs : [{""title"":""제목1<>"", ""content"":""내용1<>"", ""catagory"":""board""}, {""title"":""제목2"", ""content"":""내용2"", ""catagory"":""board""}, {....}]
+- escape 데이터 docs : [{""title"":""제목1&lt;&gt;"", ""content"":""내용1&lt;&gt;"", ""catagory"":""board"", ""encElements"":""title,content""}, {""title"":""제목2"", ""content"":""내용2"", ""catagory"":""board""}, {....}]
+3. 프론트엔드 :
+post-api.service.ts 의 makeResultData 함수에서
+docs 데이터에 encElements key 가 있으면 해당 key 의 value 에 해당하는 key 데이터를 조회하여 unescapehtml 수행
+적용할 소스 코드)
+d.responseVO.body[key].forEach(item => {
+if (item.encElements) {
+var arr = item.encElements.split("","");
+arr.forEach(ele => {
+item[ele] = item[ele].replace(/&lt;/g, '<')
+.replace(/&gt;/g, '>')
+.replace(/&quot;/g, '""')
+.replace(/&#039;/g, ""'"")
+.replace(/&#39;/g, ""'"")
+.replace(/&amp;/g, '&');
+});
+}
+});
+```"
+개발 공통-Angular cli 설정,"특정 Angular cli 설치 :
+npm uninstall -g @angular/cli
+npm i -g @angular/cli@버전
+ng version
+ng new 프로젝트명"
+"개발 공통-NVM, Node 설치 가이드","nvm 설치 : [https://github.com/coreybutler/nvm-windows/releases](https://github.com/coreybutler/nvm-windows/releases)
+- nvm 설치 시 주의 사항 : 기존 node가 설치되어있으면 삭제 후 진행 필요
+Node 릴리즈 버전 보기 : nvm list available
+Node 설치 : nvm install 버전
+특정노드버전사용 : nvm use 버전"
+개발 공통-Softzion 프로젝트 산출물 템플릿,"파일 위치 :
+- 사내 NAS : \HDD1\기술연구소\프로젝트\00.산출물_템플릿\소프트자이온_프로젝트산출물_템플릿"
+개발 공통-Unicode Character 'ZERO WIDTH SPACE' (U+200B) - Eclipse 나 메모장 등 웬만한 에디터에서는 보이지 않음,"Eclipse 나 메모장 등 웬만한 에디터에서는 보이지 않는 문자열이 있습니다.
+Jupyter notebook 에서는 다음과 같이 표시됩니다.
+![Untitled](%E1%84%80%E1%85%A2%E1%84%87%E1%85%A1%E1%86%AF%20%E1%84%80%E1%85%A9%E1%86%BC%E1%84%90%E1%85%A9%E1%86%BC-Unicode%20Character%20'ZERO%20WIDTH%20SPACE'%20%20e2f50f7b2c5a410caa7c5b6767d8db44/Untitled.png)
+이와 유사하게 보이지 않는 문자열로 어려움을 겪을 수 있는 경우를 정리해 보았습니다.
+1. 유니코드 u200b (Zero Width Space) 공간 캐릭터는 안 보이면서 귀찮게 합니다.
+2. 이모티콘 중 여러개의 이모티콘을 결합하는 이모티콘이 있습니다. 이 결합하는 요소도 유니코드 캐릭터로, 이모티콘이 지원되지 않는 환경에서는 이모티콘이 분리되어 보이며, 결합 캐릭터는 안 보이면서도 존재하게 됩니다.
+3. 아랍어는 오른쪽에서 왼쪽으로 읽는 문자열이라서, 모든 아랍어 String의 첫문자 앞에는 ""right-to-left"" 유니코드 캐릭터가 숨겨져 있습니다. 이 또한 안 보이면서도 존재합니다..
+4. 쉼표도 여러 종류가 있어서 잘 못 copy & paste 하면 귀찮게 됩니다.
+5. 따옴표/쌍따옴표도 마찬가지로 여러 종류가 있어서, json 변형시 에러를 일으키는 요소가 됩니다.
+6. escape character \ 가 포함된 string 값이 json으로 변형되면 \\가 되고, 이게 여러번 다른 플랫폼에 걸쳐가다 보면 어느새 \\\\\\\\ 가 되어있습니다."
+개발 공통-WEB/WAS GZIP 설정을 통한 성능 향상,"성능 개선을 위해서 Apache / Tomcat 서버에 gzip 압축 적용
+[https://gitabout.com/18](https://gitabout.com/18)
+[https://blog.naver.com/wizardkyn/220714079323](https://blog.naver.com/wizardkyn/220714079323)"
+개발 공통-WEB/WAS 시스템 보안 점검 항목,"[https://www.ncloud.com/product/security/systemSecurityChecker](https://www.ncloud.com/product/security/systemSecurityChecker)
+위 링크를 참조해주시기 바랍니다."
+개발 공통-Windows 서버에 서버 세팅방법,"1. jdk 설치 : 압축을 c:/java 폴더에 해제
+2. apach-tomcat-8.5.72 설치 : 설치경로는 c:\Tomcat8.5 (기본경로로 설치하면 경로명에 공백이 들어가서 많은 문제 있습니다.)
+3. 톰캣서버 설정 변경
+4. redis 설치 , password 설정
+5. c:\tomcat8.5\webapps\ksacrm 폴더에 백엔드, 프론트엔드 파일 복사
+6. Monitor Tomcat 프로그램 시작해서 tomcat 서비스 재시작
+7. 파이어월에서 80 포트 오픈"
+개발 공통-링크 처리 정규표현식(Regex),"링크 처리 정규표현식 관련해서 웹에 공개된게 별로 없고 잘 안되서 여러 삽질 끝에 사용할 만한것을 만들었습니다.
+파이썬 뿐만이 아니라 JS, Java, C# 등 그 외 언어에서도 활용이 가능하니 참고하시길 바랍니다.
+링크 처리 조건:
+1. 스키마: http, https, 또는 www 시작되는 링크들만 추출 (e.g. [http://google.com](http://google.com/), [https://www.google.com](https://www.google.com/))
+2. 도메인: [단어.단어.단어] 형식의 패턴 인식 (e.g. aicrm.salevis.co.kr)
+3. 경로: [/단어/단어/단어] 형식의 패턴 인식 (e.g. ../account/details/edit)
+4. 파일명: [.단어] 형식의 패턴 인식 (e.g. ../map/index.html)
+5. 쿼리: [?단어=단어&단어=단어] 형식의 패턴 인식 (e.g. ../search?query=regex&category=python)
+Regex 패턴 (수정됨, 2022/01/17):`r'\b((?:https?://|www\.)(?:[0-9a-zA-Z]+\.?)+(?:(?:/[\w@\-%=]+)?)+(?:\.\w+)?(?:/?\?\w+=[\w%.+\-_=\|]+(?:(?:&\w+=(?:[\w%.+\-_=\|]+)?)?)+)?(?:#\w+)?)'`"
+개발 공통-이 기종 DB Link,"이기종 DB Link 관련 가이드 자료
+[https://teams.microsoft.com/l/file/FE208E67-79F9-4677-8604-6D43AAB17649?tenantId=a0f8ce05-1c8d-4116-913f-478ebb90edcb&fileType=pdf&objectUrl=https%3A%2F%2Fsoftzion.sharepoint.com%2Fsites%2Fmsteams_d48474%2FShared%20Documents%2F%EC%A7%80%EC%8B%9D%EA%B3%B5%EC%9C%A0%2F%EC%98%A4%EB%9D%BC%ED%81%B4-%EC%9D%B4%EA%B8%B0%EC%A2%85DBLink.pdf&baseUrl=https%3A%2F%2Fsoftzion.sharepoint.com%2Fsites%2Fmsteams_d48474&serviceName=teams&threadId=19:c1c2cff65bb74703a1bdd91e351e03aa@thread.tacv2&groupId=1f185631-346b-4783-90b2-de71bf347bba](https://teams.microsoft.com/l/file/FE208E67-79F9-4677-8604-6D43AAB17649?tenantId=a0f8ce05-1c8d-4116-913f-478ebb90edcb&fileType=pdf&objectUrl=https%3A%2F%2Fsoftzion.sharepoint.com%2Fsites%2Fmsteams_d48474%2FShared%20Documents%2F%EC%A7%80%EC%8B%9D%EA%B3%B5%EC%9C%A0%2F%EC%98%A4%EB%9D%BC%ED%81%B4-%EC%9D%B4%EA%B8%B0%EC%A2%85DBLink.pdf&baseUrl=https%3A%2F%2Fsoftzion.sharepoint.com%2Fsites%2Fmsteams_d48474&serviceName=teams&threadId=19:c1c2cff65bb74703a1bdd91e351e03aa@thread.tacv2&groupId=1f185631-346b-4783-90b2-de71bf347bba)"
+개발 공통-자주 사용하는 Git 명령어,"[https://about.gitlab.com/images/press/git-cheat-sheet.pdf](https://about.gitlab.com/images/press/git-cheat-sheet.pdf)
+위 pdf를 참조해주시기 바랍니다."
+개발 공통-코딩스타일 가이드,"1. 모든 javascirpt, html, css, java, xml 파일은 tab to space 적용, tab size 는 2
+2. javascript 와 java 의 띄워쓰기는 아래와 같이
+![Untitled](%E1%84%80%E1%85%A2%E1%84%87%E1%85%A1%E1%86%AF%20%E1%84%80%E1%85%A9%E1%86%BC%E1%84%90%E1%85%A9%E1%86%BC-%E1%84%8F%E1%85%A9%E1%84%83%E1%85%B5%E1%86%BC%E1%84%89%E1%85%B3%E1%84%90%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%AF%20%E1%84%80%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%83%E1%85%B3%20cb6a1076fad24cceacf3945b95fa28e7/Untitled.png)
+```bash
+) { 사이는 한칸띄움 if/while 과 ( 사이는 한칸띄움
+( ) 안의 문장은 ( ) 와 간격을 띄우지 않음
+=, >=, == 등호/부등호의 앞,뒤는 한칸 띄움
+3. mybatis 용 xml 파일도 위 2번과 동일한 롤입니다.
+아래와 같습니다.
+<if test='TelNo != null and TelNo != """"'>, HEX(AES_ENCRYPT(#{TelNo}, 'SALEVIS4'))</if>
+단 if test 후에 있는 = 는 띄움없이 붙여 주세요.
+#{TelNo} 와 같이 띄움없이 붙여주세요.
+4. javascript 에서 문장 끝에 ; 을 꼭 붙여 주세요.
+단 if 문의 {} 는 ; 붙일 필요 없습니다. json 선언을 위한 {} 는 문장 끝이므로 ; 를 붙입니다.
+```"
+고객사 유지보수용 IP (61.35.16.253) 외부 접속 방법-61.35.16.253 공인 IP를 VPN으로 접속,"외부에서 사내 SOFTZION-RND-PUB5G에 접속하시려면 VPN을 이용하면 됩니다.
+아래 글을 참고하여 VPN을 설정했고, 윈도에서 VPN으로 연결하면 됩니다.
+VPN 연결 계정 정보는
+접속 IP : 61.35.16.253
+ID : szrnddev 또는 szrnddev2 또는 szrnddev3 사용
+PW : szrnd@pub2021$
+- 연결이 안될 경우 다른 사용자가 사용중 일 수 있으므로 다른 ID 로 접속 필요함
+- 계정 관리 담당자 : 연구소 최원영 수석
+- 윈도우 10 이하
+[https://medical8282.tistory.com/11](https://medical8282.tistory.com/11)
+- 윈도우 11 이상
+[https://m.blog.naver.com/toruin84/222664575387](https://m.blog.naver.com/toruin84/222664575387)"
+구글 애널리틱스 (GA4) - 초기 세팅 방법,"1. [구글 애널리틱스](https://analytics.google.com/analytics/web/?hl=ko#/)에 접속하여 ‘측정 시작’ 버튼을 클릭합니다.
+![Untitled](%E1%84%80%E1%85%AE%E1%84%80%E1%85%B3%E1%86%AF%20%E1%84%8B%E1%85%A2%E1%84%82%E1%85%A5%E1%86%AF%E1%84%85%E1%85%B5%E1%84%90%E1%85%B5%E1%86%A8%E1%84%89%E1%85%B3%20(GA4)%20-%20%E1%84%8E%E1%85%A9%E1%84%80%E1%85%B5%20%E1%84%89%E1%85%A6%E1%84%90%E1%85%B5%E1%86%BC%20%E1%84%87%E1%85%A1%E1%86%BC%E1%84%87%E1%85%A5%E1%86%B8%204f71b76e8ac34be2a5a851ef70d84bb1/Untitled.png)
+1. 계정 이름을 설정해 줍니다.
+![Untitled](%E1%84%80%E1%85%AE%E1%84%80%E1%85%B3%E1%86%AF%20%E1%84%8B%E1%85%A2%E1%84%82%E1%85%A5%E1%86%AF%E1%84%85%E1%85%B5%E1%84%90%E1%85%B5%E1%86%A8%E1%84%89%E1%85%B3%20(GA4)%20-%20%E1%84%8E%E1%85%A9%E1%84%80%E1%85%B5%20%E1%84%89%E1%85%A6%E1%84%90%E1%85%B5%E1%86%BC%20%E1%84%87%E1%85%A1%E1%86%BC%E1%84%87%E1%85%A5%E1%86%B8%204f71b76e8ac34be2a5a851ef70d84bb1/Untitled%201.png)
+1. [관리자 > 데이터 스트림]이나 생성 페이지에서 데이터 스트림을 세팅해 주세요.
+![Untitled](%E1%84%80%E1%85%AE%E1%84%80%E1%85%B3%E1%86%AF%20%E1%84%8B%E1%85%A2%E1%84%82%E1%85%A5%E1%86%AF%E1%84%85%E1%85%B5%E1%84%90%E1%85%B5%E1%86%A8%E1%84%89%E1%85%B3%20(GA4)%20-%20%E1%84%8E%E1%85%A9%E1%84%80%E1%85%B5%20%E1%84%89%E1%85%A6%E1%84%90%E1%85%B5%E1%86%BC%20%E1%84%87%E1%85%A1%E1%86%BC%E1%84%87%E1%85%A5%E1%86%B8%204f71b76e8ac34be2a5a851ef70d84bb1/Untitled%202.png)
+![Untitled](%E1%84%80%E1%85%AE%E1%84%80%E1%85%B3%E1%86%AF%20%E1%84%8B%E1%85%A2%E1%84%82%E1%85%A5%E1%86%AF%E1%84%85%E1%85%B5%E1%84%90%E1%85%B5%E1%86%A8%E1%84%89%E1%85%B3%20(GA4)%20-%20%E1%84%8E%E1%85%A9%E1%84%80%E1%85%B5%20%E1%84%89%E1%85%A6%E1%84%90%E1%85%B5%E1%86%BC%20%E1%84%87%E1%85%A1%E1%86%BC%E1%84%87%E1%85%A5%E1%86%B8%204f71b76e8ac34be2a5a851ef70d84bb1/Untitled%203.png)
+1. 웹 스트림 세부정보에서 생성된 Google 태그를 확인 할 수 있습니다.
+![Untitled](%E1%84%80%E1%85%AE%E1%84%80%E1%85%B3%E1%86%AF%20%E1%84%8B%E1%85%A2%E1%84%82%E1%85%A5%E1%86%AF%E1%84%85%E1%85%B5%E1%84%90%E1%85%B5%E1%86%A8%E1%84%89%E1%85%B3%20(GA4)%20-%20%E1%84%8E%E1%85%A9%E1%84%80%E1%85%B5%20%E1%84%89%E1%85%A6%E1%84%90%E1%85%B5%E1%86%BC%20%E1%84%87%E1%85%A1%E1%86%BC%E1%84%87%E1%85%A5%E1%86%B8%204f71b76e8ac34be2a5a851ef70d84bb1/Untitled%204.png)
+2. 향상된 측정 기능 설정
+![Untitled](%E1%84%80%E1%85%AE%E1%84%80%E1%85%B3%E1%86%AF%20%E1%84%8B%E1%85%A2%E1%84%82%E1%85%A5%E1%86%AF%E1%84%85%E1%85%B5%E1%84%90%E1%85%B5%E1%86%A8%E1%84%89%E1%85%B3%20(GA4)%20-%20%E1%84%8E%E1%85%A9%E1%84%80%E1%85%B5%20%E1%84%89%E1%85%A6%E1%84%90%E1%85%B5%E1%86%BC%20%E1%84%87%E1%85%A1%E1%86%BC%E1%84%87%E1%85%A5%E1%86%B8%204f71b76e8ac34be2a5a851ef70d84bb1/Untitled%205.png)"
+동적으로 생성되는 HTML TABLE의 ROWSPAN과 COLSPAN 처리는 어떻게 하나요?,"### 내용
+동적으로 생성되는 HTML TABLE의 ROWSPAN과 COLSPAN 처리는 어떻게 하나요?
+행이나 열 단위로 동일한 값이 있을 경우 Row, Column 단위로 Merge 처리를 하고 싶습니다.
+---
+### 답변
+Row, Column 단위 Merge 처리를 위해서는 크게 아래 2가지 방법이 있습니다.
+1. SQL 문에서 데이터를 Merge 처리해서 생성하는 방법
+2. Frontend에서 Jquery 등으로 처리하는 방법
+위 2가지 방법중 Jquery를 이용하는 방법은 아래 자료를 참고해 보시기 바랍니다.
+[https://interdigm.tistory.com/entry/jquery-%EC%97%B4%EA%B3%BC-%ED%96%89-%EC%9E%90%EB%8F%99%ED%95%A9%EC%B9%98%EA%B8%B0](https://interdigm.tistory.com/entry/jquery-%EC%97%B4%EA%B3%BC-%ED%96%89-%EC%9E%90%EB%8F%99%ED%95%A9%EC%B9%98%EA%B8%B0)"
+메일서버 (hMail Server)-Window server용 무료 SMTP / POP3 메일 서버,"[https://xetown.com/tips/1304642](https://xetown.com/tips/1304642)
+위 링크를 참조해주시기 바랍니다."
+메일서버 설정시 스팸 방지 설정,"스팸 서버 방지를 위한 메일 서버 설정
+[https://bokunn91.medium.com/%EA%B5%AC%EC%B6%95%ED%95%9C-%EB%A9%94%EC%9D%BC-%EC%84%9C%EB%B9%84%EC%8A%A4%EC%97%90%EC%84%9C-%EB%A9%94%EC%9D%BC%EC%9D%84-%EC%84%B1%EA%B3%B5%EC%A0%81%EC%9C%BC%EB%A1%9C-%EB%B0%9C%EC%86%A1%ED%95%98%EA%B8%B0-%EC%9C%84%ED%95%9C-%EB%B0%A9%EB%B2%95-6%EC%84%A0-4344a6031a8a](https://bokunn91.medium.com/%EA%B5%AC%EC%B6%95%ED%95%9C-%EB%A9%94%EC%9D%BC-%EC%84%9C%EB%B9%84%EC%8A%A4%EC%97%90%EC%84%9C-%EB%A9%94%EC%9D%BC%EC%9D%84-%EC%84%B1%EA%B3%B5%EC%A0%81%EC%9C%BC%EB%A1%9C-%EB%B0%9C%EC%86%A1%ED%95%98%EA%B8%B0-%EC%9C%84%ED%95%9C-%EB%B0%A9%EB%B2%95-6%EC%84%A0-4344a6031a8a)"
+배포 시 별도의 Context Path가 주어진 상황에서의 기존 소스 수정 방법 공유,"인천공항 VOC 작업 중 Weseed VOC의 중간 작업물을 배포하면서 발생한 이슈 처리 사항입니다.
+배포 환경: JEUS8 - Webtob
+개발 환경: 전자정부 프레임워크 4.1 - Angular cli v12
+기존 단일 서버에 단일 프로젝트를 배포할 때와 달리 여러 프로젝트를 단일 서버에 배포하게 될 경우, jeus에서 소스 별로 Context Path를 부여해주는데요, 우리의 프로젝트들은 모두 Root Path를 기준으로 짜여진 소스이다 보니, Context Path가 주어졌을 때의 WAS로의 요청, Web에서의 라우팅 등의 작업이 원활하지 않습니다.
+해서 이번 인천공항 VOC의 중간 배포 작업 중 해당 이슈에 대한 조치사항을 공유합니다.
+1. 외부 파일 참조 시 **절대 경로 대신 상대 경로**를 지정할 것
+- 절대 경로는 Root Path를 기준으로 참조하는 만큼 Context Path가 주어졌을 때 외부 파일을 올바르게 참조할 가능성이 낮습니다. 따라서 절대 경로 대신 상대 경로를 써, Context Path 기준으로 파일을 참조하도록 작업합니다.
+예시 ) 절대 경로 (’/assets/font/….’) 대신 상대 경로 (’assets/font/…’)를 참조
+![Untitled](%E1%84%87%E1%85%A2%E1%84%91%E1%85%A9%20%E1%84%89%E1%85%B5%20%E1%84%87%E1%85%A7%E1%86%AF%E1%84%83%E1%85%A9%E1%84%8B%E1%85%B4%20Context%20Path%E1%84%80%E1%85%A1%20%E1%84%8C%E1%85%AE%E1%84%8B%E1%85%A5%E1%84%8C%E1%85%B5%E1%86%AB%20%E1%84%89%E1%85%A1%E1%86%BC%E1%84%92%E1%85%AA%E1%86%BC%E1%84%8B%E1%85%A6%E1%84%89%E1%85%A5%E1%84%8B%20fff2160720b2466e85a08ae755fd5aac/Untitled.png)
+1. **base href** 설정
+- base href는 모든 상대 URL의 기본 주소를 설정해주는 옵션인데요, index.html에서 직접 설정할 수 있고, Angular 프로젝트의 경우 build 옵션에서 설정해 줄 수도 있습니다. base href가 지정되면, 소스 내 모든 상대 URL은 해당 base href를 기반으로 해석됩니다.
+예시 ) baseHref 옵션 설정을 통해 빌드 시 base href가 지정된 모습(직접 지정해도 됩니다!)
+![Untitled](%E1%84%87%E1%85%A2%E1%84%91%E1%85%A9%20%E1%84%89%E1%85%B5%20%E1%84%87%E1%85%A7%E1%86%AF%E1%84%83%E1%85%A9%E1%84%8B%E1%85%B4%20Context%20Path%E1%84%80%E1%85%A1%20%E1%84%8C%E1%85%AE%E1%84%8B%E1%85%A5%E1%84%8C%E1%85%B5%E1%86%AB%20%E1%84%89%E1%85%A1%E1%86%BC%E1%84%92%E1%85%AA%E1%86%BC%E1%84%8B%E1%85%A6%E1%84%89%E1%85%A5%E1%84%8B%20fff2160720b2466e85a08ae755fd5aac/Untitled%201.png)
+![Untitled](%E1%84%87%E1%85%A2%E1%84%91%E1%85%A9%20%E1%84%89%E1%85%B5%20%E1%84%87%E1%85%A7%E1%86%AF%E1%84%83%E1%85%A9%E1%84%8B%E1%85%B4%20Context%20Path%E1%84%80%E1%85%A1%20%E1%84%8C%E1%85%AE%E1%84%8B%E1%85%A5%E1%84%8C%E1%85%B5%E1%86%AB%20%E1%84%89%E1%85%A1%E1%86%BC%E1%84%92%E1%85%AA%E1%86%BC%E1%84%8B%E1%85%A6%E1%84%89%E1%85%A5%E1%84%8B%20fff2160720b2466e85a08ae755fd5aac/Untitled%202.png)
+예시 2) base href 설정에 따라 polyfills.js 참조 시 /voc/polyfills.js를 참조하게 되는 모습
+![Untitled](%E1%84%87%E1%85%A2%E1%84%91%E1%85%A9%20%E1%84%89%E1%85%B5%20%E1%84%87%E1%85%A7%E1%86%AF%E1%84%83%E1%85%A9%E1%84%8B%E1%85%B4%20Context%20Path%E1%84%80%E1%85%A1%20%E1%84%8C%E1%85%AE%E1%84%8B%E1%85%A5%E1%84%8C%E1%85%B5%E1%86%AB%20%E1%84%89%E1%85%A1%E1%86%BC%E1%84%92%E1%85%AA%E1%86%BC%E1%84%8B%E1%85%A6%E1%84%89%E1%85%A5%E1%84%8B%20fff2160720b2466e85a08ae755fd5aac/Untitled%203.png)
+![Untitled](%E1%84%87%E1%85%A2%E1%84%91%E1%85%A9%20%E1%84%89%E1%85%B5%20%E1%84%87%E1%85%A7%E1%86%AF%E1%84%83%E1%85%A9%E1%84%8B%E1%85%B4%20Context%20Path%E1%84%80%E1%85%A1%20%E1%84%8C%E1%85%AE%E1%84%8B%E1%85%A5%E1%84%8C%E1%85%B5%E1%86%AB%20%E1%84%89%E1%85%A1%E1%86%BC%E1%84%92%E1%85%AA%E1%86%BC%E1%84%8B%E1%85%A6%E1%84%89%E1%85%A5%E1%84%8B%20fff2160720b2466e85a08ae755fd5aac/Untitled%204.png)
+1. **요청 URL 수정** (PostApiService 수정)
+- Web 뿐 아니라 WAS 역시 해당 Context Path 기반으로 요청을 받습니다. 예를 들어 Context Path가 voc로 설정될 시, RequestMapping Url 앞에 /voc 가 포함되게 됩니다.
+그렇다면 요청 URL 역시 그에 맞게 바꿔주어야 하는데요, 현재 우리 소스의 모든 api요청을 담당하는 PostApiService의 수정이 불가피합니다. 최대한 우리 소스의 설정에 맞춰 PostApiService를 수정해 봤습니다.
+- global-config.ts 수정
+global-config.ts 안의 CONSTANT 객체에는 URL에 대한 기본 설정이 선언되어 있습니다. 이 중 대부분의 소스에선 공란일 CONSTANT.URL.CONTEXT 속성을 부여받은 Context Path로 지정 해 줍니다.
+![Untitled](%E1%84%87%E1%85%A2%E1%84%91%E1%85%A9%20%E1%84%89%E1%85%B5%20%E1%84%87%E1%85%A7%E1%86%AF%E1%84%83%E1%85%A9%E1%84%8B%E1%85%B4%20Context%20Path%E1%84%80%E1%85%A1%20%E1%84%8C%E1%85%AE%E1%84%8B%E1%85%A5%E1%84%8C%E1%85%B5%E1%86%AB%20%E1%84%89%E1%85%A1%E1%86%BC%E1%84%92%E1%85%AA%E1%86%BC%E1%84%8B%E1%85%A6%E1%84%89%E1%85%A5%E1%84%8B%20fff2160720b2466e85a08ae755fd5aac/Untitled%205.png)
+- PostApiService 수정
+요청을 보낼 Url을 생성해주는 getUrl()메소드를 수정해 줍니다. 대부분 기존의 domainPort와 domainVersion 사이에 삽입해 주면 됩니다.
+![Untitled](%E1%84%87%E1%85%A2%E1%84%91%E1%85%A9%20%E1%84%89%E1%85%B5%20%E1%84%87%E1%85%A7%E1%86%AF%E1%84%83%E1%85%A9%E1%84%8B%E1%85%B4%20Context%20Path%E1%84%80%E1%85%A1%20%E1%84%8C%E1%85%AE%E1%84%8B%E1%85%A5%E1%84%8C%E1%85%B5%E1%86%AB%20%E1%84%89%E1%85%A1%E1%86%BC%E1%84%92%E1%85%AA%E1%86%BC%E1%84%8B%E1%85%A6%E1%84%89%E1%85%A5%E1%84%8B%20fff2160720b2466e85a08ae755fd5aac/Untitled%206.png)
+결과 - 요청 URL에 Context Path가 잘 포함되어 전송되는 모습
+![Untitled](%E1%84%87%E1%85%A2%E1%84%91%E1%85%A9%20%E1%84%89%E1%85%B5%20%E1%84%87%E1%85%A7%E1%86%AF%E1%84%83%E1%85%A9%E1%84%8B%E1%85%B4%20Context%20Path%E1%84%80%E1%85%A1%20%E1%84%8C%E1%85%AE%E1%84%8B%E1%85%A5%E1%84%8C%E1%85%B5%E1%86%AB%20%E1%84%89%E1%85%A1%E1%86%BC%E1%84%92%E1%85%AA%E1%86%BC%E1%84%8B%E1%85%A6%E1%84%89%E1%85%A5%E1%84%8B%20fff2160720b2466e85a08ae755fd5aac/Untitled%207.png)
+** 배포 시에는 Context Path가 지정되어 별도의 서버 작업은 필요치 않지만, 톰캣 서버에서 개발 작업 시에는 Deployment의 Apllication Context를 해당 Context Path로 수정 후 작업해야 원활한 작업을 할 수 있습니다.
+예시) tomcat 서버 설정에서 Context Path를 지정해주는 모습
+![Untitled](%E1%84%87%E1%85%A2%E1%84%91%E1%85%A9%20%E1%84%89%E1%85%B5%20%E1%84%87%E1%85%A7%E1%86%AF%E1%84%83%E1%85%A9%E1%84%8B%E1%85%B4%20Context%20Path%E1%84%80%E1%85%A1%20%E1%84%8C%E1%85%AE%E1%84%8B%E1%85%A5%E1%84%8C%E1%85%B5%E1%86%AB%20%E1%84%89%E1%85%A1%E1%86%BC%E1%84%92%E1%85%AA%E1%86%BC%E1%84%8B%E1%85%A6%E1%84%89%E1%85%A5%E1%84%8B%20fff2160720b2466e85a08ae755fd5aac/Untitled%208.png)"
+백엔드에서 여러개의 쿼리 작업을 한번에 하는 api 를 만드는 방법,"1. 틀린방법
+controller 에서 api 를 하나 만들고,
+baseService.insert, baseService.update, baseService.delete 를 여러줄 중복해서 사용하고,
+controller 에서 트랜젝션 코드를 추가 합니다.
+=> 이유 : baseService 의 insert, update, delete 함수 안에 transaction 코드가 있으므로, transacton 이 중복됩니다.
+1. 틀린방법
+controller 에서 api 를 하나 만들고,
+baseDao.insert, baseDao.update, baseDao.delete 를 여러줄 중복해서 사용하고,
+controller 에서 트랜젝션 코드를 추가 합니다.
+=> 이유 : 컨트롤러에서 dao 를 직접 호출하면 안 됩니다.
+MVC 모델 관점에서 Controller 는 데이터를 직접 access 하지 않아야 하므로, dao 를 직접 호출하지 않습니다. 대신 Model 이 데이터를 직접 access 하도록 해야 됩니다.
+코이카에서 시큐어코드 점검에서 이렇게 사용한 예를 지적 받은 적이 있습니다.
+1. 바른방법
+controller 에서 api 를 하나 만들고,
+service 도 만들어 function 을 추가하고, controller 에서는 service 쪽의 function 을 호출하도록 합니다.
+service 의 function 안에서
+baseDao.insert, baseDao.update, baseDao.delete 를 여러줄 중복해서 사용하고,
+controller 에서 트랜젝션 코드를 추가 합니다."
+성능 테스트의 중요성과 목적 그리고 효과,"성능 테스트의 중요성과 목적 그리고 효과
+- **성능 테스트의 중요성과 목적**: 성능 테스트는 서비스의 트래픽이 폭발할 때나 성장할 때 자원 할당이나 안정성을 확보하기 위한 근거를 제공한다. 또한 성능 문제를 미리 감지하고 해결할 수 있다.
+- **성능 테스트 툴 소개**: 성능 테스트 툴은 서버에 부하를 주고 응답을 검증하는 도구이다. jmeter, ngrinder, grafana k6 등 다양한 툴이 있으며, grafana k6를 추천한다.
+- **프로파일러 소개**: 프로파일러는 서버의 성능 데이터를 수집하고 분석하는 도구이다. VisualVM, Scouter 등 다양한 툴이 있으며, 각각 장단점이 있다.
+- **주요 모니터링 지표**: CPU 사용량, 메모리 사용량, 네트워크 트래픽, 스레드 상태, 디스크 사용량, 요청 처리 시간, 데이터베이스 상태 등을 모니터링하여 서버의 성능을 평가하고 개선할 수 있다.
+- **주의 사항**: 성능 테스트는 별도의 머신에서 진행해야 하며, 애플리케이션의 특성과 지표를 이해해야 한다. 또한 베이스 라인을 만들어서 비교하고 분석해야 한다.
+원문
+[https://f-lab.kr/blog/importance%20of%20performance%20Testing?fbclid=IwAR0UZtRd7HHKU_CqM-xPS1FrSIEvRlcrfdO64gQfo8pyLaCmJ5pcUZIGYVY](https://f-lab.kr/blog/importance%20of%20performance%20Testing?fbclid=IwAR0UZtRd7HHKU_CqM-xPS1FrSIEvRlcrfdO64gQfo8pyLaCmJ5pcUZIGYVY)"
+세종Agent 개발 관련-세종 Agent 결과코드,"세종 Agent 결과코드
+![Untitled](%E1%84%89%E1%85%A6%E1%84%8C%E1%85%A9%E1%86%BCAgent%20%E1%84%80%E1%85%A2%E1%84%87%E1%85%A1%E1%86%AF%20%E1%84%80%E1%85%AA%E1%86%AB%E1%84%85%E1%85%A7%E1%86%AB-%E1%84%89%E1%85%A6%E1%84%8C%E1%85%A9%E1%86%BC%20Agent%20%E1%84%80%E1%85%A7%E1%86%AF%E1%84%80%E1%85%AA%E1%84%8F%E1%85%A9%E1%84%83%E1%85%B3%20bd8f06b47a5848cb9ffd9a6de34f4cb6/Untitled.png)"
+세종Agent 개발 관련-에러코드 924 - campaignimplcustomer.ResultCode,"에러코드 924 - campaignimplcustomer.ResultCode
+---
+대체발송시 text2 필드 누락.
+msg_queue 테이블의 K_NEXT_TYPE 이 0 이 아닌 경우 text 필드의 내용으로 알림톡을 보내는 것이 실패하면, text2 필드의 내용으로 SMS, LMS, MMS 발송을 다시 시도함.
+K_NEXT_TYPE 이 0 인 경우는 text2 가 없어도 되지만, 0 이 아닌 경우는 text2 가 없으면 무조건 발송실패 됨 (에러코드924)"
+세종Agent 개발 관련-중복에러 기준,"에러코드 507인 중복 처리되는 기준은 아래와 같습니다.
+1.해당 수신 번호로 최근 50건 조회 X
+- > Queue 테이블에 insert된 순서대로 50건을 담고, 그 안에서 수신선호 + 2번내용으로 중복체크
+( 즉, insert된 순서로 1번과 51번째의 수신번호와 내용이 같으면 성공처리됨
+2.문자 내용의 첫 글자부터 80byte (한글 기준 40자) 가 동일한 경우"
+연구소 주간 보고서 (2023년 자료),"비고: 2023년 연구소 주간보고서 엑셀 파일
+첨부 파일: ../%25EC%2597%25B0%25EA%25B5%25AC%25EC%2586%258C_%25EC%25A3%25BC%25EA%25B0%2584%25EB%25B3%25B4%25EA%25B3%25A0%25EC%2584%259C(2023).xlsx"
+"오라클 테이블, 컬럼별 데이터 건수 확인 쿼리","```jsx
+-- Oracle 11g - 테이블/컬럼별 데이터 건수 조회 쿼리
+-- Where 조건의 Owner는 실제 테이블 Owner로 수정 필요
+SELECT a.owner
+, a.table_name
+, a.comments AS table_comment
+, c.column_id
+, b.column_name
+, b.comments AS column_comment
+, TO_NUMBER(
+dbms_xmlgen.getxmltype(
+'SELECT COUNT(' ||
+CASE
+WHEN SUBSTR(c.data_type, 1, 9)
+IN ('DATE', 'TIMESTAMP', 'FLOAT', 'NUMBER', 'BINARY_DO', 'CHAR', 'NCHAR', 'VARCHAR', 'VARCHAR2', 'NVARCHAR', 'NVARCHAR2')
+THEN b.column_name
+ELSE 'NULL'
+END
+|| ') FROM ' || a.owner || '.' || b.table_name
+).Extract('//text()')
+)          AS RowsCount
+FROM all_tab_comments a
+, all_col_comments b
+, all_tab_columns c
+WHERE a.owner = b.owner
+AND b.owner = c.owner
+AND a.table_name = b.table_name
+AND b.table_name = c.table_name
+AND b.column_name = c.column_name
+AND a.table_type = 'TABLE'
+and a.OWNER = 'SALEVISDEV' ;
+```"
+운영서버 세팅 시 Salevis 라이센스 키 발급 절차,"# **Salevis 라이센스 발급 프로그램 확보 (노병인 상무께 요청)**
+## 1. 톰캣서버에서 MainApp 을 직접 실행하여 라이센스 발급
+'톰캣서버에 MainApp.class 를 복사한 후 다음을 실행
+> java MainApp [엔터]
+>
+작업 번호를 입력하세요.
+'작업번호에 0509 비밀번호를 입력 후 엔터
+> 0509 [엔터]
+>
+Date String 을 입력하세요.
+'서버만료일 yyyyMMdd 형식으로 입력
+> 20201231 [엔터]
+>
+Limit String 을 입력하세요.
+'5자 숫자를 입력 (서버만료일이 경과하거나, IP, MAC ADDRESS 가 다른 경우 Limit String 의 횟수만큼만 request 를 처리하고 이후에는 request 를 처리하지 않음)
+> 99999 [엔터]
+>
+IP 를 입력하세요.
+'0을 입력 (0을 입력하면 톰캣서버의 정보를 자동 입력받음)
+> 0 [엔터]
+>
+MAC ADDRESS 를 입력하세요.
+'0을 입력 (0을 입력하면 톰캣서버의 정보를 자동 입력받음)
+> 0 [엔터]
+>
+Your current IP address : localhost.localdomain/[127.0.0.1](http://127.0.0.1/)
+Your current mac address : 525400EAD30D
+'발급된 라이센스키. conf-prd.properties 파일의 com.softz.licensekey 값에 입력 후 톰캣서버 재시작
+MjAyMDEyMzE5OTk5OTllMGEyNmMwZDg5NzllZGViZTc1OTU5NmI3NjE0YzkwOTVkYTAxM2M2NjBhODU5NzE4MGY0YjgzMjk2YTA3ZWI=
+##
+## 2. 톰캣서버에서 IP와 MAC ADDRESS 정보 수집 방법
+'톰캣서버에 MainApp.class 를 복사한 후 다음을 실행
+> java MainApp [엔터]
+>
+작업 번호를 입력하세요.
+'작업번호에 1 을 입력 후 엔터
+> 1 [엔터]
+>
+Your current IP address : localhost.localdomain/[127.0.0.1](http://127.0.0.1/)
+Your current mac address : 525400EAD30D
+## 3. 다른 컴퓨터에서 MainApp 을 실행하여 라이센스 발급
+'MainApp.class 를 실행
+> java MainApp [엔터]
+>
+작업 번호를 입력하세요.
+'작업번호에 **** 비밀번호를 입력 후 엔터
+> **** [엔터]
+>
+Date String 을 입력하세요.
+'서버만료일 yyyyMMdd 형식으로 입력
+> 20201231 [엔터]
+>
+Limit String 을 입력하세요.
+'5자 숫자를 입력 (서버만료일이 경과하거나, IP, MAC ADDRESS 가 다른 경우 Limit String 의 횟수만큼만 request 를 처리하고 이후에는 request 를 처리하지 않음)
+> 99999 [엔터]
+>
+IP 를 입력하세요.
+'2번으로 수집받은 정보 입력
+> localhost.localdomain/127.0.0.1 [엔터]
+>
+MAC ADDRESS 를 입력하세요.
+'2번으로 수집받은 정보 입력
+> 525400EAD30D [엔터]
+>
+'발급된 라이센스키. conf-prd.properties 파일의 com.softz.licensekey 값에 입력 후 톰캣서버 재시작
+MjAyMDEyMzE5OTk5OTllMGEyNmMwZDg5NzllZGViZTc1OTU5NmI3NjE0YzkwOTVkYTAxM2M2NjBhODU5NzE4MGY0YjgzMjk2YTA3ZWI=
+#
+- *** 사용후 MainApp.class 를 서버에서 삭제바랍니다. ****"
+운영서버 세팅 시 Salevis 라이센스 키 발급 절차,"### 답변
+# **Salevis 라이센스 발급 프로그램 확보 (노병인 상무께 요청)**
+## 1. 톰캣서버에서 MainApp 을 직접 실행하여 라이센스 발급
+'톰캣서버에 MainApp.class 를 복사한 후 다음을 실행
+> java MainApp [엔터]
+>
+작업 번호를 입력하세요.
+'작업번호에 0509 비밀번호를 입력 후 엔터
+> 0509 [엔터]
+>
+Date String 을 입력하세요.
+'서버만료일 yyyyMMdd 형식으로 입력
+> 20201231 [엔터]
+>
+Limit String 을 입력하세요.
+'5자 숫자를 입력 (서버만료일이 경과하거나, IP, MAC ADDRESS 가 다른 경우 Limit String 의 횟수만큼만 request 를 처리하고 이후에는 request 를 처리하지 않음)
+> 99999 [엔터]
+>
+IP 를 입력하세요.
+'0을 입력 (0을 입력하면 톰캣서버의 정보를 자동 입력받음)
+> 0 [엔터]
+>
+MAC ADDRESS 를 입력하세요.
+'0을 입력 (0을 입력하면 톰캣서버의 정보를 자동 입력받음)
+> 0 [엔터]
+>
+Your current IP address : localhost.localdomain/[127.0.0.1](http://127.0.0.1/)
+Your current mac address : 525400EAD30D
+'발급된 라이센스키. conf-prd.properties 파일의 com.softz.licensekey 값에 입력 후 톰캣서버 재시작
+MjAyMDEyMzE5OTk5OTllMGEyNmMwZDg5NzllZGViZTc1OTU5NmI3NjE0YzkwOTVkYTAxM2M2NjBhODU5NzE4MGY0YjgzMjk2YTA3ZWI=
+##
+## 2. 톰캣서버에서 IP와 MAC ADDRESS 정보 수집 방법
+'톰캣서버에 MainApp.class 를 복사한 후 다음을 실행
+> java MainApp [엔터]
+>
+작업 번호를 입력하세요.
+'작업번호에 1 을 입력 후 엔터
+> 1 [엔터]
+>
+Your current IP address : localhost.localdomain/[127.0.0.1](http://127.0.0.1/)
+Your current mac address : 525400EAD30D
+## 3. 다른 컴퓨터에서 MainApp 을 실행하여 라이센스 발급
+'MainApp.class 를 실행
+> java MainApp [엔터]
+>
+작업 번호를 입력하세요.
+'작업번호에 **** 비밀번호를 입력 후 엔터
+> **** [엔터]
+>
+Date String 을 입력하세요.
+'서버만료일 yyyyMMdd 형식으로 입력
+> 20201231 [엔터]
+>
+Limit String 을 입력하세요.
+'5자 숫자를 입력 (서버만료일이 경과하거나, IP, MAC ADDRESS 가 다른 경우 Limit String 의 횟수만큼만 request 를 처리하고 이후에는 request 를 처리하지 않음)
+> 99999 [엔터]
+>
+IP 를 입력하세요.
+'2번으로 수집받은 정보 입력
+> localhost.localdomain/127.0.0.1 [엔터]
+>
+MAC ADDRESS 를 입력하세요.
+'2번으로 수집받은 정보 입력
+> 525400EAD30D [엔터]
+>
+'발급된 라이센스키. conf-prd.properties 파일의 com.softz.licensekey 값에 입력 후 톰캣서버 재시작
+MjAyMDEyMzE5OTk5OTllMGEyNmMwZDg5NzllZGViZTc1OTU5NmI3NjE0YzkwOTVkYTAxM2M2NjBhODU5NzE4MGY0YjgzMjk2YTA3ZWI=
+- *** 사용후 MainApp.class 를 서버에서 삭제바랍니다. ****
+### 댓글
+- [@노병인](https://stackoverflowteams.com/c/softzion/users/2/) [@임선규](https://stackoverflowteams.com/c/softzion/users/7/) 작성한 답변이 정확한지 확인해 주세요.  [](https://stackoverflowteams.com/c/softzion/users/1/)[Jul 28, 2022 at 0:09](https://stackoverflowteams.com/c/softzion/questions/55#comment9_56)
+– [최원영](https://stackoverflowteams.com/c/softzion/users/1/)
+- 운영서버에서(Linux서버) java MainApp 실행이 안될경우 javac MainApp.java로 다시 컴파일해서 실행을 해야 합니다.  [May 19, 2023 at 4:43](https://stackoverflowteams.com/c/softzion/questions/55#comment13_56)
+– [최원영](https://stackoverflowteams.com/c/softzion/users/1/)
+- 내부 리눅스 개발 서버(61.35.16.252)의 License Key 정보# license key com.softz.licensekey=MjAyMTEyMzE5OTk5OThhM2MxMDM2NGZmYmNlYTc2MGFkMWViNDhjZWMyMjhlNzJlN2E0YTk0OTI4Yzg1Yjg2M2JiNWUxOTQwNmMwZDQ=  [Jul 26, 2023 at 4:37](https://stackoverflowteams.com/c/softzion/questions/55#comment14_56)
+– [최원영](https://stackoverflowteams.com/c/softzion/users/1/)"
+웹 어플리케이션 보안 가이드,"벤처협회 웹 취약점 점검 결과 조치를 위해 전달 받은 웹 어플리케이션 보안 가이드
+[https://softzion.sharepoint.com/:b:/s/msteams_d48474/EcolFy-qf51Mscil27PEReQBMXpWoyPTXvopE5N1HHaBQA?e=SaljZE](https://softzion.sharepoint.com/:b:/s/msteams_d48474/EcolFy-qf51Mscil27PEReQBMXpWoyPTXvopE5N1HHaBQA?e=SaljZE)"
+웹 접근성 관련 점검 툴,"@이태민 주임이 코이카 프로젝트 하면서 정리한 자료
+- ---------
+**웹 접근성 자동평가도구**
+```makefile
+A=CoolCheck!
+(KWCAG 2.1 기준 웹 접근성 자가진단 프로그램)
+```
+센티널테크놀로지
+데모버전 다운로드 가능
+[http://www.coolcheck.co.kr/product/Acoolcheck_2.php?pn=1&sn=2](http://www.coolcheck.co.kr/product/Acoolcheck_2.php?pn=1&sn=2)
+Watch 1.0
+웹사이트 URL에 대한 웹접근성 및 웹표준 준수여부를 자동진단하는 자동진단툴
+웹와치 사이트에서 다운로드 가능
+K-WAH 4.4
+웹 접근성 연구소에서 배포함.
+2016.09.30 서비스 중단.
+KW3C 2.0(자가 진단용 웹 표준 진단 프로그램)
+한국 정보화 진흥원에서 배포함.
+현재 다운로드 링크 없음.
+**웹 접근성 진단 도구**
+N_WAX
+(NHN Web Accessibility eXension)
+**브라우저 부가기능**(파이어폭스, 크롬)
+OpenWAX
+(Open Web Accessibility eXtension)
+**브라우저 부가기능**(파이어폭스, 크롬)
+**색에 무관한 인식 관련 평가도구**
+Colour Contrast Check - [snook.ca](http://snook.ca/)
+**[전경 색과 배경색의 명도 대비 테스트](https://snook.ca/technical/colour_contrast/colour.html#fg=33FF33,bg=333333)**
+[http://www.snook.ca/technical/colour_cont](http://www.snook.ca/technical/colour_contrast/colour.html)rast/colour.html
+Colour Contrast Analyser (CCA)
+**전경 색과 배경색의 명도 대비 테스트**
+다운로드 사이트
+[https://www.paciellogroup.com/resources/contrastanalyser/](https://www.paciellogroup.com/resources/contrastanalyser/)
+Fujitsu ColorSelector
+**전경 색과 배경색의 명도 대비 테스트**
+Fujitsu ColorSelector 와 Colour Contrast Analyser 두 개의 결과가 다르다고 함.
+둘 중 Colour Contrast Analyser 를 사용하는 게 더 좋은 것 같다고 함
+Contrast Ratio (포토숍 익스텐션)
+포토숍에서 전경 색과 배경색의 명도 대비를 바로 확인
+CS4, CS5에서만 사용 가능
+Fujitsu ColorDoctor
+색맹  시험 툴(적색맹,녹색맹,청황색맹)
+후지쯔사의 웹 접근성 평가도구중 하나로, 화면의 색상을 흑백모드로 전환시켜 검사
+할 수 있도록 도와줍니다.
+**발작위험 테스트 도구**
+PEAT
+(Photosensitive Epilepsy Analysis Tool)
+[http://trace.umd.edu/peat#download](http://trace.umd.edu/peat#download)
+**스크린리더**
+시각 장애인이 컴퓨터를 사용할 때 화면에 표시되는 입출력 정보를 음성으로 알려주는 프로그램
+센스리더
+화면낭독 프로그램
+엑스비전테크놀로지 자료실에서 센스리더 최신 버전 다운로드 가능
+라이센스가 없는 경우 데모 상태로 30분간 사용이 가능
+[http://xvtech.com/xvtech/?mid=data](http://xvtech.com/xvtech/?mid=data)
+센스리더 인터넷 뷰어
+센스리더가 웹페이지에 어떻게 인식하는지 시각적으로 확인하기 위한 뷰어
+**W3C HTML 유효성 검사**
+[http://validator.kldp.org](http://validator.kldp.org/)
+**W3C CSS 유효성 검사**
+```bash
+http://jigsaw.w3.org/css-validator
+```
+[https://happysos.tistory.com/10](https://happysos.tistory.com/10)"
+"웹 표준, 웹 접근성, 브라우저 호환성 테스트 관련","프로젝트 진행 시 웹 표준, 웹 접근성, 브라우저 호환성 테스트를 위해서 참고할 자료 입니다.
+## 웹 표준
+[The W3C Markup Validation Service](https://validator.w3.org/)
+![웹표준-테스트계획.png](%E1%84%8B%E1%85%B0%E1%86%B8%20%E1%84%91%E1%85%AD%E1%84%8C%E1%85%AE%E1%86%AB,%20%E1%84%8B%E1%85%B0%E1%86%B8%20%E1%84%8C%E1%85%A5%E1%86%B8%E1%84%80%E1%85%B3%E1%86%AB%E1%84%89%E1%85%A5%E1%86%BC,%20%E1%84%87%E1%85%B3%E1%84%85%E1%85%A1%E1%84%8B%E1%85%AE%E1%84%8C%E1%85%A5%20%E1%84%92%E1%85%A9%E1%84%92%E1%85%AA%E1%86%AB%E1%84%89%E1%85%A5%E1%86%BC%20%E1%84%90%E1%85%A6%E1%84%89%E1%85%B3%E1%84%90%E1%85%B3%20658cf57291b949c3a9413a49a4fda054/%25EC%259B%25B9%25ED%2591%259C%25EC%25A4%2580-%25ED%2585%258C%25EC%258A%25A4%25ED%258A%25B8%25EA%25B3%2584%25ED%259A%258D.png)
+## 웹 접근성
+[인증심사비 | 웹 접근성 | WebWatch - 정보 접근성 대한민국 No.1 / Web·App·SW·Kiosk 접근성 인증·컨설팅·시험평가](http://www.webwatch.or.kr/WA/010401.html?MenuCD=140)
+![웹접근성-테스트계획.png](%E1%84%8B%E1%85%B0%E1%86%B8%20%E1%84%91%E1%85%AD%E1%84%8C%E1%85%AE%E1%86%AB,%20%E1%84%8B%E1%85%B0%E1%86%B8%20%E1%84%8C%E1%85%A5%E1%86%B8%E1%84%80%E1%85%B3%E1%86%AB%E1%84%89%E1%85%A5%E1%86%BC,%20%E1%84%87%E1%85%B3%E1%84%85%E1%85%A1%E1%84%8B%E1%85%AE%E1%84%8C%E1%85%A5%20%E1%84%92%E1%85%A9%E1%84%92%E1%85%AA%E1%86%AB%E1%84%89%E1%85%A5%E1%86%BC%20%E1%84%90%E1%85%A6%E1%84%89%E1%85%B3%E1%84%90%E1%85%B3%20658cf57291b949c3a9413a49a4fda054/%25EC%259B%25B9%25EC%25A0%2591%25EA%25B7%25BC%25EC%2584%25B1-%25ED%2585%258C%25EC%258A%25A4%25ED%258A%25B8%25EA%25B3%2584%25ED%259A%258D.png)
+## 브라우저 호환성
+[Most Reliable App & Cross Browser Testing Platform | BrowserStack](https://www.browserstack.com/)"
+"이메일 발송시 SPF, DKIM 설정","스티비에서 제공하는 가이드 참고
+[https://help.stibee.com/hc/ko/articles/4756529633423-SPF-DKIM%EC%9D%B4-%EB%AD%94%EA%B0%80%EC%9A%94-](https://help.stibee.com/hc/ko/articles/4756529633423-SPF-DKIM%EC%9D%B4-%EB%AD%94%EA%B0%80%EC%9A%94-)"
+인텔리J 한글 깨짐(인코딩) 처리,"![https://i.stack.imgur.com/sykQB.png](https://i.stack.imgur.com/sykQB.png)
+첫번째
+![Untitled](%E1%84%8B%E1%85%B5%E1%86%AB%E1%84%90%E1%85%A6%E1%86%AF%E1%84%85%E1%85%B5J%20%E1%84%92%E1%85%A1%E1%86%AB%E1%84%80%E1%85%B3%E1%86%AF%20%E1%84%81%E1%85%A2%E1%84%8C%E1%85%B5%E1%86%B7(%E1%84%8B%E1%85%B5%E1%86%AB%E1%84%8F%E1%85%A9%E1%84%83%E1%85%B5%E1%86%BC)%20%E1%84%8E%E1%85%A5%E1%84%85%E1%85%B5%20dd83574952e04f3e8938decae7ec70ea/Untitled.png)
+추가
+-Dfile.encoding=UTF-8
+- Dconsole.encoding=UTF-8
+두번째
+![Untitled](%E1%84%8B%E1%85%B5%E1%86%AB%E1%84%90%E1%85%A6%E1%86%AF%E1%84%85%E1%85%B5J%20%E1%84%92%E1%85%A1%E1%86%AB%E1%84%80%E1%85%B3%E1%86%AF%20%E1%84%81%E1%85%A2%E1%84%8C%E1%85%B5%E1%86%B7(%E1%84%8B%E1%85%B5%E1%86%AB%E1%84%8F%E1%85%A9%E1%84%83%E1%85%B5%E1%86%BC)%20%E1%84%8E%E1%85%A5%E1%84%85%E1%85%B5%20dd83574952e04f3e8938decae7ec70ea/Untitled%201.png)
+세번째
+![Untitled](%E1%84%8B%E1%85%B5%E1%86%AB%E1%84%90%E1%85%A6%E1%86%AF%E1%84%85%E1%85%B5J%20%E1%84%92%E1%85%A1%E1%86%AB%E1%84%80%E1%85%B3%E1%86%AF%20%E1%84%81%E1%85%A2%E1%84%8C%E1%85%B5%E1%86%B7(%E1%84%8B%E1%85%B5%E1%86%AB%E1%84%8F%E1%85%A9%E1%84%83%E1%85%B5%E1%86%BC)%20%E1%84%8E%E1%85%A5%E1%84%85%E1%85%B5%20dd83574952e04f3e8938decae7ec70ea/Untitled%202.png)
+![Untitled](%E1%84%8B%E1%85%B5%E1%86%AB%E1%84%90%E1%85%A6%E1%86%AF%E1%84%85%E1%85%B5J%20%E1%84%92%E1%85%A1%E1%86%AB%E1%84%80%E1%85%B3%E1%86%AF%20%E1%84%81%E1%85%A2%E1%84%8C%E1%85%B5%E1%86%B7(%E1%84%8B%E1%85%B5%E1%86%AB%E1%84%8F%E1%85%A9%E1%84%83%E1%85%B5%E1%86%BC)%20%E1%84%8E%E1%85%A5%E1%84%85%E1%85%B5%20dd83574952e04f3e8938decae7ec70ea/Untitled%203.png)
+추가
+- Dfile.encoding=UTF-8
+세번째에서 해결 함 :)"
+주피터 노트북이 OOM으로 인해 열리지 않는 경우,"### 내용
+주피터 노트북에서 파이썬으로 대량 데이터 정제 작업 중, 새로 로딩할때 out of memory 에러가 뜹니다.
+---
+### 답변
+주피터 노트북에서 작업시, print 또는 output으로 출력되는 결과의 양이 너무 많은 경우 발생하는 문제로 판단됩니다.
+노트북에 파이썬 Kernel 이 살아있을 때는 크게 문제가 되지 않지만, 저장하고 재실행시 OOM 에러가 발생될 수 있습니다.
+이런 상황을 방지하기 위해서는:
+1. 범주형 데이터에 있는 데이터를 전체 검토해보고 싶을때 : 코드 구현 중, 결과 검토 후 해당 셀을 제거;
+2. 인덱싱/슬라이싱 통해 해당 부분만 확인;
+3. 파이썬 기본 자료형이 아닌, 판다스 데이터프레임/시리즈별로 데이터 조회 (판다스는 일부 생략해서 보여주기 때문);
+4. print & break를 적절히 사용하여 구현 도중 필요한 부분만 확인하는 방법 등이 있습니다.
+이런 상황이 재발하는 경우, 주피터 노트북 파일 위치에서 콘솔창을 열어서 아래 명령어를 실행하세요.
+```css
+jupyter nbconvert --clear-output --inplace 로딩안되는주피터노트북.ipynb
+```
+### 답변
+자바의 경우 VM Option중 Heap Memory 설정값을 증가 시켜서 해결하기도 하는데요. Python은 그런 옵션값 설정은 없나요?
+– [최원영](https://stackoverflowteams.com/c/softzion/users/1/)
+[Aug 10, 2022 at 23:40](https://stackoverflowteams.com/c/softzion/questions/57#comment10_58)"
+카카오 커머스 Angular 도입 활용 사례,"[https://tech.kakao.com/2019/11/27/kakao-commerce-frontend-angular/#h.m79xbkkvuxqx](https://tech.kakao.com/2019/11/27/kakao-commerce-frontend-angular/#h.m79xbkkvuxqx)
+[https://tech.kakao.com/2019/11/27/kakao-commerce-frontend-angular/#h.m79xbkkvuxqx](https://tech.kakao.com/2019/11/27/kakao-commerce-frontend-angular/#h.m79xbkkvuxqx)"
+특허 관련 프로세스,"2021~2023 셀비스휴/심뜰/위시드마인드 정부 과제 연구개발 계획서의 **과제 성능지표** 내용 중에
+과제 내용 관련 특허 1건이 포함되어 있었습니다.
+향후 참고 위해 특허 청구항 작성 및 출원 프로세스 관련 내용을 상술합니다.
+---
+## **전체 프로세스 소요 기간 (참고) : 3개월**
+1. **브레인스토밍 (2개월+)**: 해당 기능을 개발하는 *담당 실무/개발자, 기능 스토리, 코드 기술 중심*으로,
+- **기준:** 계획서에 기술된 특허 관련 성능지표 개요 중 특허 특징.
+- `예시1: ""AI 상담 컨텐츠, 상담사 개발 관련 특허"" 1건, 5%`
+- `예시2: ""AI 지산 매칭개발 관련 특허"" 1건, 5%`
+- **주제 안 (최소 3가지)+ 청구항 (대략적, 각 안마다 최소 3건)+ 대표도 (청구항 기준, 각 안마다 최소 1종)+ 키워드**
+- 담당 실무/개발자 역할: 상기 키워드를 중심으로 [KIPRIS](http://www.kipris.or.kr/khome/main.jsp)에 **다양하게 검색 필요.**
+1. `예시1: (인공지능+AI+ML+DL+머신러닝+딥러닝)*(심리+상담+정신+심리상담+상담사)분석(추천+추천시스템+추천모델)`
+2. `예시2: (심리+상담+정신+심리상담+상담사+psychological+counseling+counselor)*(감정분석+감정+분석+sentiment+analysis)`
+3. `예시3: (심리+상담+정신+심리상담+상담사+psychological+counseling+counselor)(추천+시스템+모델+recommend+recommender+recommendation+system+model)(감정분석+감정+분석+sentiment+analysis)`
+- (변리사 이해 위한) 청구항 내용 관련 보충 기술 자료 준비 필요.
+- `예시: 감정분석모델 구축에 사용한 알고리즘 목록 및 기술 설명`
+2. **피드백** :
+1. (담당 실무/개발자 제외) **팀장급 이상 결정권자 피드백 30%,**
+2. **기타 관련 기능 개발자 피드백 40%,**
+3. 변리사 피드백 30% 수렴.
+- 사유: 상위 결정권자의 피드백으로 인해 50% 이상 수정하는 경우를 방지하기 위함.
+3. **변리사 (1개월+):**
+- 주제안, 청구항 및 대표도 구성 후, 경영지원실 통해 변리사 컨택.
+- 2023 셀비스휴/심뜰/위시드마인드 과제 특허 출원 담당 변리사:유용혁 대표변리사, 특허법인 영비, [yhyoo@yongbeeip.com](mailto:yhyoo@yongbeeip.com), 010-6663-3216. 젊은 감각.
+- 변리사 미팅 시 주의 사항:
+- (반드시) 녹취.
+- 견적서, 결제, 초안, 최종본 및 출원번호 수령 예정일 명시.
+- 변리사/경영지원실 간의 견적서 수정 및 결제 단계 소요시간 고려하여 초안/최종본 일정 정하기.
+<20230919 이시원연구원 작성.>
+피드백 부탁 드립니다."
+파이썬으로 큰 파일을 어떻게 읽어야 하나요?,"### 내용
+3,000,000 행 x 2,000 열 정수로 이루어진 데이터셋(.csv) 파이썬(판다스 데이터프레임)으로 읽으려고 하는데 계속 Out of Memory 에러가 나네요. 파일 사이즈가 12GB이고 RAM이 80GB이라서 메모리는 충분한데요.
+왜 OOM 에러가 날까요? 그리고 큰 파일은 어떻게 읽어야 하는걸까요?
+---
+### 답변
+파이썬은 기본 옵션으로 파일을 UTF-8 인코딩 텍스트로 저장합니다. 따라서, 데이터 파일이 UTF-8 인코딩된 텍스트 파일임을 가정하고 밑에 설명드립니다.
+UTF-8 문자의 크기는 1~4 byte 정도 됩니다. 판다스에 `pd.read_csv()`로 데이터 파일을 읽어오며 `dtype`(데이터타입)을 지정하지 않으면, 판다스는 데이터를 UTF-8 형식으로 모두 읽어온 후 데이터타입을 판단하고, 정수로 판단되는 경우 기본 옵션인 int64 (8 byte) 형식으로 따로 카피(copy)를 만듭니다. 이 과정에 RAM에는 대략 12GB + 48GB = 60GB 정도의 메모리가 쌓입니다; 파이썬 자체의 오버헤드, 판다스의 오버헤드, OS와 다른 프로그램들이 잡아먹는 메모리까지 고려해보면 80GB 를 초과할 수도 있습니다 (특히 크롬 브라우저).
+큰 파일을 읽는 방안은 여러 가지 있지만, 그 중 두 가지 방안을 알려드립니다.
+### 데이터타입 지정
+위에 말씀드린 바와 같이, `dtype`이 지정되지 않은 경우 판다스는 텍스트본을 유지한 상태로 int64 카피본을 만듭니다. 따라서, `dtype='int64'`를 미리 지정해주면, 텍스트본을 유지하지 않기 때문에 메모리를 덜 사용합니다 (물론 `dtype`을 지정하지 않더라도 읽는게 성공했다면 텍스트본은 제거됬을겁니다).
+더불어, 데이터 내 정수의 범위가 -32768 ~ 32767 넘지 않는 경우, `int64` 대신 `int16`을 사용하면 메모리 사용량이 4배까지 줄어들 수 있습니다.
+### 데이터 분할
+**Chunking**은 데이터를 여러 덩어리(Chunk)로 나누어 한 덩어리씩 처리하는 방식을 뜻합니다.
+`pd.read_csv()`에 `chunksize` 파라미터로 덩어리의 크기(행 개수)를 지정하고 변수로 선언하면, 반복문으로 처리할 수 있는 iterable 객체가 생성됩니다.
+예를 들어, `df = pd.read_csv(filename, chunksize=1000)`를 실행하면 1000개씩 분리된 데이터프레임을 출력하는 객체가 생성됩니다.
+반복문으로 각 덩어리를 호출하면 반복할때마다 덩어리 한 개가 메모리에 잠시 머물고 소멸합니다 (다른 변수로 저장하지 않는 이상)."
+피그마를 이용하여 효율적으로 협업하기 위한 기본 단축키 공유,"**협업을 위한 단축키**
+- ui 표시/숨기기
+Ctrl+\
+- present 모드 열어서 proto type 확인
+Ctrl+Alt+Enter
+- 상단 탭 이동
+Ctrl+Alt+방향키←/방향키→
+디자인 파일과 present모드 확인할때 유용
+- 특정 프레임 링크 공유
+Ctrl+L
+전체 파일을 공유하는 게 아닌 이 중에서 공유하고자 했던 특정한 화면이 자동 포커싱 되어 공유
+- 프레임 기준 화면 맞춤(다음프레임 이동)
+N
+- 프레임 기준 화면 맞춤(이전프레임 이동)
+Shift+N
+- 선택 된 오브젝트의 자식 레이어 선택
+오브젝트 선택+Enter
+- 선택 된 오브젝트의 부모 레이어 선택
+오브젝트 선택+Shift+Enter
+> Tip.
+>
+>
+> 벡터 이미지 Asset의 경우 SVG 코드로 직접 복사가 가능합니다.
+>
+> 벡터 기반 객체 선택 > 마우스 우클릭 > Copy/Paste as > Copy as SVG
+>
+---
+**디자이너를 위한 단축키**
+- spacing 모드 packed(수치입력) ↔ space between(오토) 전환
+auto layout 사각형 영역 활성화 + X
+- 이미지 자르기 (crop image)
+Alt+double click
+- 아웃라인 표시/숨기기
+Shift+O
+- section 만들기
+Shift+S
+frame과 달리 present 모드에서 section은 표시 되지 않으므로 불필요한 frame이 보이지 않음.
+- 요소를 움직이지 않고 프레임 늘이기 (auto layout 아닐 경우에만)
+Ctrl+stretch
+constraints에 영향을 받지 않고 frame 이나 variant 영역 조절이 가능함.frame 이나 variant 영역 안에 포함된 요소의 위치 고정됨."
+화상/전화 상담 하는데 상담사 목소리가 들리지 않아요! 해결 방법을 알려주세요,"모바일에서 상담사 목소리가 들리지 않는 이유는 대부분 단말 설정의 문제 입니다.
+현재까지 알려진 문제는 아래와 같습니다.
+1. 블루투스
+- 블루투스 기능이 On 되어 있는지 확인
+- 연결된 기기에서 통화연결 기능이 On 되어 있는지 확인
+- 블루투스를 종료하거나 통화연결 기능을 Off 상태로 변경
+2. 소리 설정
+- 설정 -> 소리 및 진동 -> 음량 -> 미디어가 음소거 되어 있는지 확인 후 볼륨을 재설정"
